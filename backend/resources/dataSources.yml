@@ -1,0 +1,13 @@
+# User
+- type: AWS_LAMBDA
+  name: "getUser"
+  config:
+    functionName: "getUser"
+- type: AWS_LAMBDA
+  name: "createUser"
+  config:
+    functionName: "createUser"
+- type: AWS_LAMBDA
+  name: "listUsers"
+  config:
+    functionName: "listUsers"

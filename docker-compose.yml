@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "62222:62222"
+      - "8000:8000"
+    environment:
+      AWS_REGION: "us-east-1"
+      AWS_ACCESS_KEY_ID: "local"
+      AWS_SECRET_ACCESS_KEY: "local"
+    expose:
+      - 62222
+  frontend:
+    build: ./frontend
+    stdin_open: true
+    command: npm start
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_GRAPHQL_API_URL: http://localhost:62222/graphql
+    expose:
+      - 3000

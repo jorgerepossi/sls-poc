@@ -1,0 +1,28 @@
+# Users
+listUsers:
+  handler: lambda-functions/user/listUsers/index.handler
+  layers:
+    - { Ref: VendorLambdaLayer }
+  package:
+    include:
+      - '!**'
+      - lambda-functions/util/**
+      - lambda-functions/user/listUsers/**
+getUser:
+  handler: lambda-functions/user/getUser/index.handler
+  layers:
+    - { Ref: VendorLambdaLayer }
+  package:
+    include:
+      - '!**'
+      - lambda-functions/util/**
+      - lambda-functions/user/getUser/**
+createUser:
+  handler: lambda-functions/user/createUser/index.handler
+  layers:
+    - { Ref: VendorLambdaLayer }
+  package:
+    include:
+      - '!**'
+      - lambda-functions/util/**
+      - lambda-functions/user/createUser/**

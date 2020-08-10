@@ -1,0 +1,105 @@
+service: mv-sls
+
+package:
+  individually: true
+
+# Serverless installed plugins
+plugins:
+  - serverless-jetpack
+  - serverless-dynamodb-local
+  - serverless-appsync-plugin
+  - serverless-appsync-offline
+  - serverless-plugin-split-stacks
+  - serverless-s3-local
+  - serverless-offline
+
+
+# Provider configuration / env variables.
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+        - lambda:*
+        - s3:*
+      Resource:
+        - arn:aws:dynamodb:${self:provider.region}:*:*
+        - arn:aws:lambda:${self:provider.region}:*:*
+  environment:
+    REGION: "${self:provider.region}"
+    STAGE: "${self:provider.stage}"
+    APPSYNC_NAME: "${self:custom.defaultPrefix}-appsync"
+    USER_POOL_NAME: "${self:custom.defaultPrefix}-user-pool"
+    USER_POOL_CLIENT_NAME: "${self:custom.defaultPrefix}-user-pool-client"
+    USER_TABLE_NAME: "${self:custom.defaultPrefix}-userTable"
+    DEFAULT_LIST_LIMIT: 20
+    USER_POOL_ID:
+      Ref: CognitoUserPool
+    USER_POOL_CLIENT_ID:
+      Ref: CognitoUserPoolClient
+    DYNAMODB_ENDPOINT: "http://localhost:8000"
+
+custom:
+  s3:
+    port: 8011
+    directory: /tmp
+  jetpack:
+    concurrency: 4
+  appSync: # appsync plugin configuration
+    name: "${self:provider.environment.APPSYNC_NAME}"
+    authenticationType: AMAZON_COGNITO_USER_POOLS
+    userPoolConfig:
+      awsRegion: ${self:provider.region}
+      defaultAction: ALLOW
+      userPoolId: # "us-east-1_CpnMBemg5"
+        Ref: CognitoUserPool
+    serviceRole: "AppSyncServiceRole"
+    dataSources: ${file(resources/dataSources.yml)}
+    mappingTemplates: ${file(resources/resolvers.yml)}
+  dynamodb:
+    stages:
+      - local
+    start:
+      port: 8000
+      inMemory: false
+      dbPath: "dynamodb_local_data"
+      migrate: false
+  appsync-offline: # appsync-offline configuration
+    port: 62222
+    dynamodb:
+      client:
+        endpoint: "http://localhost:8000"
+        region: localhost
+  defaultPrefix: ${self:service}-${self:provider.stage}
+  localPrefix: ${self:service}-local
+  devPrefix: ${self:service}-dev
+  stagePrefix: ${self:service}-stage
+  prodPrefix: ${self:service}-prod
+
+
+layers:
+  vendor:
+    path: lambda-functions/layers/vendor
+    description: Third party libraries.
+    compatibleRuntimes:
+      - "${self:provider.runtime}"
+    allowedAccounts:
+      - '*'
+
+
+functions:
+  - ${file(resources/lambda-functions.yml)}
+
+resources:
+  # Cognito
+  - ${file(resources/cognito-user-pool.yml)}
+  # DynamoDB
+  - ${file(resources/dynamodb-tables.yml)}
+  # Roles
+  - ${file(resources/roles.yml)}
+  # Roles
+  - ${file(resources/s3.yml)}

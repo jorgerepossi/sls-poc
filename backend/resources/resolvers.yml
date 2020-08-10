@@ -1,0 +1,16 @@
+# User
+- dataSource: "createUser"
+  type: Mutation
+  field: "createUser"
+  request: "user/mutation.createUser-request.vtl"
+  response: "common-response.vtl"
+- dataSource: "listUsers"
+  type: Query
+  field: "listUsers"
+  request: "user/query.listUsers-request.vtl"
+  response: "common-response.vtl"
+- dataSource: "getUser"
+  type: Query
+  field: "getUser"
+  request: "user/query.getUser-request.vtl"
+  response: "common-response.vtl"

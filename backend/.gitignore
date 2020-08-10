@@ -1,0 +1,12 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+.dynamodb
+
+#DynamoDB local data files
+dynamodb_local_data/*
+# exception to the rule, to commit folder
+!dynamodb_local_data/.gitkeep

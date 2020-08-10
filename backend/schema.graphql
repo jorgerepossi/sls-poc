@@ -1,0 +1,44 @@
+# Entities
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  password: String!
+  birthDate: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+# List responses
+type UserListResponse {
+  items: [User]
+  nextToken: String
+}
+
+# Creation/update inputs
+input CreateUserInput {
+  username: String!
+  password: String!
+  email: String!
+  birthDate: String!
+}
+
+# Define the queries
+type Query {
+  getUser(id: ID!): User
+  listUsers(limit: Int, nextToken: String): UserListResponse
+
+}
+
+# Define the mutations
+type Mutation {
+  createUser(input: CreateUserInput!) : User
+}
+
+# Define the schema
+schema {
+  # all the queries
+  query: Query
+  # all the mutations
+  mutation: Mutation
+}

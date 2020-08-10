@@ -1,0 +1,71 @@
+Resources:
+  # Creates a role that allows Cognito to send SNS messages
+  SNSRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal: 
+              Service: 
+                - "cognito-idp.amazonaws.com"
+            Action: 
+              - "sts:AssumeRole"
+      Policies:
+        - PolicyName: "${self:custom.defaultPrefix}-CognitoSNSPolicy"
+          PolicyDocument: 
+            Version: "2012-10-17"
+            Statement: 
+              - Effect: "Allow"
+                Action: "sns:publish"
+                Resource: "*"
+  CognitoUserPool:
+    Type: "AWS::Cognito::UserPool"
+    Properties:
+      MfaConfiguration: "OPTIONAL"
+      SmsConfiguration:
+        #ExternalId: !Sub ${AuthName}-external
+        ExternalId: "${self:custom.defaultPrefix}-CognitoSNS-external"
+        SnsCallerArn: !GetAtt SNSRole.Arn
+      AutoVerifiedAttributes:
+        - phone_number
+      UserPoolName: "${self:provider.environment.USER_POOL_NAME}"
+      Schema:
+        - Name: "email"
+          Mutable: true
+          Required: true
+          AttributeDataType: String
+        - Name: "phone_number"
+          Mutable: true
+          Required: true
+          AttributeDataType: String
+      UsernameAttributes:
+        - email
+        - phone_number
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 6
+          RequireLowercase: False
+          RequireNumbers: True
+          RequireSymbols: False
+          RequireUppercase: True
+  CognitoUserPoolGroupReaders:
+    Type: AWS::Cognito::UserPoolGroup
+    Properties: 
+      GroupName: "Readers"
+      UserPoolId:
+        Ref: CognitoUserPool
+  CognitoUserPoolGroupWriters:
+    Type: AWS::Cognito::UserPoolGroup
+    Properties: 
+      GroupName: "Writers"
+      UserPoolId:
+        Ref: CognitoUserPool          
+  CognitoUserPoolClient:
+    Type: "AWS::Cognito::UserPoolClient"
+    Properties:
+      ClientName: "${self:provider.environment.USER_POOL_CLIENT_NAME}"
+      GenerateSecret: False
+      UserPoolId:
+        Ref: CognitoUserPool
