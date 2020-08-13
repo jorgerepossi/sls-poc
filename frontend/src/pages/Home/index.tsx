@@ -1,7 +1,8 @@
 import React from "react";
+import { Section } from "./../../components";
 
 const Home = () => {
-  return <div>From home</div>;
+  return <Section>From home</Section>;
 };
 
 export default Home;

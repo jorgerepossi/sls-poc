@@ -11,6 +11,7 @@ import apolloClient from "./apolloClient";
 import rootReducer from "./reducers";
 import { Layout, Footer, Header } from "./components/";
 import routes from "./routes";
+import { Navigation } from "./components/Navbar";
 
 const store = configureStore({
   reducer: rootReducer,
@@ -22,9 +23,7 @@ ReactDOM.render(
       <ApolloProvider client={apolloClient}>
         <BrowserRouter>
           <Header>
-            <Link to="/"> Home</Link>
-            <Link to="/about"> About</Link>
-            <Link to="/contact"> Contact</Link>
+            <Navigation />
           </Header>
           <Layout>{routes}</Layout>
           <Footer />
