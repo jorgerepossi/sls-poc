@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import { BrowserRouter, Link } from "react-router-dom";
+
 import { ApolloProvider } from "@apollo/client";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 import apolloClient from "./apolloClient";
 import rootReducer from "./reducers";
+import { Layout, Footer, Header } from "./components/";
 import routes from "./routes";
 
 const store = configureStore({
@@ -18,9 +21,13 @@ ReactDOM.render(
     <Provider store={store}>
       <ApolloProvider client={apolloClient}>
         <BrowserRouter>
-          <Link to="/"> Home</Link>
-          <Link to="/contact"> Contact</Link>
-          {routes}
+          <Header>
+            <Link to="/"> Home</Link>
+            <Link to="/about"> About</Link>
+            <Link to="/contact"> Contact</Link>
+          </Header>
+          <Layout>{routes}</Layout>
+          <Footer />
         </BrowserRouter>
       </ApolloProvider>
     </Provider>
