@@ -1,17 +1,17 @@
-import React, { Suspense, lazy } from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
-import Loading from './components/Loading';
+import React, { Suspense, lazy } from "react";
+import { Switch, Route, HashRouter } from "react-router-dom";
+import Loading from "./components/Loading";
 
-const SignUp = lazy(() => import('./pages/SignUp'));
+const Home = lazy(() => import("./pages/Home"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const routes = (
-  <HashRouter basename='/'>
-    <Suspense fallback={<Loading />}>
-      <Switch key='router'>
-        <Route path='*' component={SignUp} />
-      </Switch>
-    </Suspense>
-  </HashRouter>
+  <Suspense fallback={<Loading />}>
+    <Switch key="router">
+      <Route exact path="/" component={Home} />
+      <Route path="/contact" component={Contact} />
+    </Switch>
+  </Suspense>
 );
 
 export default routes;
