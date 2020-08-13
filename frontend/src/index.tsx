@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter, Link } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import { ApolloProvider } from "@apollo/client";
 import { configureStore } from "@reduxjs/toolkit";
@@ -12,6 +12,9 @@ import rootReducer from "./reducers";
 import { Layout, Footer, Header } from "./components/";
 import routes from "./routes";
 import { Navigation } from "./components/Navbar";
+
+import "./components/styles/Reset.scss";
+import "./components/styles/Normalize.css";
 
 const store = configureStore({
   reducer: rootReducer,
