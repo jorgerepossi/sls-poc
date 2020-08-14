@@ -40,3 +40,8 @@ export const InfoData = [
     infoContentSecond: "+549 011 123 456 788",
   },
 ];
+
+export const Social = [
+  { mame: "Facebook", link: "" },
+  { mame: "Instagram", link: "" },
+];
