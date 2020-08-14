@@ -32,11 +32,11 @@ export const InfoData = [
     infoContentSecond: "NY 10002, USA",
   },
   {
-    infoContentFirst: "zircona_company@mail.com",
-    infoContentSecond: "zircona@mail.com",
+    infoContentFirst: "info_company@mail.com",
+    infoContentSecond: "info@mail.com",
   },
   {
-    infoContentFirst: "+1 800 123 456 789",
-    infoContentSecond: "+1 800 123 456 788",
+    infoContentFirst: "+549 011 123 456 789",
+    infoContentSecond: "+549 011 123 456 788",
   },
 ];
