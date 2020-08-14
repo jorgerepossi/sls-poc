@@ -1,13 +1,13 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 import { Navbar } from "./../Navbar";
 
-interface ListProps {
-  data: Array<Type>;
+type TypeProps = {
+  data: Array<ListProps>;
   className?: string;
   id?: string;
-}
+};
 
-interface Type {
+interface ListProps {
   to?: string;
   className?: string;
   activeClassName?: string;
@@ -20,7 +20,11 @@ interface Type {
   seo?: string;
 }
 
-export const List: React.FC<ListProps> = ({ data, className, id }): JSX.Element => {
+export const List: React.FC<TypeProps> = ({
+  data,
+  className,
+  id,
+}): JSX.Element => {
   return (
     <Fragment>
       <ul id={id} className={className}>
@@ -39,5 +43,29 @@ export const List: React.FC<ListProps> = ({ data, className, id }): JSX.Element 
         ))}
       </ul>
     </Fragment>
+  );
+};
+
+interface InfoProps {
+  infoContentFirst?: string;
+  infoContentSecond?: string;
+}
+
+type InfoType = {
+  data: Array<InfoProps>;
+  className?: string;
+  id?: string;
+};
+
+export const Info: React.FC<InfoType> = ({ data, className }): JSX.Element => {
+  return (
+    <div className={className}>
+      {data.map((info, key) => (
+        <div key={key}>
+          <p>{info.infoContentFirst}</p>
+          <p>{info.infoContentSecond}</p>
+        </div>
+      ))}
+    </div>
   );
 };

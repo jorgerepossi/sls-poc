@@ -1,6 +1,5 @@
 import React from "react";
 import { Data } from "./Data";
-import { Navbar } from "./Navbar";
 import styled from "@emotion/styled";
 import { List } from "../List";
 

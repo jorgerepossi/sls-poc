@@ -34,8 +34,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <Link
-      activeClassName={activeClassName}
-      inactiveClassName={inactiveClassName}
       className={allClassName}
       to={to}
       alt={alt}
