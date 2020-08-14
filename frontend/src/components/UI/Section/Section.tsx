@@ -28,9 +28,7 @@ const SectionCenterStyled = styled.section`
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  .Grid {
-    display: grid;
-  }
+  
 `;
 
 export const SectionCenter: React.FC<SectionCenterProps> = ({ children, className }): JSX.Element => (

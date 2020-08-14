@@ -21,7 +21,7 @@ export const Navigation = () => {
     <SiteContent className="site-header">
       <div>logo</div>
       <nav>
-        <List data={Data} />
+        <List data={Data}  />
       </nav>
       <div>redes sociales</div>
     </SiteContent>
