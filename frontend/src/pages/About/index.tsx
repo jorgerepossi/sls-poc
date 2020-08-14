@@ -1,9 +1,13 @@
 import React from "react";
-import { Section } from "./../../components";
-
+import { Section, Seo } from "./../../components";
 
 const About: React.FC = (): JSX.Element => {
-  return <Section>About Us</Section>;
+  return (
+    <>
+      <Seo title='About Us' metaDescription='' />
+      <Section>About Us</Section>
+    </>
+  );
 };
 
 export default About;

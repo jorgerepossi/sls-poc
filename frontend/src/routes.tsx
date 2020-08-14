@@ -5,6 +5,8 @@ import Loading from "./components/Loading";
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const OurWork = lazy(() => import("./pages/OurWork"));
+const Team = lazy(() => import("./pages/Team"));
+
 const Contact = lazy(() => import("./pages/Contact"));
 
 const routes = (
@@ -13,6 +15,7 @@ const routes = (
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/our-work" component={OurWork} />
+      <Route path="/team" component={Team} />
       <Route path="/contact" component={Contact} />
     </Switch>
   </Suspense>

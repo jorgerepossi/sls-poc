@@ -1,8 +1,13 @@
 import React from "react";
-import { Section } from "./../../components";
+import { Section, Seo } from "./../../components";
 
 const Home = () => {
-  return <Section>From home</Section>;
+  return (
+    <>
+      <Seo title="Home" metaDescription='ss' />
+      <Section id="Home">Home</Section>
+    </>
+  );
 };
 
 export default Home;

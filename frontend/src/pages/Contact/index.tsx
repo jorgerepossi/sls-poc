@@ -1,8 +1,13 @@
 import React from "react";
-import { Section } from "./../../components";
+import { Section, Seo } from "./../../components";
 
 const Contact = () => {
-  return <Section id="Contact">Hi From contact</Section>;
+  return (
+    <>
+      <Seo title="Contact"   />
+      <Section id="Contact">Hi From contact</Section>
+    </>
+  );
 };
 
 export default Contact;

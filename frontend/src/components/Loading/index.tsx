@@ -3,7 +3,7 @@ import { Typography, CircularProgress } from "@material-ui/core";
 
 const Loading = () => (
   <div className="loading-page">
-    <Typography variant="h2">Loading...</Typography>
+    <Typography variant="inherit">Loading...</Typography>
     <CircularProgress />
   </div>
 );
