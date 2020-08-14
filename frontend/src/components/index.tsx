@@ -4,3 +4,4 @@ export { Section } from "./UI/Section";
 export { Navbar } from "./Navbar/";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
+export { List } from './List'

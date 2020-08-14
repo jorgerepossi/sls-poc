@@ -4,11 +4,10 @@ import styled from "@emotion/styled";
 interface HeaderProps {}
 
 const HeaderStyled = styled.header`
-position: absolute;
+position: relative;
 z-index: 99;
 width: 100%;
-left: 0;
-top: 0;
+ 
 
 `;
 

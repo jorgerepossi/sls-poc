@@ -14,6 +14,8 @@ import routes from "./routes";
 import { Navigation } from "./components/Navbar";
 
 import "./components/styles/Reset.scss";
+import "./components/styles/Main.scss";
+
 import "./components/styles/Normalize.css";
 
 const store = configureStore({

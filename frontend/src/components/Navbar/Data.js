@@ -2,19 +2,26 @@ export const Data = [
   {
     to: "/",
     seo: "Home",
-    target: "",
     sitelink: "Home",
   },
   {
     to: "/about",
     seo: "About",
-    target: "",
     sitelink: "About",
+  },
+  {
+    to: "/our-work",
+    seo: "Our Work",
+    sitelink: "Our Work",
+  },
+  {
+    to: "/team",
+    seo: "Team",
+    sitelink: "Team",
   },
   {
     to: "/contact",
     seo: "Contact",
-    target: "",
     sitelink: "Contact",
   },
 ];

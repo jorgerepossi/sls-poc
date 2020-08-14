@@ -2,6 +2,7 @@ import React from "react";
 import { Data } from "./Data";
 import { Navbar } from "./Navbar";
 import styled from "@emotion/styled";
+import { List } from "../List";
 
 const SiteContent = styled.div`
   display: flex;
@@ -9,6 +10,11 @@ const SiteContent = styled.div`
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  nav {
+    ul {
+      display: flex;
+    }
+  }
 `;
 
 export const Navigation = () => {
@@ -16,19 +22,7 @@ export const Navigation = () => {
     <SiteContent className="site-header">
       <div>logo</div>
       <nav>
-        <ul>
-          {Data.map((item, key) => (
-            <li key={key}>
-              <Navbar
-                to={item.to}
-                className="menu"
-                sitelink={item.sitelink}
-                title={item.seo}
-                alt={item.seo}
-              />
-            </li>
-          ))}
-        </ul>
+        <List data={Data} />
       </nav>
       <div>redes sociales</div>
     </SiteContent>
