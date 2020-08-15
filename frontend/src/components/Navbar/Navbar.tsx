@@ -1,20 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-interface NavbarProps {
-  to?: string;
-  className?: string;
-  activeClassName?: string;
-  inactiveClassName?: string;
-  exact?: string;
-  sitelink?: string;
-  alt?: string;
-  title?: string;
-  target?: string;
-  onClick?: Function;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({
+export const Navbar = ({
   to,
   className,
   activeClassName,
@@ -26,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   target,
   onClick,
   ...rest
-}): JSX.Element => {
+}: NavbarProps): JSX.Element => {
   let location = useLocation();
   let isActive = location.pathname === to;
   let allClassName =

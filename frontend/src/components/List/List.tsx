@@ -1,30 +1,7 @@
 import React, { Fragment } from "react";
 import { Navbar } from "./../Navbar";
 
-type TypeProps = {
-  data: Array<ListProps>;
-  className?: string;
-  id?: string;
-};
-
-interface ListProps {
-  to?: string;
-  className?: string;
-  activeClassName?: string;
-  inactiveClassName?: string;
-  exact?: string;
-  sitelink?: string;
-  alt?: string;
-  title?: string;
-  target?: string;
-  seo?: string;
-}
-
-export const List: React.FC<TypeProps> = ({
-  data,
-  className,
-  id,
-}): JSX.Element => {
+export const List = ({ data, className, id }: TypeProps): JSX.Element => {
   return (
     <Fragment>
       <ul id={id} className={className}>
@@ -46,18 +23,7 @@ export const List: React.FC<TypeProps> = ({
   );
 };
 
-interface InfoProps {
-  infoContentFirst?: string;
-  infoContentSecond?: string;
-}
-
-type InfoType = {
-  data: Array<InfoProps>;
-  className?: string;
-  id?: string;
-};
-
-export const Info: React.FC<InfoType> = ({ data, className }): JSX.Element => {
+export const Info = ({ data, className }: InfoType): JSX.Element => {
   return (
     <div className={className}>
       {data.map((info, key) => (

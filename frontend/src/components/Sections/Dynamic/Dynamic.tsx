@@ -1,20 +1,15 @@
 import React from "react";
 import { SectionCenter } from "./../../index";
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box } from "@material-ui/core";
 
-
-type DynamicType = {
-     subtitle: string;
-     content: string;
-     title: string;
-}
-
-export const Dynamic: React.FC<DynamicType> = ({ title, content, subtitle }): JSX.Element => {
+export const Dynamic = ({
+  title,
+  content,
+  subtitle,
+}: DynamicType): JSX.Element => {
   return (
-    <SectionCenter className="SectionGrid Grid">
-      <Box>
-           hola
-      </Box>
+    <SectionCenter  Flex className="SectionGrid  ">
+      <Box>hola</Box>
       <Box>
         <Box> {subtitle} </Box>
         <Typography component="h3">
