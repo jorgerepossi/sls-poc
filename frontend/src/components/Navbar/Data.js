@@ -5,6 +5,11 @@ export const Data = [
     sitelink: "Home",
   },
   {
+    to: "/services",
+    seo: "Services",
+    sitelink: "Services",
+  },
+  {
     to: "/about",
     seo: "About",
     sitelink: "About",
@@ -32,8 +37,8 @@ export const InfoData = [
     infoContentSecond: "NY 10002, USA",
   },
   {
-    infoContentFirst: "info_company@mail.com",
-    infoContentSecond: "info@mail.com",
+    infoContentFirst: "info_company@dispatchsss.com",
+    infoContentSecond: "info@dispatchsss.com",
   },
   {
     infoContentFirst: "+549 011 123 456 789",
@@ -42,6 +47,6 @@ export const InfoData = [
 ];
 
 export const Social = [
-  { mame: "Facebook", link: "" },
-  { mame: "Instagram", link: "" },
+  { name: "Facebook", link: "" },
+  { name: "Instagram", link: "" },
 ];

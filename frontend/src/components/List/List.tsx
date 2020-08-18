@@ -1,10 +1,15 @@
 import React, { Fragment } from "react";
 import { Navbar } from "./../Navbar";
+import style from "./../styles/Common.module.css";
 
-export const List = ({ data, className, id }: TypeProps): JSX.Element => {
+export const List = ({ data, className, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
+  const classes = [
+    Flex && ` ${style.Flex}`,
+    Grid && ` ${style.Grid}`,
+    JustifyCenter && ` ${style.JustifyCenter}`, className,];
   return (
     <Fragment>
-      <ul id={id} className={className}>
+      <ul id={id} className={classes.join(" ")}>
         {data.map((item, key) => (
           <li key={key}>
             <Navbar
@@ -24,6 +29,7 @@ export const List = ({ data, className, id }: TypeProps): JSX.Element => {
 };
 
 export const Info = ({ data, className }: InfoType): JSX.Element => {
+  
   return (
     <div className={className}>
       {data.map((info, key) => (
@@ -35,3 +41,13 @@ export const Info = ({ data, className }: InfoType): JSX.Element => {
     </div>
   );
 };
+
+export const SocialIcon = ({ data }) =>{
+  return(
+    <ul>
+      {data.map((item, key)=>(
+        <li key={key} >{item.name}</li>
+      ))}
+    </ul>
+  )
+}

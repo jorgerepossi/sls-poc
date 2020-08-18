@@ -1,7 +1,11 @@
-.Flex{
-    display: flex;
+.Flex {
+  display: flex;
 }
 
-.Grid{
-    display: grid;
+.Grid {
+  display: grid;
+}
+
+.JustifyCenter {
+  justify-content: center;
 }

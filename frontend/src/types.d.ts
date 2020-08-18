@@ -1,4 +1,4 @@
-import { SectionProps, DisplayProps } from './types.d';
+import { SectionProps, DisplayProps } from "./types.d";
 declare global {
   // Interfaces
   export interface NavbarProps {
@@ -32,10 +32,11 @@ declare global {
     infoContentSecond?: string;
   }
 
-  export interface DisplayProps {
+  export type DisplayProps = {
     Flex?: any;
     Grid?: any;
-  }
+    JustifyCenter?: any;
+  };
 
   export interface SectionCenterProps {
     id?: string;
@@ -51,19 +52,17 @@ declare global {
     children: any;
   }
 
-  export interface SectionProps extends DisplayProps{}
-
-  //export interface BaseSectionProps extends SectionProps, DisplayProps {}
-  export interface BaseSectionCenterProps
-    extends SectionCenterProps,
-      DisplayProps {}
-
-  // Types
-  export type TypeProps = {
+  export interface TypeProps extends DisplayProps {
     data: Array<ListProps>;
     className?: string;
     id?: string;
-  };
+  }
+
+  export interface SectionProps extends DisplayProps {}
+  export interface SectionCenterProps extends DisplayProps {}
+
+  // Types
+
   export type DynamicType = {
     subtitle: string;
     content: string;

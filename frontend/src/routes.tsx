@@ -8,11 +8,13 @@ const OurWork = lazy(() => import("./pages/OurWork"));
 const Team = lazy(() => import("./pages/Team"));
 
 const Contact = lazy(() => import("./pages/Contact"));
+const Services = lazy(() => import ('./pages/Services'));
 
 const routes = (
   <Suspense fallback={<Loading />}>
     <Switch key="router">
       <Route exact path="/" component={Home} />
+      <Route path="/services" component={Services} />
       <Route path="/about" component={About} />
       <Route path="/our-work" component={OurWork} />
       <Route path="/team" component={Team} />
