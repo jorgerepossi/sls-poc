@@ -1,3 +1,4 @@
+import { SectionProps, DisplayProps } from './types.d';
 declare global {
   // Interfaces
   export interface NavbarProps {
@@ -50,7 +51,9 @@ declare global {
     children: any;
   }
 
-  export interface BaseSectionProps extends SectionProps, DisplayProps {}
+  export interface SectionProps extends DisplayProps{}
+
+  //export interface BaseSectionProps extends SectionProps, DisplayProps {}
   export interface BaseSectionCenterProps
     extends SectionCenterProps,
       DisplayProps {}

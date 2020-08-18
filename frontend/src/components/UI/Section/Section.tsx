@@ -12,7 +12,7 @@ export const Section = ({
   className,
   Flex,
   Grid,
-}: BaseSectionProps): JSX.Element => {
+}: SectionProps): JSX.Element => {
   const classes = [className, Flex && style.Flex, Grid && style.Grid];
 
   return (
