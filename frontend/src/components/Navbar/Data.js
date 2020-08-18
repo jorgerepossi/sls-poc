@@ -49,4 +49,6 @@ export const InfoData = [
 export const Social = [
   { name: "Facebook", link: "" },
   { name: "Instagram", link: "" },
+  { name: "LinkedIn", link: "" },
+  { name: "Twitter", link: "" },
 ];

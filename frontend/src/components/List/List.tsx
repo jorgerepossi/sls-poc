@@ -3,10 +3,7 @@ import { Navbar } from "./../Navbar";
 import style from "./../styles/Common.module.css";
 
 export const List = ({ data, className, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
-  const classes = [
-    Flex && ` ${style.Flex}`,
-    Grid && ` ${style.Grid}`,
-    JustifyCenter && ` ${style.JustifyCenter}`, className,];
+  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
   return (
     <Fragment>
       <ul id={id} className={classes.join(" ")}>
@@ -29,7 +26,6 @@ export const List = ({ data, className, id, Flex, Grid, JustifyCenter }: TypePro
 };
 
 export const Info = ({ data, className }: InfoType): JSX.Element => {
-  
   return (
     <div className={className}>
       {data.map((info, key) => (
@@ -42,12 +38,22 @@ export const Info = ({ data, className }: InfoType): JSX.Element => {
   );
 };
 
-export const SocialIcon = ({ data }) =>{
-  return(
-    <ul>
-      {data.map((item, key)=>(
-        <li key={key} >{item.name}</li>
-      ))}
-    </ul>
-  )
-}
+interface SocialIconProps extends TypeProps {}
+
+export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter }: SocialIconProps) => {
+  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
+
+  if (data) {
+    return (
+      <Fragment>
+        <ul id={id} className={classes.join(" ")}>
+          {data.map((item, key) => (
+            <li key={key}>{item.name}</li>
+          ))}
+        </ul>
+      </Fragment>
+    );
+  } else {
+    return <div></div>;
+  }
+};

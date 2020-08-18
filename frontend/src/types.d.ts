@@ -25,6 +25,7 @@ declare global {
     title?: string;
     target?: string;
     seo?: string;
+    name?: string;
   }
 
   export interface InfoProps {
@@ -56,6 +57,7 @@ declare global {
     data: Array<ListProps>;
     className?: string;
     id?: string;
+    name?: string;
   }
 
   export interface SectionProps extends DisplayProps {}

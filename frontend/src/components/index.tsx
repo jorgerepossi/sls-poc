@@ -9,4 +9,4 @@ export { Seo } from "./Seo";
 
 /** export sections  */
 export { Dynamic } from "./Sections/Dynamic/";
-export { Services } from "./Sections/Services/";
+export { OurServices } from "./Sections/OurServices";

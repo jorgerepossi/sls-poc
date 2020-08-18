@@ -1,8 +1,8 @@
 import React from "react";
-import { Data, Social  } from "./Data";
+import { Data, Social } from "./Data";
 import styled from "@emotion/styled";
-import { List  } from "../List";
-import {  SocialIcon } from "../List";
+import { List } from "../List";
+import { SocialIcon } from "../List";
 
 const SiteContent = styled.div`
   display: flex;
@@ -21,10 +21,13 @@ export const Navigation = () => {
   return (
     <SiteContent className="site-header">
       <div>logo</div>
+
       <nav>
-        <List data={Data}  />
+        <List data={Data} />
       </nav>
-      <SocialIcon data={Social } />
+      <div>
+        <SocialIcon data={Social} />
+      </div>
     </SiteContent>
   );
 };

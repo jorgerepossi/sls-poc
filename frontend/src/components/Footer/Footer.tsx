@@ -1,16 +1,20 @@
 import React from "react";
 import FooterStyled from "./Footer.styled";
-import { Data, InfoData } from "./../Navbar/Data";
-import { List, Info } from "../List";
-import { SectionCenter } from "./../index";
+import { Data, InfoData, Social } from "./../Navbar/Data";
+import { List, Info, SocialIcon } from "../List";
+import { Section, SectionCenter } from "./../index";
 
 export const Footer = () => {
   return (
     <FooterStyled>
       <SectionCenter className="footerContent ">
-        <List data={Data} className="footerContent " Flex JustifyCenter />
+        
         <Info data={InfoData} />
-        <p>Copyright © 2020 by VerboStudio. All Rights Reserved.</p>
+        <List data={Data} className="footerContent " Flex JustifyCenter />
+        <p>Copyright © 2020 by <a href="https://www.verbostudio.com/" target="_blank" rel="noopener noreferrer"  >VerboStudio</a>. All Rights Reserved.</p>
+        <Section Flex JustifyCenter>
+          <SocialIcon  data={Social}  Flex JustifyCenter />
+        </Section>
       </SectionCenter>
     </FooterStyled>
   );
