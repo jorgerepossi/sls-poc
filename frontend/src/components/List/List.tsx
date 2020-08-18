@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { Link } from 'react-router-dom'
 import { Navbar } from "./../Navbar";
 import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
+
 
 export const List = ({ data, className, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
   const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
