@@ -2,32 +2,32 @@ export const Data = [
   {
     to: "/",
     seo: "Home",
-    sitelink: "Home",
+    siteto: "Home",
   },
   {
     to: "/services",
     seo: "Services",
-    sitelink: "Services",
+    siteto: "Services",
   },
   {
     to: "/about",
     seo: "About",
-    sitelink: "About",
+    siteto: "About",
   },
   {
     to: "/our-work",
     seo: "Our IT Work",
-    sitelink: "Our Work",
+    siteto: "Our Work",
   },
   {
     to: "/team",
     seo: "Team",
-    sitelink: "Team",
+    siteto: "Team",
   },
   {
     to: "/contact",
     seo: "Contact",
-    sitelink: "Contact",
+    siteto: "Contact",
   },
 ];
 
@@ -47,8 +47,16 @@ export const InfoData = [
 ];
 
 export const Social = [
-  { name: "Facebook", link: "" },
-  { name: "Instagram", link: "" },
-  { name: "LinkedIn", link: "" },
-  { name: "Twitter", link: "" },
+  { name: "Facebook", 
+  to: "https://www.facebook.com/", 
+  iconimg: "fab fa-facebook-f" },
+  { name: "Instagram", 
+  to: "https://www.instagram.com/", 
+  iconimg: "fab fa-instagram" },
+  { name: "toedIn", 
+  to: "https://www.toedin.com/", 
+  iconimg: "fab fa-linkedin-in" },
+  { name: "Twitter", 
+  to: "https://www.toedin.com/", 
+  iconimg: "fab fa-twitter" },
 ];

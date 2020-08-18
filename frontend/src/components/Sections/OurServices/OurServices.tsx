@@ -1,7 +1,11 @@
 import React from "react";
+
 import { Section, SectionCenter } from "../../index";
 import { Typography, Box } from "@material-ui/core";
+import { Heading } from "../../Heading";
+
 import "./ServiceWrapper.scss";
+import { OurDevelopmentCycle } from "../OurDevelopmentCycle";
 
 interface OurServiceProps extends DynamicType {
   data?: any;
@@ -11,11 +15,7 @@ export const OurServices = ({ subtitle, title, content, data }: OurServiceProps)
   return (
     <SectionCenter>
       <Section>
-        <Box> {subtitle} </Box>
-        <Typography component="h3">
-          <span> {title} </span>
-        </Typography>
-        <Typography>{content}</Typography>
+        <Heading subtitle={subtitle} title={title} content={content} />
       </Section>
 
       <Section id="ServiceWrapper" Grid>
@@ -48,6 +48,13 @@ export const OurServices = ({ subtitle, title, content, data }: OurServiceProps)
             </div>
           );
         })}
+      </Section>
+      <Section>
+        <OurDevelopmentCycle
+          subtitle="what we do"
+          title="Our Development Cycle"
+          content="But building it before the development of a full-fledged application is a widespread practice that always pays off in the end."
+        />
       </Section>
     </SectionCenter>
   );

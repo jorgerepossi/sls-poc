@@ -26,6 +26,7 @@ declare global {
     target?: string;
     seo?: string;
     name?: string;
+    iconimg?: any;
   }
 
   export interface InfoProps {

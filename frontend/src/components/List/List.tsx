@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
+import { Link } from 'react-router-dom'
 import { Navbar } from "./../Navbar";
+import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 
 export const List = ({ data, className, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
@@ -38,9 +40,12 @@ export const Info = ({ data, className }: InfoType): JSX.Element => {
   );
 };
 
-interface SocialIconProps extends TypeProps {}
+interface SocialIconProps extends TypeProps {
+  iconimg?: string;
+  
+}
 
-export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter }: SocialIconProps) => {
+export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter, iconimg  }: SocialIconProps) => {
   const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
 
   if (data) {
@@ -48,7 +53,11 @@ export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter }: S
       <Fragment>
         <ul id={id} className={classes.join(" ")}>
           {data.map((item, key) => (
-            <li key={key}>{item.name}</li>
+            <li key={key}>
+              <a href={item.to}>
+                <Icon iconimg={item.iconimg} />
+              </a>
+            </li>
           ))}
         </ul>
       </Fragment>

@@ -1,6 +1,6 @@
 import React from "react";
-import { SectionCenter } from "./../../index";
-import { Typography, Box } from "@material-ui/core";
+import { SectionCenter, Heading } from "./../../index";
+import { Box } from "@material-ui/core";
 
 export const Dynamic = ({
   title,
@@ -11,11 +11,7 @@ export const Dynamic = ({
     <SectionCenter  Flex className="SectionGrid  ">
       <Box>hola</Box>
       <Box>
-        <Box> {subtitle} </Box>
-        <Typography component="h3">
-          <span> {title} </span>
-        </Typography>
-        <Typography>{content}</Typography>
+        <Heading subtitle={subtitle} title={title} content={content} />
       </Box>
     </SectionCenter>
   );
