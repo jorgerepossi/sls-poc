@@ -47,16 +47,8 @@ export const InfoData = [
 ];
 
 export const Social = [
-  { name: "Facebook", 
-  to: "https://www.facebook.com/", 
-  iconimg: "fab fa-facebook-f" },
-  { name: "Instagram", 
-  to: "https://www.instagram.com/", 
-  iconimg: "fab fa-instagram" },
-  { name: "toedIn", 
-  to: "https://www.toedin.com/", 
-  iconimg: "fab fa-linkedin-in" },
-  { name: "Twitter", 
-  to: "https://www.toedin.com/", 
-  iconimg: "fab fa-twitter" },
-];
+         { name: "Facebook", to: "https://www.facebook.com/", iconimg: "fab fa-facebook-f" },
+         { name: "Instagram", to: "https://www.instagram.com/", iconimg: "fab fa-instagram" },
+         { name: "toedIn", to: "https://www.toedin.com/", iconimg: "fab fa-linkedin-in" },
+         { name: "Twitter", to: "https://www.toedin.com/", iconimg: "ti-palette" },
+       ];
