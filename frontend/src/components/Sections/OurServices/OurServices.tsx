@@ -31,7 +31,7 @@ export const OurServices = ({
         />
       </Section>
 
-      <Section id="ServiceWrapper" Grid>
+      <Section id="ServiceWrapper" Display="grid">
         {data.map((item, key) => {
           return (
             <Box key={key}>
@@ -56,8 +56,7 @@ export const OurServices = ({
                     </Box>
                   </Box>
                   <Box>
-                    {" "}
-                    <Icon iconimg="ti-arrow-top-right" />{" "}
+                    <Icon iconimg="ti-arrow-top-right" />
                   </Box>
                 </Box>
               </Box>

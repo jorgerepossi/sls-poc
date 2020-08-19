@@ -1,5 +1,47 @@
 import { SectionProps, DisplayProps } from "./types.d";
 declare global {
+  // Types
+
+  export type DisplayProps = {
+    Flex?: any;
+    Grid?: any;
+    JustifyCenter?: any;
+    Display?:
+      | "flex"
+      | "flex-inline"
+      | "block"
+      | "inline-block"
+      | "grid"
+      | "none";
+    Direction?: "row" | "row-reverse" | "column" | "column-reverse";
+    JustifyContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "space-between"
+      | "space-around"
+      | "space-evenly";
+    AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
+    AlignContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "stretch"
+      | "baseline";
+  };
+
+  export type DynamicType = {
+    subtitle: string;
+    content: string;
+    title: string;
+  };
+
+  export type InfoType  = {
+    data: Array<InfoProps>;
+    className?: string;
+    id?: string;
+  };
+
   // Interfaces
   export interface NavbarProps {
     to?: string;
@@ -65,42 +107,6 @@ declare global {
 
   export interface SectionProps extends DisplayProps {}
   export interface SectionCenterProps extends DisplayProps {}
-
-  // Types
-
-  export type DisplayProps = {
-    Flex?: any;
-    Grid?: any;
-    JustifyCenter?: any;
-    Display?: "flex" | "block" | "flex-inline" | "grid";
-    Direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    JustifyContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "space-between"
-      | "space-around"
-      | "space-evenly";
-    AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    AlignContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "stretch"
-      | "baseline";
-  };
-
-  export type DynamicType = {
-    subtitle: string;
-    content: string;
-    title: string;
-  };
-
-  export type InfoType = {
-    data: Array<InfoProps>;
-    className?: string;
-    id?: string;
-  };
 }
 
 export {};
