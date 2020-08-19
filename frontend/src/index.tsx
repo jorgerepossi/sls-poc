@@ -16,6 +16,7 @@ import { Navigation } from "./components/Navbar";
 import "./components/styles/Reset.scss";
 import "./components/styles/Main.scss";
 import "./components/styles/Normalize.css";
+import "./components/styles/ThemifyIcon/themify-icons.css";
 
 const store = configureStore({
   reducer: rootReducer,
