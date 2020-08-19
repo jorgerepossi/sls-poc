@@ -6,12 +6,12 @@ export const Data = [
   },
   {
     to: "/services",
-    seo: "Services",
+    seo: "Our Services",
     sitelink: "Services",
   },
   {
     to: "/about",
-    seo: "About",
+    seo: "About Us",
     sitelink: "About",
   },
   {
@@ -21,14 +21,10 @@ export const Data = [
   },
   {
     to: "/team",
-    seo: "Team",
-    sitelink: "Team",
+    seo: "Our Team",
+    sitelink: "Our Team",
   },
-  {
-    to: "/contact",
-    seo: "Contact",
-    sitelink: "Contact",
-  },
+  
 ];
 
 export const InfoData = [

@@ -38,16 +38,16 @@ export const List = ({
   );
 };
 
-export const Info: React.FC<InfoType> = ({ data, className }): JSX.Element => {
+export const Info: React.FC<InfoType> = ({ data }): JSX.Element => {
   return (
-    <div className={className}>
+    <>
       {data.map((info, key) => (
         <div key={key}>
           <p>{info.infoContentFirst}</p>
           <p>{info.infoContentSecond}</p>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

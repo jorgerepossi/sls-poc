@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 
@@ -53,8 +52,16 @@ const HeadingStyled = styled.div<DisplayProps>`
   align-items: ${(props) => props.AlignItems};
 `;
 
+Heading.propsTypes = {
+  subtitle: PropTypes.string,
+  title: PropTypes.string,
+  content: PropTypes.string,
+};
+
 Heading.defaultProps = {
   subtitle: "subtitle",
   title: "title",
   content: "content",
+  Display: "flex",
+  Direction: "column",
 };

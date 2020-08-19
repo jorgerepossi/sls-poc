@@ -11,7 +11,7 @@ import apolloClient from "./apolloClient";
 import rootReducer from "./reducers";
 import { Layout, Footer, Header } from "./components/";
 import routes from "./routes";
-import { Navigation } from "./components/Navbar";
+import { Navigation } from "./components/";
 
 import "./components/styles/Reset.scss";
 import "./components/styles/Main.scss";

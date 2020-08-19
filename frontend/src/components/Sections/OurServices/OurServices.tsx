@@ -64,7 +64,8 @@ export const OurServices = ({
           );
         })}
       </Section>
-      <Section>
+
+      <Section id="WhatWeDo">
         <OurDevelopmentCycle
           subtitle="what we do"
           title="Our Development Cycle"
