@@ -6,6 +6,7 @@ import style from "./../styles/Common.module.css";
 export const List = ({
   data,
   className,
+  listClass, 
   id,
   Flex,
   Grid,
@@ -21,7 +22,7 @@ export const List = ({
     <Fragment>
       <ul id={id} className={classes.join(" ")}>
         {data.map((item, key) => (
-          <li key={key}>
+          <li key={key} className={listClass}>
             <Navbar
               activeClassName="active"
               inactiveClassName="false"

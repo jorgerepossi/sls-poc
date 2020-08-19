@@ -1,31 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,800&display=swap");
 
 :root {
-    --dark-color: hsl(240, 14%, 13%);
+  --dark-color: hsla(240, 14%, 13%, 100%);
+  --orange-color: hsla(6, 100%, 76%, 100%);
+  --cyan-color: hsl(184, 81%, 67%);
+  --violet-color: hsl(238, 72%, 80%);
 }
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.875;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.875;
 
-    //font-weight: 400;
-    color: #616161;
-    position: relative;
-    overflow-x: hidden;
+  //font-weight: 400;
+  color: #616161;
+  position: relative;
+  overflow-x: hidden;
 }
 
-body, html {
-    max-width: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+body,
+html {
+  max-width: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 p {
-    font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }

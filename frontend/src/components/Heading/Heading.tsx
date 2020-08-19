@@ -3,18 +3,7 @@ import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 
-export const Heading = ({
-  id,
-  title,
-  content,
-  subtitle,
-  className,
-  Display,
-  Direction,
-  AlignItems,
-  AlignContent,
-  JustifyContent,
-}: HeadingProps) => {
+export const Heading = ({ id, title, content, subtitle, className, Display, Direction, AlignItems, AlignContent, JustifyContent }: HeadingProps) => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
@@ -34,11 +23,11 @@ export const Heading = ({
 
       <Box className="HeadingContentTitle">
         <Typography component="h3">
-          <span>{title}</span>
+          <span className="title">{title}</span>
         </Typography>
       </Box>
       <Box className="HeadingContentBox">
-        <Typography>{content}</Typography>
+        <Typography className="SideMargin">{content}</Typography>
       </Box>
     </HeadingStyled>
   );
@@ -50,6 +39,27 @@ const HeadingStyled = styled.div<DisplayProps>`
   justify-content: ${(props) => props.JustifyContent};
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
+  font-family: "Nunito Sans", sans-serif;
+  h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Nunito Sans", sans-serif;
+    span {
+      &.title {
+        color: #1c1c25;
+        margin-bottom: 20px;
+        display: block;
+      }
+    }
+  }
+  .HeadingContentBox {
+    p {
+      font-family: "Nunito Sans", sans-serif;
+      color: #616161;
+      font-weight: 400;
+    }
+  }
+  /** color: #616161; */
 `;
 
 Heading.propsTypes = {

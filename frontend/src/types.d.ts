@@ -6,28 +6,11 @@ declare global {
     Flex?: any;
     Grid?: any;
     JustifyCenter?: any;
-    Display?:
-      | "flex"
-      | "flex-inline"
-      | "block"
-      | "inline-block"
-      | "grid"
-      | "none";
+    Display?: "flex" | "flex-inline" | "block" | "inline-block" | "grid" | "none";
     Direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    JustifyContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "space-between"
-      | "space-around"
-      | "space-evenly";
+    JustifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
     AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    AlignContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "stretch"
-      | "baseline";
+    AlignContent?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
   };
 
   export type DynamicType = {
@@ -36,7 +19,7 @@ declare global {
     title: string;
   };
 
-  export type InfoType  = {
+  export type InfoType = {
     data: Array<InfoProps>;
     className?: string;
     id?: string;
@@ -101,6 +84,7 @@ declare global {
   export interface TypeProps extends DisplayProps {
     data: Array<ListProps>;
     className?: string;
+    listClass?: string;
     id?: string;
     name?: string;
   }
