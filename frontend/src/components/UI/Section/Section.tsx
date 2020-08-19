@@ -6,11 +6,20 @@ const SectionStyled = styled.section`
   width: 100%;
 `;
 
-export const Section = ({ children, id, className, Flex, Grid, JustifyCenter }: SectionProps): JSX.Element => {
+export const Section = ({
+  children,
+  id,
+  className,
+  Flex,
+  Grid,
+  JustifyCenter,
+}: SectionProps): JSX.Element => {
   const classes = [
-    Flex && ` ${style.Flex}`,  
-    Grid && ` ${style.Grid}`, 
-    JustifyCenter && ` ${style.JustifyCenter}`, className,    ];
+    Flex && ` ${style.Flex}`,
+    Grid && ` ${style.Grid}`,
+    JustifyCenter && ` ${style.JustifyCenter}`,
+    className,
+  ];
 
   return (
     <SectionStyled id={id} className={classes.join(" ")}>
@@ -26,7 +35,13 @@ const SectionCenterStyled = styled.section`
   position: relative;
 `;
 
-export const SectionCenter = ({ id, children, className, Flex, Grid }: SectionCenterProps): JSX.Element => {
+export const SectionCenter = ({
+  id,
+  children,
+  className,
+  Flex,
+  Grid,
+}: SectionCenterProps): JSX.Element => {
   const classes = [className, Flex && style.Flex, Grid && style.Grid];
 
   return (

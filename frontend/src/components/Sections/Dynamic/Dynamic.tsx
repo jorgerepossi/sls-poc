@@ -8,7 +8,7 @@ export const Dynamic = ({
   subtitle,
 }: DynamicType): JSX.Element => {
   return (
-    <SectionCenter  Flex className="SectionGrid  ">
+    <SectionCenter Flex className="SectionGrid  ">
       <Box>hola</Box>
       <Box>
         <Heading subtitle={subtitle} title={title} content={content} />

@@ -34,11 +34,13 @@ declare global {
     infoContentSecond?: string;
   }
 
-  export type DisplayProps = {
-    Flex?: any;
-    Grid?: any;
-    JustifyCenter?: any;
-  };
+  export interface HeadingProps extends DisplayProps {
+    className?: string;
+    id?: string;
+    subtitle?: string;
+    title?: string;
+    content?: string;
+  }
 
   export interface SectionCenterProps {
     id?: string;
@@ -65,6 +67,28 @@ declare global {
   export interface SectionCenterProps extends DisplayProps {}
 
   // Types
+
+  export type DisplayProps = {
+    Flex?: any;
+    Grid?: any;
+    JustifyCenter?: any;
+    Display?: "flex" | "block" | "flex-inline" | "grid";
+    Direction?: "row" | "row-reverse" | "column" | "column-reverse";
+    JustifyContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "space-between"
+      | "space-around"
+      | "space-evenly";
+    AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
+    AlignContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "stretch"
+      | "baseline";
+  };
 
   export type DynamicType = {
     subtitle: string;

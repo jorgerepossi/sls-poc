@@ -1,27 +1,40 @@
 import React from "react";
-
-import { Section, SectionCenter } from "../../index";
+import { Section, SectionCenter, Icon } from "../../index";
 import { Typography, Box } from "@material-ui/core";
 import { Heading } from "../../Heading";
-
 import "./ServiceWrapper.scss";
+
 import { OurDevelopmentCycle } from "../OurDevelopmentCycle";
 
 interface OurServiceProps extends DynamicType {
   data?: any;
+  JustifyContent?: string;
 }
 
-export const OurServices = ({ subtitle, title, content, data }: OurServiceProps): JSX.Element => {
+export const OurServices = ({
+  subtitle,
+  title,
+  content,
+  data,
+}: OurServiceProps): JSX.Element => {
   return (
     <SectionCenter>
-      <Section>
-        <Heading subtitle={subtitle} title={title} content={content} />
+      <Section id="OurService">
+        <Heading
+          subtitle={subtitle}
+          title={title}
+          content={content}
+          className="heading"
+          JustifyContent="center"
+          Direction="column"
+          Display="flex"
+        />
       </Section>
 
       <Section id="ServiceWrapper" Grid>
         {data.map((item, key) => {
           return (
-            <div key={key}>
+            <Box key={key}>
               <Box>
                 <Box>{item.icon}</Box>
                 <Box>
@@ -42,10 +55,13 @@ export const OurServices = ({ subtitle, title, content, data }: OurServiceProps)
                       </ul>
                     </Box>
                   </Box>
-                  <Box> arrow </Box>
+                  <Box>
+                    {" "}
+                    <Icon iconimg="ti-arrow-top-right" />{" "}
+                  </Box>
                 </Box>
               </Box>
-            </div>
+            </Box>
           );
         })}
       </Section>

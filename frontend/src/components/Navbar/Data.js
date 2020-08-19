@@ -2,32 +2,32 @@ export const Data = [
   {
     to: "/",
     seo: "Home",
-    siteto: "Home",
+    sitelink: "Home",
   },
   {
     to: "/services",
     seo: "Services",
-    siteto: "Services",
+    sitelink: "Services",
   },
   {
     to: "/about",
     seo: "About",
-    siteto: "About",
+    sitelink: "About",
   },
   {
     to: "/our-work",
     seo: "Our IT Work",
-    siteto: "Our Work",
+    sitelink: "Our Work",
   },
   {
     to: "/team",
     seo: "Team",
-    siteto: "Team",
+    sitelink: "Team",
   },
   {
     to: "/contact",
     seo: "Contact",
-    siteto: "Contact",
+    sitelink: "Contact",
   },
 ];
 
@@ -47,8 +47,24 @@ export const InfoData = [
 ];
 
 export const Social = [
-         { name: "Facebook", to: "https://www.facebook.com/", iconimg: "fab fa-facebook-f" },
-         { name: "Instagram", to: "https://www.instagram.com/", iconimg: "fab fa-instagram" },
-         { name: "toedIn", to: "https://www.toedin.com/", iconimg: "fab fa-linkedin-in" },
-         { name: "Twitter", to: "https://www.toedin.com/", iconimg: "ti-palette" },
-       ];
+  {
+    name: "Facebook",
+    to: "https://www.facebook.com/",
+    iconimg: "fab fa-facebook-f",
+  },
+  {
+    name: "Instagram",
+    to: "https://www.instagram.com/",
+    iconimg: "fab fa-instagram",
+  },
+  {
+    name: "linkedIn",
+    to: "https://www.liknedin.com/",
+    iconimg: "fab fa-linkedin-in",
+  },
+  {
+    name: "Twitter",
+    to: "https://www.twitter.com/",
+    iconimg: "fab fa-twitter",
+  },
+];

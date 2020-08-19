@@ -1,8 +1,10 @@
 import React from "react";
-import { Data, Social } from "./Data";
+import { Data  } from "./Data";
+import { Box} from "@material-ui/core";
 import styled from "@emotion/styled";
 import { List } from "../List";
-import { SocialIcon } from "../List";
+import { Icon } from "../UI/Icon/IconSet";
+
 
 const SiteContent = styled.div`
   display: flex;
@@ -20,14 +22,14 @@ const SiteContent = styled.div`
 export const Navigation = () => {
   return (
     <SiteContent className="site-header">
-      <div>logo</div>
+      <Box>logo</Box>
 
       <nav>
         <List data={Data} />
       </nav>
-      <div>
-        <SocialIcon data={Social} />
-      </div>
+      <Box>
+      <Icon iconimg="ti-email" />
+      </Box>
     </SiteContent>
   );
 };
