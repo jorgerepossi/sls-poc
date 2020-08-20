@@ -9,8 +9,8 @@ import Box from "@material-ui/core/Box";
 export const Footer = () => {
   return (
     <FooterStyled>
-      <SectionCenter className="footerContent ">
-        <Section id="" Display="flex" JustifyContent="space-between">
+      <SectionCenter className="FooterWrapperContent ">
+        <Section id="FooterData" Display="flex" JustifyContent="space-between">
           <Info data={InfoData} />
         </Section>
 

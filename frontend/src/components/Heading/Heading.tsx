@@ -49,7 +49,7 @@ const Subtitle = ({ subtitle }) => {
       </Box>
     );
   } else {
-    return <Box></Box>;
+    return <></>;
   }
 };
 

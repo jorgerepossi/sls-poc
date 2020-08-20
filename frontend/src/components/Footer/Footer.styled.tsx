@@ -12,6 +12,19 @@ const FooterStyled = styled.footer`
     color: inherit;
   }
 
+  .FooterWrapperContent {
+    #FooterData {
+      .InfoContentFooter {
+        .iconWrapper {
+          transition: 0.4s;
+         
+          .icon {
+            box-shadow: 0px 0px 0px 2px #ffffff inset;
+          }
+        }
+      }
+    }
+  }
   .FooterContent {
     li {
       &.FooterUlLink {

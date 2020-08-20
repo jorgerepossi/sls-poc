@@ -4,21 +4,8 @@ import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 import { Section } from "../UI/Section";
 
-export const List = ({
-  data,
-  className,
-  listClass,
-  id,
-  Flex,
-  Grid,
-  JustifyCenter,
-}: TypeProps): JSX.Element => {
-  const classes = [
-    Flex && ` ${style.Flex}`,
-    Grid && ` ${style.Grid}`,
-    JustifyCenter && ` ${style.JustifyCenter}`,
-    className,
-  ];
+export const List = ({ data, className, listClass, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
+  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
   return (
     <Fragment>
       <ul id={id} className={classes.join(" ")}>
@@ -45,8 +32,10 @@ export const Info = ({ data, iconimg }: InfoProps): JSX.Element => {
     <>
       {data.map((info, key) => (
         <Section Display="flex" className="InfoContentFooter" key={key}>
-          <div>
-            <Icon iconimg={info.iconimg} />
+          <div className="iconWrapper">
+            <span className="icon">
+              <Icon iconimg={info.iconimg} />
+            </span>
           </div>
           <div>
             <p>{info.infoContentFirst}</p>
@@ -62,21 +51,8 @@ interface SocialIconProps extends TypeProps {
   iconimg?: string;
 }
 
-export const SocialIcon = ({
-  data,
-  className,
-  id,
-  Flex,
-  Grid,
-  JustifyCenter,
-  iconimg,
-}: SocialIconProps) => {
-  const classes = [
-    Flex && ` ${style.Flex}`,
-    Grid && ` ${style.Grid}`,
-    JustifyCenter && ` ${style.JustifyCenter}`,
-    className,
-  ];
+export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter, iconimg }: SocialIconProps) => {
+  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
 
   if (data) {
     return (
@@ -93,6 +69,6 @@ export const SocialIcon = ({
       </Fragment>
     );
   } else {
-    return <div></div>;
+    return <></>;
   }
 };
