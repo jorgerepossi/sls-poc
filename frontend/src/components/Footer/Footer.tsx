@@ -16,15 +16,25 @@ export const Footer = () => {
 
         <Section>
           <Box m={4}>
-            <List data={Data} className="FooterContent " listClass="FooterUlLink" Flex JustifyCenter />
+            <List
+              data={Data}
+              className="FooterContent "
+              listClass="FooterUlLink"
+              Flex
+              JustifyCenter
+            />
           </Box>
         </Section>
         <Section id="Copyright">
           <Box m={2} textAlign="center">
             <Typography component="p">
-              Copyright @copy; 2020 {process.env.REACT_APP_BASE_NAME} by
+              Copyright &copy; 2020 {process.env.REACT_APP_BASE_NAME} by
               <span>
-                <a href="https://www.verbostudio.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.verbostudio.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   VerboStudio
                 </a>
               </span>

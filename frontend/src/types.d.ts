@@ -6,11 +6,28 @@ declare global {
     Flex?: any;
     Grid?: any;
     JustifyCenter?: any;
-    Display?: "flex" | "flex-inline" | "block" | "inline-block" | "grid" | "none";
+    Display?:
+      | "flex"
+      | "flex-inline"
+      | "block"
+      | "inline-block"
+      | "grid"
+      | "none";
     Direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    JustifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
+    JustifyContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "space-between"
+      | "space-around"
+      | "space-evenly";
     AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    AlignContent?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
+    AlignContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "stretch"
+      | "baseline";
   };
 
   export type DynamicType = {
@@ -23,6 +40,7 @@ declare global {
     data: Array<InfoProps>;
     className?: string;
     id?: string;
+    iconimg?: string;
   };
 
   // Interfaces
@@ -54,11 +72,6 @@ declare global {
     iconimg?: any;
   }
 
-  export interface InfoProps {
-    infoContentFirst?: string;
-    infoContentSecond?: string;
-  }
-
   export interface HeadingProps extends DisplayProps {
     className?: string;
     id?: string;
@@ -87,6 +100,12 @@ declare global {
     listClass?: string;
     id?: string;
     name?: string;
+  }
+  export interface InfoProps {
+    infoContentFirst?: string;
+    infoContentSecond?: string;
+    iconimg?: any;
+    data: Array<>;
   }
 
   export interface SectionProps extends DisplayProps {}

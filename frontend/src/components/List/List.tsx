@@ -2,11 +2,12 @@ import React, { Fragment } from "react";
 import { Navbar } from "./../Navbar";
 import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
+import { Section } from "../UI/Section";
 
 export const List = ({
   data,
   className,
-  listClass, 
+  listClass,
   id,
   Flex,
   Grid,
@@ -39,14 +40,19 @@ export const List = ({
   );
 };
 
-export const Info: React.FC<InfoType> = ({ data }): JSX.Element => {
+export const Info = ({ data, iconimg }: InfoProps): JSX.Element => {
   return (
     <>
       {data.map((info, key) => (
-        <div key={key}>
-          <p>{info.infoContentFirst}</p>
-          <p>{info.infoContentSecond}</p>
-        </div>
+        <Section Display="flex" className="InfoContentFooter" key={key}>
+          <div>
+            <Icon iconimg={info.iconimg} />
+          </div>
+          <div>
+            <p>{info.infoContentFirst}</p>
+            <p>{info.infoContentSecond}</p>
+          </div>
+        </Section>
       ))}
     </>
   );

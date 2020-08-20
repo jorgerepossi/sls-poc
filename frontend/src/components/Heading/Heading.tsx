@@ -3,7 +3,18 @@ import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 
-export const Heading = ({ id, title, content, subtitle, className, Display, Direction, AlignItems, AlignContent, JustifyContent }: HeadingProps) => {
+export const Heading = ({
+  id,
+  title,
+  content,
+  subtitle,
+  className,
+  Display,
+  Direction,
+  AlignItems,
+  AlignContent,
+  JustifyContent,
+}: HeadingProps) => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
@@ -17,10 +28,7 @@ export const Heading = ({ id, title, content, subtitle, className, Display, Dire
       AlignItems={AlignItems}
       AlignContent={AlignContent}
     >
-      <Box className="HeadingContentSubTitle">
-        <span>{subtitle}</span>
-      </Box>
-
+      <Subtitle subtitle={subtitle} />
       <Box className="HeadingContentTitle">
         <Typography component="h3">
           <span className="title">{title}</span>
@@ -31,6 +39,18 @@ export const Heading = ({ id, title, content, subtitle, className, Display, Dire
       </Box>
     </HeadingStyled>
   );
+};
+
+const Subtitle = ({ subtitle }) => {
+  if (subtitle) {
+    return (
+      <Box className="HeadingContentSubTitle">
+        <span>{subtitle}</span>
+      </Box>
+    );
+  } else {
+    return <Box></Box>;
+  }
 };
 
 const HeadingStyled = styled.div<DisplayProps>`

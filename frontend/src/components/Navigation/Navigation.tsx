@@ -4,7 +4,7 @@ import { Data } from "../Navbar/Data";
 import { Box } from "@material-ui/core";
 import { List } from "../List";
 import { Icon } from "../UI/Icon/IconSet";
-import SiteContent from "./Navisation.Styled";
+import SiteContent from "./Navigation.Styled";
 
 export const Navigation = () => {
   return (

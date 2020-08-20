@@ -24,19 +24,21 @@ export const Data = [
     seo: "Our Team",
     sitelink: "Our Team",
   },
-  
 ];
-
+// <i class=""></i>
 export const InfoData = [
   {
+    iconimg: "fas fa-map-marker-alt",
     infoContentFirst: "27 Division St, New York,",
     infoContentSecond: "NY 10002, USA",
   },
   {
+    iconimg: "fas fa-envelope",
     infoContentFirst: "info_company@dispatchsss.com",
     infoContentSecond: "info@dispatchsss.com",
   },
   {
+    iconimg: "fas fa-phone-alt",
     infoContentFirst: "+549 011 123 456 789",
     infoContentSecond: "+549 011 123 456 788",
   },
