@@ -33,6 +33,21 @@ const IconStyled = styled.span`
     padding: 15.5px 15.5px 15.5px 15.5px;
     border-width: 0px 0px 0px 0px;
   }
+  
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: block;
+      transition: 0.4s;
+      z-index: -1;
+      border-radius: inherit;
+    }
+  
 `;
 
 const Icon = (props) => {

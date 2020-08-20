@@ -1,55 +1,59 @@
-import React, { Fragment } from "react";
+import React, { Fragment, memo } from "react";
 import { Navbar } from "./../Navbar";
 import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 import { Section } from "../UI/Section";
 
-export const List = ({ data, className, listClass, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
-  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
-  return (
-    <Fragment>
-      <ul id={id} className={classes.join(" ")}>
-        {data.map((item, key) => (
-          <li key={key} className={listClass}>
-            <Navbar
-              activeClassName="active"
-              inactiveClassName="false"
-              to={item.to}
-              className="menu"
-              sitelink={item.sitelink}
-              title={item.seo}
-              alt={item.seo}
-            />
-          </li>
-        ))}
-      </ul>
-    </Fragment>
-  );
-};
+export const List = memo(
+  ({ data, className, listClass, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
+    const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
+    return (
+      <Fragment>
+        <ul id={id} className={classes.join(" ")}>
+          {data.map((item, key) => (
+            <li key={key} className={listClass}>
+              <Navbar
+                activeClassName="active"
+                inactiveClassName="false"
+                to={item.to}
+                className="menu"
+                sitelink={item.sitelink}
+                title={item.seo}
+                alt={item.seo}
+              />
+            </li>
+          ))}
+        </ul>
+      </Fragment>
+    );
+  }
+);
 
-export const Info = ({ data, iconimg }: InfoProps): JSX.Element => {
-  return (
-    <>
-      {data.map((info, key) => (
-        <Section Display="flex" className="InfoContentFooter" key={key}>
-          <div className="iconWrapper">
-            <Icon iconimg={info.iconimg} />
-          </div>
-          <div>
-            <p>{info.infoContentFirst}</p>
-            <p>{info.infoContentSecond}</p>
-          </div>
-        </Section>
-      ))}
-    </>
-  );
-};
+export const InfoList = memo(
+  ({ data }: InfoProps): JSX.Element => {
+    return (
+      <>
+        {data.map((info, key) => (
+          <Section Display="flex" className="InfoContentFooter" key={key}>
+            <div className="iconWrapper">
+              <Icon iconimg={info.iconimg} />
+            </div>
+            <div>
+              <p>{info.infoContentFirst}</p>
+              <p>{info.infoContentSecond}</p>
+            </div>
+          </Section>
+        ))}
+      </>
+    );
+  }
+);
 
 interface SocialIconProps extends TypeProps {
   iconimg?: string;
 }
 
-export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter, iconimg }: SocialIconProps) => {
+export const SocialIcon = memo(({ data, className, id, Flex, Grid, JustifyCenter }: SocialIconProps) => {
   const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
 
   if (data) {
@@ -69,4 +73,4 @@ export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter, ico
   } else {
     return <></>;
   }
-};
+});

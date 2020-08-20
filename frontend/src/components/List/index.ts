@@ -1,1 +1,1 @@
-export { List, Info, SocialIcon } from './List'
+export { List, InfoList, SocialIcon } from "./List";

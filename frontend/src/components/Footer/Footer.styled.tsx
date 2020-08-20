@@ -15,11 +15,55 @@ const FooterStyled = styled.footer`
   .FooterWrapperContent {
     #FooterData {
       .InfoContentFooter {
+        position: relative;
+        z-index: 1;
+
+        &:first-child {
+          .iconWrapper {
+            span {
+              position: relative;
+              &:after {
+                background-color: var(--violet-color);
+                transform: translate(6px, 6px);
+              }
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          .iconWrapper {
+            span {
+              position: relative;
+              &:after {
+                background-color: var(--orange-color);
+                transform: translate(6px, 6px);
+              }
+            }
+          }
+        }
+        &:last-child {
+          .iconWrapper {
+            span {
+              position: relative;
+              &:after {
+                background-color: var(--cyan-color);
+                transform: translate(6px, 6px);
+              }
+            }
+          }
+        }
         .iconWrapper {
           transition: 0.4s;
-         
+          span{
+            &:hover:after {
+            transform: translate(0px, 0px);
+          }
+          }
+
           .icon {
             box-shadow: 0px 0px 0px 2px #ffffff inset;
+            i {
+              color: #ffffff;
+            }
           }
         }
       }
