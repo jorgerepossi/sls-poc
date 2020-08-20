@@ -16,9 +16,7 @@ export const Navigation = () => {
       </nav>
       <Box>
         <Link to="/contact">
-          <span className="icon">
-            <Icon iconimg="ti-email" />
-          </span>
+          <Icon iconimg="ti-email" />
         </Link>
       </Box>
     </SiteContent>

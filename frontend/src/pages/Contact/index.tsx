@@ -1,12 +1,14 @@
 import React from "react";
-import { Section, Seo } from "./../../components";
+import { Section, Seo, Container, SectionCenter } from "./../../components";
 
 const Contact = () => {
   return (
-    <>
-      <Seo title="Contact"   />
-      <Section id="Contact">Hi From contact</Section>
-    </>
+    <Container>
+      <Seo title="Contact" />
+      <SectionCenter>
+        <Section id="Contact">Hi From contact</Section>
+      </SectionCenter>
+    </Container>
   );
 };
 

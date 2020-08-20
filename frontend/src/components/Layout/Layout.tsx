@@ -1,13 +1,20 @@
 import React from "react";
 import { Container } from "./../UI/Container";
+import styled from "@emotion/styled";
 import Box from "@material-ui/core/Box";
 
 interface LayoutProps {}
 
+const ContainerStyled = styled.div`
+  display: "flex";
+  flex-wrap: "wrap";
+  flex: 1;
+`;
+
 export const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
   return (
-    <Container>
+    <ContainerStyled>
       <Box p={5}>{children}</Box>
-    </Container>
+    </ContainerStyled>
   );
 };

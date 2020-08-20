@@ -33,9 +33,7 @@ export const Info = ({ data, iconimg }: InfoProps): JSX.Element => {
       {data.map((info, key) => (
         <Section Display="flex" className="InfoContentFooter" key={key}>
           <div className="iconWrapper">
-            <span className="icon">
-              <Icon iconimg={info.iconimg} />
-            </span>
+            <Icon iconimg={info.iconimg} />
           </div>
           <div>
             <p>{info.infoContentFirst}</p>
@@ -61,7 +59,7 @@ export const SocialIcon = ({ data, className, id, Flex, Grid, JustifyCenter, ico
           {data.map((item, key) => (
             <li key={key}>
               <a href={item.to}>
-                <Icon iconimg={item.iconimg} />
+                <i className={item.iconimg}></i>
               </a>
             </li>
           ))}

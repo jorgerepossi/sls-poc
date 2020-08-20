@@ -1,12 +1,14 @@
 import React from "react";
-import { Section, Seo } from "./../../components";
+import { Container, SectionCenter, Section, Seo } from "./../../components";
 
 const About: React.FC = (): JSX.Element => {
   return (
-    <>
-      <Seo title='About Us' metaDescription='' />
-      <Section>About Us</Section>
-    </>
+    <Container className="about">
+      <Seo title="About Us" metaDescription="" />
+      <SectionCenter>
+        <Section>About Us</Section>
+      </SectionCenter>
+    </Container>
   );
 };
 
