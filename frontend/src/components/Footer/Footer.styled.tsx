@@ -14,6 +14,7 @@ const FooterStyled = styled.footer`
 
   .FooterWrapperContent {
     #FooterData {
+      padding: 2rem 0;
       .InfoContentFooter {
         position: relative;
         z-index: 1;
@@ -53,10 +54,10 @@ const FooterStyled = styled.footer`
         }
         .iconWrapper {
           transition: 0.4s;
-          span{
+          span {
             &:hover:after {
-            transform: translate(0px, 0px);
-          }
+              transform: translate(0px, 0px);
+            }
           }
 
           .icon {

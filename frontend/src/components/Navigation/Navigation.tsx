@@ -12,11 +12,13 @@ export const Navigation = () => {
       <Box>logo</Box>
 
       <nav id="Navigation">
-        <List data={Data} />
+        <List data={Data} id="MenuMain" className="Menu" listClass="MenuItem" />
       </nav>
-      <Box>
-        <Link to="/contact">
-          <Icon iconimg="ti-email" />
+      <Box id="ContactIcon">
+        <Link to="/contact" alt="Contact Us" title="Contact Us">
+          <div className="iconWrapper">
+            <Icon iconimg="ti-email" />
+          </div>
         </Link>
       </Box>
     </SiteContent>
