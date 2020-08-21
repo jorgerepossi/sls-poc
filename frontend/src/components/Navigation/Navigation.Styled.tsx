@@ -98,7 +98,7 @@ const SiteContentStyled = styled.div`
       transition: 0.4s;
       position: relative;
       &::after {
-        content: "Contact";
+        content: "Contact Us";
         position: absolute;
         line-height: 3.5rem;
         right: 0px;
@@ -107,13 +107,14 @@ const SiteContentStyled = styled.div`
         opacity: 0;
         color: var(--orange-color);
         font-weight: 800;
+        width: 90px;
       }
       &:hover {
         &::after {
           transition: 0.4s all ease-in-out;
           position: absolute;
           line-height: 3rem;
-          right: 100px;
+          right: 80px;
           opacity: 1;
         }
         .icon {
@@ -143,9 +144,7 @@ const SiteContentStyled = styled.div`
   }
 `;
 const SiteContent = ({ children, className }) => {
-  return (
-    <SiteContentStyled className={className}>{children}</SiteContentStyled>
-  );
+  return <SiteContentStyled className={className}>{children}</SiteContentStyled>;
 };
 
 export default SiteContent;
