@@ -38,7 +38,7 @@ p {
     }
 
     25% {
-        transform: translate(15px, 0px);
+        transform: perspective(500px) translate3d(5px, 5px, 15px);
     }
 
     50% {
@@ -46,7 +46,7 @@ p {
     }
 
     75% {
-        transform: translate(-15px, 0px);
+        transform: perspective(500px) translate3d(-5px, 5px, -15px);
     }
 
     100% {

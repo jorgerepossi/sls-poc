@@ -19,7 +19,7 @@ const FooterStyled = styled.footer`
         position: relative;
         z-index: 1;
 
-        &:first-child {
+        &:first-of-type {
           .iconWrapper {
             span {
               position: relative;
@@ -41,7 +41,7 @@ const FooterStyled = styled.footer`
             }
           }
         }
-        &:last-child {
+        &:last-of-type {
           .iconWrapper {
             span {
               position: relative;

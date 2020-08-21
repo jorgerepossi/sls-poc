@@ -1,13 +1,13 @@
-import React from 'react'
-import { Container, Section, SectionCenter, Heading } from './../../index'
+import React from "react";
+import { Container, SectionCenter, Heading } from "./../../index";
 
 export const SolutionBusiness = () => {
-    return (
-        <Container>
-            <SectionCenter>
-            <Heading />
-            SolutionBusiness
-            </SectionCenter>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <SectionCenter>
+        <Heading />
+        SolutionBusiness
+      </SectionCenter>
+    </Container>
+  );
+};

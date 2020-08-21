@@ -52,7 +52,7 @@ const SiteContentStyled = styled.div`
                 bottom: 25px;
                 visibility: visible;
                 transition: all 0.2s ease-in-out;
-                animation: dotMove 3s infinite linear;
+                animation: dotMove 1.5s infinite linear;
               }
             }
             &:hover {
