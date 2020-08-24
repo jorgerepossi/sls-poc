@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Box from "@material-ui/core/Box";
 
+
 interface LayoutProps {}
 
 const ContainerStyled = styled.div`
@@ -17,3 +18,4 @@ export const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
     </ContainerStyled>
   );
 };
+

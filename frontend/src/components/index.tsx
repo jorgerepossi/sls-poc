@@ -10,6 +10,7 @@ export { Heading } from "./Heading";
 export { Footer } from "./Footer";
 export { List } from "./List";
 export { Seo } from "./Seo";
+export { PageHeader } from "./PageHeader";
 
 /** export sections  */
 export { Dynamic } from "./Sections/Dynamic/";

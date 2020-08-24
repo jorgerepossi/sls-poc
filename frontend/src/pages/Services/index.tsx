@@ -1,12 +1,18 @@
 import React from "react";
-import { Seo } from "./../../components";
+import { Seo, PageHeader } from "./../../components";
 import { OurServices } from "../../components/Sections/OurServices/OurServices";
 import { DataService } from "./../../components/Sections/OurServices/Data";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
+  let location = useLocation();
+  {
+    console.log(useLocation());
+  }
   return (
     <>
       <Seo title="Services" metaDescription="ss" />
+      <PageHeader  />
       <OurServices
         data={DataService}
         subtitle="our services"
