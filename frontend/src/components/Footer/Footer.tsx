@@ -1,6 +1,6 @@
 import React from "react";
 import FooterStyled from "./Footer.styled";
-import { Data, InfoData, Social } from "./../Navbar/Data";
+import { Data, InfoData, Social } from "./../NavLink/Data";
 import { List, InfoList, SocialIcon } from "../List";
 import { Section, SectionCenter, Divider } from "./../index";
 import { Typography  } from "@material-ui/core";

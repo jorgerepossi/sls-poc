@@ -14,7 +14,7 @@ const ContainerStyled = styled.div`
 export const Layout: React.FC<LayoutProps> = ({ children }): JSX.Element => {
   return (
     <ContainerStyled>
-      <Box p={5}>{children}</Box>
+      <Box pb={5}>{children}</Box>
     </ContainerStyled>
   );
 };

@@ -5,7 +5,7 @@ const About: React.FC = (): JSX.Element => {
   return (
     <Container className="about">
       <Seo title="About Us" metaDescription="" />
-      <PageHeader />
+      <PageHeader title="About Us" />
       <SectionCenter>
         <Section>About Us</Section>
       </SectionCenter>

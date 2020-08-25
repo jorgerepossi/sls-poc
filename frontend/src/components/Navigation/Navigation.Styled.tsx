@@ -13,6 +13,7 @@ const SiteContentStyled = styled.div`
   align-content: center;
   align-items: center;
   padding: 0 2rem;
+  background-color: #fff;
   nav {
     &#Navigation {
       height: 100px;
@@ -94,6 +95,7 @@ const SiteContentStyled = styled.div`
     }
   }
   #ContactIcon {
+    z-index: 99;
     .iconWrapper {
       transition: 0.4s;
       position: relative;

@@ -3,7 +3,7 @@ export { Icon, IonIcon } from "./UI/Icon";
 export { Divider } from "./UI/Divider";
 export { Container } from "./UI/Container";
 export { Section, SectionCenter } from "./UI/Section";
-export { Navbar } from "./Navbar/";
+export { NavLink } from "./NavLink/";
 export { Navigation } from "./Navigation";
 export { Header } from "./Header";
 export { Heading } from "./Heading";

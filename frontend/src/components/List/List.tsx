@@ -1,5 +1,5 @@
 import React, { Fragment, memo } from "react";
-import { Navbar } from "./../Navbar";
+import { NavLink } from "./../NavLink";
 import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 import { Section } from "../UI/Section";
@@ -12,7 +12,7 @@ export const List = memo(
         <ul id={id} className={classes.join(" ")}>
           {data.map((item, key) => (
             <li key={key} className={listClass}>
-              <Navbar
+              <NavLink
                 activeClassName="active"
                 inactiveClassName="false"
                 to={item.to}
