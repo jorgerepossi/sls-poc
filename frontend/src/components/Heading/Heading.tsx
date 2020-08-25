@@ -3,18 +3,7 @@ import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 
-export const Heading = ({
-  id,
-  title,
-  content,
-  subtitle,
-  className,
-  Display,
-  Direction,
-  AlignItems,
-  AlignContent,
-  JustifyContent,
-}: HeadingProps) => {
+export const Heading = ({ id, title, content, subtitle, className, Display, Direction, AlignItems, AlignContent, JustifyContent }: HeadingProps) => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
@@ -59,24 +48,38 @@ const HeadingStyled = styled.div<DisplayProps>`
   justify-content: ${(props) => props.JustifyContent};
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
-  font-family: "Nunito Sans", sans-serif;
+
   h3 {
     font-size: 2rem;
     font-weight: 800;
-    font-family: "Nunito Sans", sans-serif;
+
     span {
       &.title {
         color: #1c1c25;
         margin-bottom: 20px;
         display: block;
+        line-height: 1.35em;
       }
+    }
+  }
+  .HeadingContentSubTitle {
+    margin-bottom: 1rem;
+    span {
+      color: #33358c;
+      background-color: #e7e7fb;
+      padding: 3px 10px 3px 10px;
+      margin: 0px 0px 13px 0px;
+      border-radius: 25px 25px 25px 25px;
+      font-family: var(--fontFamily);
+      line-height: 1.5;
     }
   }
   .HeadingContentBox {
     p {
-      font-family: "Nunito Sans", sans-serif;
       color: #616161;
-      font-weight: 400;
+      font-weight: 400 !important;
+      font-family: var(--fontFamily);
+      line-height: 1.875;
     }
   }
   /** color: #616161; */

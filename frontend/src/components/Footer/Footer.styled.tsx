@@ -15,6 +15,12 @@ const FooterStyled = styled.footer`
   .FooterWrapperContent {
     #FooterData {
       padding: 2rem 0;
+      @media (max-width: 767px) {
+        display: block;
+        .InfoContentFooter {
+          padding: 2rem 0rem;
+        }
+      }
       .InfoContentFooter {
         position: relative;
         z-index: 1;
@@ -69,22 +75,35 @@ const FooterStyled = styled.footer`
         }
       }
     }
-  }
-  .FooterContent {
-    li {
-      &.FooterUlLink {
-        margin-right: calc(80px / 2);
-        margin-left: calc(80px / 2);
-        &:hover {
-          color: var(--orange-color);
-        }
-        a {
-          font-weight: 800;
-          font-family: "Nunito Sans", sans-serif;
+    #FooterMenu {
+      .FooterContent {
+        display: block;
+        li {
+          &.FooterUlLink {
+            @media (min-width: 980px) {
+              margin-right: calc(80px / 2);
+              margin-left: calc(80px / 2);
+            }
+            &:hover {
+              color: var(--orange-color);
+            }
+            a {
+              font-weight: 800;
+              font-family: "Nunito Sans", sans-serif;
 
-          &.active {
-            color: var(--orange-color);
+              &.active {
+                color: var(--orange-color);
+              }
+            }
           }
+        }
+        @media (min-width: 980px) {
+          display: flex;
+        }
+      }
+      @media (max-width: 980px) {
+        > div {
+          margin: 20px !important;
         }
       }
     }

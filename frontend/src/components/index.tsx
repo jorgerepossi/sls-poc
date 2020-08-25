@@ -15,3 +15,4 @@ export { PageHeader } from "./PageHeader";
 /** export sections  */
 export { Dynamic } from "./Sections/Dynamic/";
 export { OurServices } from "./Sections/OurServices";
+export { OurTeam } from "./Sections/OurTeam";

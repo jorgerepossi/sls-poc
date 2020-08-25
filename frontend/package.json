@@ -22,9 +22,11 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-parallax-mousemove": "^1.1.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-stickynode": "^3.0.3",
     "sass-loader": "^9.0.3",
     "typescript": "~3.7.2"
   },
