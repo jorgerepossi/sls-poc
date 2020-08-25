@@ -6,7 +6,7 @@ const Team = () => {
     <>
       <Container>
         <Seo title="Our Team" metaDescription="ss" />
-        <PageHeader title="Our Team" />
+        <PageHeader />
         <OurTeam
           subtitle="who we are"
           title="We Have Only Best Skilled Professional Team"

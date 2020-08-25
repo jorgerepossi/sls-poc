@@ -48,7 +48,7 @@ const HeadingStyled = styled.div<DisplayProps>`
   justify-content: ${(props) => props.JustifyContent};
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
-
+  margin: 3rem 0rem;
   h3 {
     font-size: 2rem;
     font-weight: 800;

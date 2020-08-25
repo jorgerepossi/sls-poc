@@ -20,7 +20,7 @@ export const Data = [
     sitelink: "Our Work",
   },
   {
-    to: "/team",
+    to: "/our-team",
     seo: "Our Team",
     sitelink: "Our Team",
   },
