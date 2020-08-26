@@ -11,11 +11,24 @@ interface OurServiceProps extends DynamicType {
   JustifyContent?: string;
 }
 
-export const OurServices = ({ subtitle, title, content, data }: OurServiceProps): JSX.Element => {
+export const OurServices = ({
+  subtitle,
+  title,
+  content,
+  data,
+}: OurServiceProps): JSX.Element => {
   return (
     <SectionCenter>
       <Section id="OurService">
-        <Heading subtitle={subtitle} title={title} content={content} className="heading" JustifyContent="center" Direction="column" Display="flex" />
+        <Heading
+          subtitle={subtitle}
+          title={title}
+          content={content}
+          className="heading"
+          JustifyContent="center"
+          Direction="column"
+          Display="flex"
+        />
       </Section>
 
       <Section id="ServiceWrapper" Display="grid">
@@ -23,7 +36,7 @@ export const OurServices = ({ subtitle, title, content, data }: OurServiceProps)
           return (
             <Box key={key} className="widget-container">
               <Box className="infobox">
-                <Box>
+                <Box className="IconWrapperTop">
                   <Icon iconimg={item.icon} />
                 </Box>
                 <Box className="content_wrapper">
@@ -32,6 +45,7 @@ export const OurServices = ({ subtitle, title, content, data }: OurServiceProps)
                       <span> {item.serviceTitle} </span>
                     </Typography>
                   </Box>
+
                   <Box className="content_inner_wrapper">
                     <Box className="infobox_content">
                       <Typography>{item.serviceContent}</Typography>

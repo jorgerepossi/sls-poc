@@ -17,6 +17,7 @@ import "./components/styles/Reset.scss";
 import "./components/styles/Main.scss";
 import "./components/styles/Normalize.css";
 import "./components/styles/ThemifyIcon/themify-icons.css";
+import "./components/styles/font/flaticon.css"
 
 const store = configureStore({
   reducer: rootReducer,
