@@ -22,7 +22,7 @@ export const DataService = [
            ],
          },
          {
-           icon: "flaticon flaticon-019-select",
+           icon: "flaticon flaticon-032-pen",
            serviceTitle: " UI/UX Design",
            serviceContent: "Our software confidently works across all popular browsers, OSes and mobile platforms, scales to millions.",
            serviceItems: [

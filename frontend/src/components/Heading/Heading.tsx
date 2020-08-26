@@ -3,7 +3,18 @@ import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
 
-export const Heading = ({ id, title, content, subtitle, className, Display, Direction, AlignItems, AlignContent, JustifyContent }: HeadingProps) => {
+export const Heading = ({
+  id,
+  title,
+  content,
+  subtitle,
+  className,
+  Display,
+  Direction,
+  AlignItems,
+  AlignContent,
+  JustifyContent,
+}: HeadingProps) => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
@@ -43,12 +54,16 @@ const Subtitle = ({ subtitle }) => {
 };
 
 const HeadingStyled = styled.div<DisplayProps>`
+  padding: 20px;
   display: ${(props) => props.Display};
   flex-direction: ${(props) => props.Direction};
   justify-content: ${(props) => props.JustifyContent};
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
-  margin: 3rem 0rem;
+  @media (min-width: 981px) {
+    margin: 3rem 0rem;
+    padding: 0px;
+  }
   h3 {
     font-size: 2rem;
     font-weight: 800;
