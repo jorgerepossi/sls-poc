@@ -9,3 +9,15 @@
 .JustifyCenter {
   justify-content: center;
 }
+
+.Dark {
+  background-color: var(--dark-color);
+  color: #fff !important ;
+}
+
+.Dark h3 span {
+  color: #fff !important ;
+}
+.Dark h3 {
+  color: #fff !important ;
+}

@@ -35,13 +35,19 @@ export const InfoList = memo(
       <>
         {data.map((info, key) => (
           <Section Display="flex" className="InfoContentFooter" key={key}>
-            <div className="iconWrapper">
-              <Icon iconimg={info.iconimg} />
-            </div>
-            <div>
-              <p>{info.infoContentFirst}</p>
-              <p>{info.infoContentSecond}</p>
-            </div>
+            <Section className="InfoContentFooter_wrapper" Display="flex">
+              <Section className="InfoContentFooter_container" Display="flex">
+                <Section className="InfoContentFooter_inner" Display="flex">
+                  <div className="iconWrapper">
+                    <Icon iconimg={info.iconimg} />
+                  </div>
+                  <div>
+                    <p>{info.infoContentFirst}</p>
+                    <p>{info.infoContentSecond}</p>
+                  </div>
+                </Section>
+              </Section>
+            </Section>
           </Section>
         ))}
       </>

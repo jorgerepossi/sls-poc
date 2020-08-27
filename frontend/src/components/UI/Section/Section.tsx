@@ -21,8 +21,9 @@ export const Section = ({
   AlignContent,
   JustifyContent,
   JustifyCenter,
+  Theme,
 }: SectionProps): JSX.Element => {
-  const classes = [JustifyCenter && ` ${style.JustifyCenter}`, className];
+  const classes = [JustifyCenter && ` ${style.JustifyCenter}`, Theme && ` ${style.Dark}`, className];
 
   return (
     <SectionStyled

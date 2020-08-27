@@ -42,8 +42,15 @@ h3 span {
   font-weight: 800;
 }
 
-.transform {
-  transform: translateY(-76px);
+
+$darkColor: var(--dark-color);
+
+.backgroundDark {
+  background-color: var(--dark-color);
+}
+
+footer {
+  @extend .backgroundDark;
 }
 
 @keyframes dotMove {

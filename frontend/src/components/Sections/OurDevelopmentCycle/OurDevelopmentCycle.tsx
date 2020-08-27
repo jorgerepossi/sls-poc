@@ -1,16 +1,13 @@
 import React from "react";
 import { Heading } from "../../Heading";
+import { Section, SectionCenter } from "../../index";
 
 export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
   return (
-    <Heading
-      subtitle={subtitle}
-      title={title}
-      content={content}
-      JustifyContent="center"
-      Direction="column"
-      Display="flex"
-      AlignItems="center"
-    />
+    <Section id="WhatWeDo" Theme="dark">
+      <SectionCenter>
+        <Heading subtitle={subtitle} title={title} content={content} JustifyContent="center" Direction="column" Display="flex" AlignItems="center" />
+      </SectionCenter>
+    </Section>
   );
 };

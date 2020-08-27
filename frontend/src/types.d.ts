@@ -6,28 +6,12 @@ declare global {
     Flex?: any;
     Grid?: any;
     JustifyCenter?: any;
-    Display?:
-      | "flex"
-      | "flex-inline"
-      | "block"
-      | "inline-block"
-      | "grid"
-      | "none";
+    Display?: "flex" | "flex-inline" | "block" | "inline-block" | "grid" | "none";
     Direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    JustifyContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "space-between"
-      | "space-around"
-      | "space-evenly";
+    JustifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
     AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    AlignContent?:
-      | "flex-start"
-      | "center"
-      | "flex-end"
-      | "stretch"
-      | "baseline";
+    AlignContent?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
+    Theme?: "dark" | "light ";
   };
 
   export type DynamicType = {
@@ -44,6 +28,7 @@ declare global {
   };
 
   // Interfaces
+
   export interface NavbarProps {
     to?: string;
     className?: string;

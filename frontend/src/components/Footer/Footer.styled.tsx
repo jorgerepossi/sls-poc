@@ -6,7 +6,7 @@ const FooterStyled = styled.footer`
   padding-bottom: 6rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: var(--dark-color);
+
   color: #ffffff;
   a {
     color: inherit;
@@ -24,6 +24,16 @@ const FooterStyled = styled.footer`
       .InfoContentFooter {
         position: relative;
         z-index: 1;
+        .InfoContentFooter_container {
+          justify-content: center;
+        }
+        .InfoContentFooter_inner {
+          width: 300px;
+          max-width: 300px;
+          @media (min-width: 980px) {
+            font-size: 0.95rem;
+          }
+        }
 
         &:first-of-type {
           .iconWrapper {
@@ -80,6 +90,8 @@ const FooterStyled = styled.footer`
         display: block;
         li {
           &.FooterUlLink {
+            margin-right: calc(10px / 2);
+            margin-left: calc(10px / 2);
             @media (min-width: 980px) {
               margin-right: calc(80px / 2);
               margin-left: calc(80px / 2);
@@ -97,9 +109,8 @@ const FooterStyled = styled.footer`
             }
           }
         }
-        @media (min-width: 980px) {
-          display: flex;
-        }
+
+        display: flex;
       }
       @media (max-width: 980px) {
         > div {

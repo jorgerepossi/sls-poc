@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
 import styled from "@emotion/styled";
+import style from "./../styles/Common.module.css";
 
 export const Heading = ({
   id,
@@ -14,7 +15,8 @@ export const Heading = ({
   AlignItems,
   AlignContent,
   JustifyContent,
-}: HeadingProps) => {
+ 
+}: HeadingProps): JSX.Element => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
@@ -27,6 +29,7 @@ export const Heading = ({
       Display={Display}
       AlignItems={AlignItems}
       AlignContent={AlignContent}
+     
     >
       <Subtitle subtitle={subtitle} />
       <Box className="HeadingContentTitle">
