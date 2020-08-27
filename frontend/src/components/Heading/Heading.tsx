@@ -48,7 +48,7 @@ const Subtitle = ({ subtitle }) => {
   if (subtitle) {
     return (
       <Box className="HeadingContentSubTitle">
-        <span>{subtitle}</span>
+        <Box>{subtitle}</Box>
       </Box>
     );
   } else {
@@ -71,18 +71,18 @@ const HeadingStyled = styled.div<DisplayProps>`
     font-size: 2rem;
     font-weight: 800;
 
-    span {
+    
       &.title {
         color: #1c1c25;
         margin-bottom: 20px;
         display: block;
         line-height: 1.35em;
-      }
+      
     }
   }
   .HeadingContentSubTitle {
     margin-bottom: 1rem;
-    span {
+    div {
       color: #33358c;
       background-color: #e7e7fb;
       padding: 3px 10px 3px 10px;

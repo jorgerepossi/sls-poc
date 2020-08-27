@@ -17,7 +17,17 @@
 
 .Dark h3 span {
   color: #fff !important ;
+  background-color: transparent;
+  
 }
 .Dark h3 {
   color: #fff !important ;
+  
+}
+.Dark p {
+  color: #C8C8C8 !important ;
+}
+.Dark div {
+  
+    background-color: transparent;
 }
