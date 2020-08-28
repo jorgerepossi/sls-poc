@@ -1,5 +1,11 @@
 import React from "react";
-import { Container, Seo, Section, SectionCenter, PageHeader, OurTeam } from "../../components/";
+import {
+  Container,
+  Seo,
+
+  PageHeader,
+  OurTeam,
+} from "../../components/";
 
 const Team = () => {
   return (

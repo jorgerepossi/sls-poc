@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { useLocation } from "react-router-dom";
 import PageHeaderImage from "./../../assets/images/page_title_elements.png";
 import PageHeaderTitle from "./../../assets/images/page-title.jpg";
+
 const PageHeaderContent = styled.div`
   background: url(${PageHeaderImage});
 
@@ -49,7 +50,10 @@ interface ErrorPageProps {
   className?: string;
 }
 
-export const PageHeader = ({ title, className }: ErrorPageProps): JSX.Element => {
+export const PageHeader = ({
+  title,
+  className,
+}: ErrorPageProps): JSX.Element => {
   useEffect(() => {
     function parallax(e) {
       document.querySelectorAll<HTMLElement>(".layer").forEach((layer) => {
@@ -57,7 +61,6 @@ export const PageHeader = ({ title, className }: ErrorPageProps): JSX.Element =>
         const x = (window.innerWidth - e.pageX * speed) / 50;
         const y = (window.innerHeight - e.pageY * speed) / 100;
         layer.style.transform = ` translate3d(${x}px, ${y}px, 0px)   `;
-       
       });
     }
     window.addEventListener("mousemove", parallax);
@@ -68,7 +71,11 @@ export const PageHeader = ({ title, className }: ErrorPageProps): JSX.Element =>
   let regex = "-";
 
   function HasTitle() {
-    return <h1 className="page-header_title">{location.pathname.substr(1).replace(regex, " ")}</h1>;
+    return (
+      <h1 className="page-header_title">
+        {location.pathname.substr(1).replace(regex, " ")}
+      </h1>
+    );
   }
 
   function HasNoTitle() {
@@ -85,11 +92,16 @@ export const PageHeader = ({ title, className }: ErrorPageProps): JSX.Element =>
 
   return (
     <PageHeaderStyled>
-     <Section>
-        <PageHeaderContent  className="layer" data-speed="2" />
-      </Section> 
       <Section>
-        <SectionCenter AlignContent="center" Display="flex" AlignItems="center" JustifyContent="center">
+        <PageHeaderContent className="layer" data-speed="2" />
+      </Section>
+      <Section>
+        <SectionCenter
+          AlignContent="center"
+          Display="flex"
+          AlignItems="center"
+          JustifyContent="center"
+        >
           <TitleComponent className={className} />
         </SectionCenter>
       </Section>

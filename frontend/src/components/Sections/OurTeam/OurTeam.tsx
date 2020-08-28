@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box } from "@material-ui/core";
+import {  Box } from "@material-ui/core";
 import { Section, SectionCenter } from "../../index";
 import { Heading } from "../../Heading";
 import { OurTeamStyled } from "./OurTeam.styled";
@@ -16,7 +16,7 @@ export const OurTeam = ({ subtitle, title, content }: OurTeamProps): JSX.Element
         <Section id="OurTeam" Display="grid">
           <Section>
             <Box className="imagenContent">
-              <img src={TeamImg01} className="fluid-image" />
+              <img src={TeamImg01} className="fluid-image" alt="" />
             </Box>
           </Section>
           <Section className="OurSkills">

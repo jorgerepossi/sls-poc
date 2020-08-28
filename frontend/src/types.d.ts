@@ -6,12 +6,28 @@ declare global {
     Flex?: any;
     Grid?: any;
     JustifyCenter?: any;
-    Display?: "flex" | "flex-inline" | "block" | "inline-block" | "grid" | "none";
+    Display?:
+      | "flex"
+      | "flex-inline"
+      | "block"
+      | "inline-block"
+      | "grid"
+      | "none";
     Direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    JustifyContent?: "flex-start" | "center" | "flex-end" | "space-between" | "space-around" | "space-evenly";
+    JustifyContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "space-between"
+      | "space-around"
+      | "space-evenly";
     AlignItems?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    AlignContent?: "flex-start" | "center" | "flex-end" | "stretch" | "baseline";
-    Theme?: "dark" | "light ";
+    AlignContent?:
+      | "flex-start"
+      | "center"
+      | "flex-end"
+      | "stretch"
+      | "baseline";
   };
 
   export type DynamicType = {
@@ -27,7 +43,17 @@ declare global {
     iconimg?: string;
   };
 
+  export type Tema = "blanco" | "negro";
+
   // Interfaces
+
+  export interface Uno<P = {}> {
+    props: P &
+      Partial<Record<Tema>> & {
+        blanco?: "#fff";
+        negro?: "#000";
+      };
+  }
 
   export interface NavbarProps {
     to?: string;
@@ -57,7 +83,7 @@ declare global {
     iconimg?: any;
   }
 
-  export interface HeadingProps extends DisplayProps {
+  export interface HeadingProps extends Partial<DisplayProps> {
     className?: string;
     id?: string;
     subtitle?: string;
@@ -79,7 +105,7 @@ declare global {
     children: any;
   }
 
-  export interface TypeProps extends DisplayProps {
+  export interface TypeProps extends Partial<DisplayProps> {
     data: Array<ListProps>;
     className?: string;
     listClass?: string;
@@ -93,8 +119,8 @@ declare global {
     data: Array<>;
   }
 
-  export interface SectionProps extends DisplayProps {}
-  export interface SectionCenterProps extends DisplayProps {}
+  export interface SectionProps extends Partial<DisplayProps> {}
+  export interface SectionCenterProps extends Partial<DisplayProps> {}
 }
 
 export {};

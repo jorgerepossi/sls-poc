@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Box, Typography } from "@material-ui/core";
-import styled from "@emotion/styled";
-import style from "./../styles/Common.module.css";
+
+import styled from "styled-components";
+
+
 
 export const Heading = ({
   id,
@@ -15,45 +17,43 @@ export const Heading = ({
   AlignItems,
   AlignContent,
   JustifyContent,
- 
 }: HeadingProps): JSX.Element => {
   const addAllClasses = ["HeadingContent "];
   const classes = [className, addAllClasses];
 
   return (
-    <HeadingStyled
-      id={id}
-      className={classes.join(" ")}
-      JustifyContent={JustifyContent}
-      Direction={Direction}
-      Display={Display}
-      AlignItems={AlignItems}
-      AlignContent={AlignContent}
-     
-    >
-      <Subtitle subtitle={subtitle} />
-      <Box className="HeadingContentTitle">
-        <Typography component="h3">
-          <span className="title">{title}</span>
-        </Typography>
-      </Box>
-      <Box className="HeadingContentBox">
-        <Typography className="SideMargin">{content}</Typography>
-      </Box>
-    </HeadingStyled>
+    
+      <HeadingStyled
+        id={id}
+        className={classes.join(" ")}
+        JustifyContent={JustifyContent}
+        Direction={Direction}
+        Display={Display}
+        AlignItems={AlignItems}
+        AlignContent={AlignContent}
+      >
+        <Subtitle subtitle={subtitle} />
+        <Box className="HeadingContentTitle">
+          <Typography component="h3">
+            <span className="title">{title}</span>
+          </Typography>
+        </Box>
+        <Box className="HeadingContentBox">
+          <Typography className="SideMargin">{content}</Typography>
+        </Box>
+      </HeadingStyled>
+   
   );
 };
 
 const Subtitle = ({ subtitle }) => {
-  if (subtitle) {
-    return (
-      <Box className="HeadingContentSubTitle">
-        <Box>{subtitle}</Box>
-      </Box>
-    );
-  } else {
-    return <></>;
-  }
+  return { subtitle } ? (
+    <Box className="HeadingContentSubTitle">
+      <Box className="HeadingContentSubTitle_inner">{subtitle}</Box>
+    </Box>
+  ) : (
+    <> </>
+  );
 };
 
 const HeadingStyled = styled.div<DisplayProps>`
@@ -68,20 +68,18 @@ const HeadingStyled = styled.div<DisplayProps>`
     padding: 0px;
   }
   h3 {
-    font-size: 2rem;
     font-weight: 800;
-
-    
+    span {
       &.title {
+        font-size: 2.5rem;
         color: #1c1c25;
         margin-bottom: 20px;
         display: block;
         line-height: 1.35em;
-      
+      }
     }
   }
   .HeadingContentSubTitle {
-    margin-bottom: 1rem;
     div {
       color: #33358c;
       background-color: #e7e7fb;
@@ -90,6 +88,7 @@ const HeadingStyled = styled.div<DisplayProps>`
       border-radius: 25px 25px 25px 25px;
       font-family: var(--fontFamily);
       line-height: 1.5;
+      display: inline-block;
     }
   }
   .HeadingContentBox {

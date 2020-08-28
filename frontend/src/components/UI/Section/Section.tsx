@@ -1,14 +1,41 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
+
 import style from "./../../styles/Common.module.css";
 
 const SectionStyled = styled.section<DisplayProps>`
   width: 100%;
   display: ${(props) => props.Display};
-  flex-direction: ${(props) => props.Direction};
-  justify-content: ${(props) => props.JustifyContent};
-  align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
+  flex-direction: ${(props) => props.Direction};
+  align-content: ${(props) => props.AlignContent};
+  justify-content: ${(props) => props.JustifyContent};
+
+  &.Theme {
+    background-color: ${(props) => props.theme.colors.backgroundColor};
+    color: ${(props) => props.theme.colors.fontColor};
+    .HeadingContent {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      .HeadingContentSubTitle {
+        .HeadingContentSubTitle_inner {
+          color: ${(props) => props.theme.colors.fontColor};
+          background-color: #a8aaf1;
+        }
+      }
+      .HeadingContentTitle {
+        h3 {
+          .title {
+            color: ${(props) => props.theme.colors.fontColor};
+          }
+        }
+      }
+      p {
+        color: #c8c8c8 !important ;
+      }
+    }
+  }
 `;
 
 export const Section = ({
@@ -21,9 +48,8 @@ export const Section = ({
   AlignContent,
   JustifyContent,
   JustifyCenter,
-  Theme,
 }: SectionProps): JSX.Element => {
-  const classes = [JustifyCenter && ` ${style.JustifyCenter}`, Theme && ` ${style.Dark}`, className];
+  const classes = [JustifyCenter && ` ${style.JustifyCenter}`, className];
 
   return (
     <SectionStyled
@@ -61,7 +87,6 @@ export const SectionCenter: React.FC<SectionCenterProps> = ({
   AlignItems,
   AlignContent,
   JustifyContent,
-
 }): JSX.Element => {
   const classes = [className];
 

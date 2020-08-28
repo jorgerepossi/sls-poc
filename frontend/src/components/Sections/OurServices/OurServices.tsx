@@ -12,11 +12,16 @@ interface OurServiceProps extends DynamicType {
   JustifyContent?: string;
 }
 
-export const OurServices = ({ subtitle, title, content, data }: OurServiceProps): JSX.Element => {
+export const OurServices = ({
+  subtitle,
+  title,
+  content,
+  data,
+}: OurServiceProps): JSX.Element => {
   return (
     <>
       <SectionCenter>
-        <Section id="OurService" >
+        <Section id="OurService">
           <Heading
             subtitle={subtitle}
             title={title}
