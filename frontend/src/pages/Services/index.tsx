@@ -11,7 +11,7 @@ const Services = () => {
       <PageHeader  />
       <OurServices
         data={DataService}
-        subtitle="our services"
+        subtitle="Our Services"
         title="Services What We Provide"
         content="Map a strategy, create a user friendly product experience, deliver reliable cross-platform solution with on-boarding and staff training."
       />

@@ -6,6 +6,7 @@ import {
   Section,
   SectionCenter,
   PageHeader,
+  OurWorkContent,
 } from "../../components/";
 
 const OurWork = () => {
@@ -15,7 +16,13 @@ const OurWork = () => {
         <Seo title="Our Work" metaDescription="ss" />
         <PageHeader />
         <Section>
-          <SectionCenter>OurWork</SectionCenter>
+          <SectionCenter>
+            <OurWorkContent
+              subtitle="our portfolio"
+              title="Our Latest Works"
+              content="We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs."
+            />
+          </SectionCenter>
         </Section>
       </Container>
     </>
