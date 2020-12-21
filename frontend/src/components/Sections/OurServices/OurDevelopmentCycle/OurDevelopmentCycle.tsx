@@ -120,15 +120,16 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
 
             <Section className="developmentContent">
               <Box className="sectionAnimate">
-                <Box className="objectAnimated_01">
-                  <img src={ObjectCross03} alt="" />
-                </Box>
-                <Box className="objectAnimated_02">
-                  <img src={ObjectCross03} alt="" />
-                </Box>
-                <Box className="objectAnimated_03">
+              <Box className="objectAnimated_03 movedown">
                   <img src={ObjectElipse03} alt="" />
                 </Box>
+                <Box className="objectAnimated_01 movetop">
+                  <img src={ObjectCross03} alt="" />
+                </Box>
+                <Box className="objectAnimated_02 movecenter">
+                  <img src={ObjectCross03} alt="" />
+                </Box>
+                
               </Box>
 
               <Box className="imagen-wrapper">

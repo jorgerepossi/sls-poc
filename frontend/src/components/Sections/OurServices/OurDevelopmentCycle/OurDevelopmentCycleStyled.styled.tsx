@@ -4,13 +4,14 @@ export const DevelopmentCycleStyled = styled.div`
   #DevelopmentCycle {
     display: flex;
     text-align: center;
-    padding: 0 20px 50px 20px;
+    padding-bottom: 50px;
 
     @media (max-width: 767px) {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding: 0 20px 50px 20px;
     }
     .developmentContent {
       position: relative;
@@ -24,21 +25,24 @@ export const DevelopmentCycleStyled = styled.div`
           .infobox-title {
             color: var(--orange-color) !important;
             transition: background 0.3s, border 0.3s, border-radius 0.3s,
-        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+              box-shadow 0.3s, -webkit-border-radius 0.3s,
+              -webkit-box-shadow 0.3s;
           }
         }
         &:nth-child(2) {
           .infobox-title {
             color: var(--cyan-color) !important;
             transition: background 0.3s, border 0.3s, border-radius 0.3s,
-        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+              box-shadow 0.3s, -webkit-border-radius 0.3s,
+              -webkit-box-shadow 0.3s;
           }
         }
         &:last-child {
           .infobox-title {
             color: var(--violet-color) !important;
             transition: background 0.3s, border 0.3s, border-radius 0.3s,
-        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+              box-shadow 0.3s, -webkit-border-radius 0.3s,
+              -webkit-box-shadow 0.3s;
           }
         }
       }
@@ -48,39 +52,78 @@ export const DevelopmentCycleStyled = styled.div`
           position: absolute;
           top: 27%;
           left: 24%;
+          width: 10px;
+        }
+        .objectAnimated_02.movecenter img {
+          position: absolute;
+          top: 16%;
+          left: 67%;
+          transition: all 0.2s ease-in-out;
+          animation: iconAnimatedCenter 12.5s infinite linear;
+          width: 10px;
+
         }
         .objectAnimated_02 img {
           position: absolute;
           top: 42%;
           left: 69%;
+          transition: all 0.2s ease-in-out;
+          animation: iconAnimated 9.5s infinite linear;
+        }
+
+        .objectAnimated_02.movetop img {
+          position: absolute;
+          top: 27%;
+          left: 26%;
+          transition: all 0.2s ease-in-out;
+          animation: iconAnimated 9.5s infinite linear;
         }
         .objectAnimated_03 img {
           position: absolute;
           top: 16%;
           left: 68%;
+          
+        }
+        .objectAnimated_03.movedown img {
+          position: absolute;
+          top: 46%;
+          left: 71%;
+          transition: all 0.2s ease-in-out;
+          animation: iconAnimatedDown 9.5s infinite linear;
         }
 
         @keyframes iconAnimated {
           0% {
-            transform: translate(0px, 0px) rotate(180deg);
+            transform: translateX( 0px)
           }
-
-          25% {
-            transform: perspective(500px) translate3d(80px, -20px, 10px)
-              rotate(-180deg);
-          }
-
           50% {
-            transform: translate(0px 5px) rotate(-180deg);
+            transform: translateX(30px)
           }
-
-          75% {
-            transform: perspective(500px) translate3d(50px, 55px, 10px)
-              rotate(180deg);
-          }
-
           100% {
-            transform: translate(0px, 0px) rotate(-180deg);
+            transform: translateX( 0px);
+          }
+        }
+        @keyframes iconAnimatedCenter {
+          0% {
+            transform: translateX( -10px) rotate(360deg);
+            
+          }
+          50% {
+            transform: translateX(30px) ;
+          }
+          100% {
+            transform: translateX( -10px) rotate(360deg);
+          }
+        }
+        @keyframes iconAnimatedDown {
+          0% {
+            transform: translateY( 0px)
+          }
+          50% {
+            transform: translateY(30px)
+          }
+          100% {
+            transform: translateY( 0px);
           }
         }
       }
