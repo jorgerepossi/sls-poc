@@ -24,11 +24,42 @@ export const DevelopmentCycleStyled = styled.div`
       .sectionAnimate {
         .objectAnimated_01 img {
           position: absolute;
-          left: 19%;
+          top: 27%;
+          left: 24%;
+        }
+        .objectAnimated_02 img {
+          position: absolute;
+          top: 42%;
+          left: 69%;
+        }
+        .objectAnimated_03 img {
+          position: absolute;
+          top: 16%;
+          left: 68%;
         }
 
-        @keyframes(){
-            
+        @keyframes iconAnimated {
+          0% {
+            transform: translate(0px, 0px) rotate(180deg);
+          }
+
+          25% {
+            transform: perspective(500px) translate3d(80px, -20px, 10px)
+              rotate(-180deg);
+          }
+
+          50% {
+            transform: translate(0px 5px) rotate(-180deg);
+          }
+
+          75% {
+            transform: perspective(500px) translate3d(50px, 55px, 10px)
+              rotate(180deg);
+          }
+
+          100% {
+            transform: translate(0px, 0px) rotate(-180deg);
+          }
         }
       }
 

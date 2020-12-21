@@ -8,6 +8,11 @@ import iconBoxes01 from "./../../../../assets/images/icon-boxes_01.png";
 import iconBoxes02 from "./../../../../assets/images/icon-boxes_02.png";
 import iconBoxes03 from "./../../../../assets/images/icon-boxes_03.png";
 import ObjectCross01 from "./../../../../assets/images/object/object-cross_01.png";
+import ObjectElipse01 from "./../../../../assets/images/object/object-ellipse_01.png";
+import ObjectCross02 from "./../../../../assets/images/object/object-cross_02.png";
+import ObjectElipse02 from "./../../../../assets/images/object/object-ellipse_02.png";
+import ObjectCross03 from "./../../../../assets/images/object/object-cross_03.png";
+import ObjectElipse03 from "./../../../../assets/images/object/object-ellipse_03.png";
 
 export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
   return (
@@ -29,9 +34,16 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
             <Section className="developmentContent">
               <Box className="sectionAnimate">
                 <Box className="objectAnimated_01">
-                  <img src={ObjectCross01} alt=""/>
+                  <img src={ObjectCross01} alt="" />
+                </Box>
+                <Box className="objectAnimated_02">
+                  <img src={ObjectCross01} alt="" />
+                </Box>
+                <Box className="objectAnimated_03">
+                  <img src={ObjectElipse01} alt="" />
                 </Box>
               </Box>
+
               <Box className="imagen-wrapper">
                 <figure className="imagen-box_img">
                   <span>
@@ -62,6 +74,18 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
             </Section>
 
             <Section className="developmentContent">
+              <Box className="sectionAnimate">
+                <Box className="objectAnimated_01">
+                  <img src={ObjectCross02} alt="" />
+                </Box>
+                <Box className="objectAnimated_02">
+                  <img src={ObjectCross02} alt="" />
+                </Box>
+                <Box className="objectAnimated_03">
+                  <img src={ObjectElipse02} alt="" />
+                </Box>
+              </Box>
+
               <Box className="imagen-wrapper">
                 <figure className="imagen-box_img">
                   <span>
@@ -83,6 +107,18 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
             </Section>
 
             <Section className="developmentContent">
+              <Box className="sectionAnimate">
+                <Box className="objectAnimated_01">
+                  <img src={ObjectCross03} alt="" />
+                </Box>
+                <Box className="objectAnimated_02">
+                  <img src={ObjectCross03} alt="" />
+                </Box>
+                <Box className="objectAnimated_03">
+                  <img src={ObjectElipse03} alt="" />
+                </Box>
+              </Box>
+
               <Box className="imagen-wrapper">
                 <figure className="imagen-box_img">
                   <span>
