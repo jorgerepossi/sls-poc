@@ -14,6 +14,8 @@ import ObjectElipse02 from "./../../../../assets/images/object/object-ellipse_02
 import ObjectCross03 from "./../../../../assets/images/object/object-cross_03.png";
 import ObjectElipse03 from "./../../../../assets/images/object/object-ellipse_03.png";
 
+import { DataCycle } from "./Data";
+
 export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
   return (
     <Section id="WhatWeDo" className="Theme">
@@ -28,9 +30,12 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
           AlignItems="center"
         />
       </SectionCenter>
+
       <SectionCenter>
         <DevelopmentCycleStyled>
           <Section id="DevelopmentCycle">
+            
+
             <Section className="developmentContent">
               <Box className="sectionAnimate">
                 <Box className="objectAnimated_01">

@@ -4,6 +4,7 @@ export const DevelopmentCycleStyled = styled.div`
   #DevelopmentCycle {
     display: flex;
     text-align: center;
+    padding-bottom: 50px;
 
     @media (max-width: 767px) {
       display: flex;
