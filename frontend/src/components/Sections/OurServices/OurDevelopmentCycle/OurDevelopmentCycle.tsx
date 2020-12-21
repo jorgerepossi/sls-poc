@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Heading } from "../../../Heading";
 import { Section, SectionCenter } from "../../../index";
 import { DevelopmentCycleStyled } from "./OurDevelopmentCycleStyled.styled";
+import { Typography, Box } from "@material-ui/core";
+import iconBoxes01 from "./../../../../assets/images/icon-boxes_01.png";
+import iconBoxes02 from "./../../../../assets/images/icon-boxes_02.png";
+import iconBoxes03 from "./../../../../assets/images/icon-boxes_03.png";
 
 export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
   return (
@@ -18,15 +23,79 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
         />
       </SectionCenter>
       <SectionCenter>
-        <DevelopmentCycleStyled id="DevelopmentCycle">
-          <Section>
-            <p>Find New Ideas</p>
-          </Section>
-          <Section>
-            <p>Diagnosis & Analysis</p>
-          </Section>
-          <Section>
-            <p>Find New Ideas</p>
+        <DevelopmentCycleStyled>
+          <Section id="DevelopmentCycle">
+            <Section className="developmentContent">
+              <Box className="imagen-wrapper">
+                <figure className="imagen-box_img">
+                  <span>
+                    <img src={iconBoxes01} alt="" />
+                  </span>
+                </figure>
+              </Box>
+              <Box className="developmentInfoBox">
+                <Box className="infobox-title_wrapper">
+                  <h3 className="infobox-title">Find New Ideas</h3>
+                </Box>
+                <Box className="infobox-content">
+                  <Typography>
+                    Zircona is an innovative and dynamic software development,
+                    outsourcing and consulting.
+                  </Typography>
+                </Box>
+              </Box>
+              <Box className="infobox-button_wrapper btn_align-default">
+                <Link
+                  to="/about"
+                  className="wgl-infobox_button button-read-more"
+                >
+                  <span className="flaticon-keyboard-right-arrow-button"></span>
+                  Learn More
+                </Link>
+              </Box>
+            </Section>
+
+            <Section className="developmentContent">
+              <Box className="imagen-wrapper">
+                <figure className="imagen-box_img">
+                  <span>
+                    <img src={iconBoxes02} alt="" />
+                  </span>
+                </figure>
+              </Box>
+              <Box className="developmentInfoBox">
+                <Box className="infobox-title_wrapper">
+                  <h3 className="infobox-title">Diagnosis & Analysis</h3>
+                </Box>
+                <Box className="infobox-content">
+                  <Typography>
+                    Zircona is an innovative and dynamic software development,
+                    outsourcing and consulting.
+                  </Typography>
+                </Box>
+              </Box>
+            </Section>
+
+            <Section className="developmentContent">
+              <Box className="imagen-wrapper">
+                <figure className="imagen-box_img">
+                  <span>
+                    <img src={iconBoxes03} alt="" />
+                  </span>
+                </figure>
+              </Box>
+              <Box className="developmentInfoBox">
+                <Box className="infobox-title_wrapper">
+                  <h3 className="infobox-title">Find New Ideas</h3>
+                </Box>
+                <Box className="infobox-content">
+                  <Typography>
+                    Zircona is an innovative and dynamic software development,
+                    outsourcing and consulting.
+                  </Typography>
+                </Box>
+              </Box>
+            </Section>
           </Section>
         </DevelopmentCycleStyled>
       </SectionCenter>
