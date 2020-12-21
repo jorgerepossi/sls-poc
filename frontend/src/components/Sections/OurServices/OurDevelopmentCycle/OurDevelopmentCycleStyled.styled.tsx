@@ -12,12 +12,24 @@ export const DevelopmentCycleStyled = styled.div`
       flex-direction: column;
     }
     .developmentContent {
+      position: relative;
       padding: 35px 10px 35px 10px;
       border-radius: 10px 10px 10px 10px;
       transition: background 0.3s, border 0.3s, border-radius 0.3s,
         box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
       &:hover {
         background-color: #2b2b34;
+      }
+
+      .sectionAnimate {
+        .objectAnimated_01 img {
+          position: absolute;
+          left: 19%;
+        }
+
+        @keyframes(){
+            
+        }
       }
 
       @media (min-width: 767px) {

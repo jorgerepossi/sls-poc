@@ -7,6 +7,7 @@ import { Typography, Box } from "@material-ui/core";
 import iconBoxes01 from "./../../../../assets/images/icon-boxes_01.png";
 import iconBoxes02 from "./../../../../assets/images/icon-boxes_02.png";
 import iconBoxes03 from "./../../../../assets/images/icon-boxes_03.png";
+import ObjectCross01 from "./../../../../assets/images/object/object-cross_01.png";
 
 export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
   return (
@@ -26,6 +27,11 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
         <DevelopmentCycleStyled>
           <Section id="DevelopmentCycle">
             <Section className="developmentContent">
+              <Box className="sectionAnimate">
+                <Box className="objectAnimated_01">
+                  <img src={ObjectCross01} alt=""/>
+                </Box>
+              </Box>
               <Box className="imagen-wrapper">
                 <figure className="imagen-box_img">
                   <span>
