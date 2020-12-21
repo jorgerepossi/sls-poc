@@ -34,8 +34,6 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
       <SectionCenter>
         <DevelopmentCycleStyled>
           <Section id="DevelopmentCycle">
-            
-
             <Section className="developmentContent">
               <Box className="sectionAnimate">
                 <Box className="objectAnimated_01">
@@ -48,7 +46,6 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
                   <img src={ObjectElipse01} alt="" />
                 </Box>
               </Box>
-
               <Box className="imagen-wrapper">
                 <figure className="imagen-box_img">
                   <span>
@@ -109,6 +106,16 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
                   </Typography>
                 </Box>
               </Box>
+
+              <Box className="infobox-button_wrapper btn_align-default">
+                <Link
+                  to="/about"
+                  className="wgl-infobox_button button-read-more"
+                >
+                  <span className="flaticon-keyboard-right-arrow-button"></span>
+                  Learn More
+                </Link>
+              </Box>
             </Section>
 
             <Section className="developmentContent">
@@ -141,6 +148,16 @@ export const OurDevelopmentCycle = ({ subtitle, title, content }) => {
                     outsourcing and consulting.
                   </Typography>
                 </Box>
+              </Box>
+
+              <Box className="infobox-button_wrapper btn_align-default">
+                <Link
+                  to="/about"
+                  className="wgl-infobox_button button-read-more"
+                >
+                  <span className="flaticon-keyboard-right-arrow-button"></span>
+                  Learn More
+                </Link>
               </Box>
             </Section>
           </Section>

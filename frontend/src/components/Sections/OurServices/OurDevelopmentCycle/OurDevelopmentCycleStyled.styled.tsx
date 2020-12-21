@@ -4,7 +4,7 @@ export const DevelopmentCycleStyled = styled.div`
   #DevelopmentCycle {
     display: flex;
     text-align: center;
-    padding-bottom: 50px;
+    padding: 0 20px 50px 20px;
 
     @media (max-width: 767px) {
       display: flex;
@@ -20,6 +20,27 @@ export const DevelopmentCycleStyled = styled.div`
         box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
       &:hover {
         background-color: #2b2b34;
+        &:first-child {
+          .infobox-title {
+            color: var(--orange-color) !important;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+          }
+        }
+        &:nth-child(2) {
+          .infobox-title {
+            color: var(--cyan-color) !important;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+          }
+        }
+        &:last-child {
+          .infobox-title {
+            color: var(--violet-color) !important;
+            transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+          }
+        }
       }
 
       .sectionAnimate {
@@ -75,11 +96,12 @@ export const DevelopmentCycleStyled = styled.div`
         .imagen-box_img {
           margin: 0px 0px 21px -20px;
           width: 100%;
+          display: flex;
+          justify-content: center;
         }
       }
       .developmentInfoBox {
         transition: 0.4s;
-
         font-family: "Nunito Sans", Sans-serif;
         font-weight: 400;
 
@@ -87,6 +109,8 @@ export const DevelopmentCycleStyled = styled.div`
           margin: 0px 0px 8px 0px;
           font-size: 21px;
           color: #ffffff;
+          transition: background 0.3s, border 0.3s, border-radius 0.3s,
+            box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
         }
 
         .infobox-content {
@@ -96,6 +120,10 @@ export const DevelopmentCycleStyled = styled.div`
           transition: 0.4s;
         }
       }
+    }
+
+    .button-read-more {
+      color: #ffffff;
     }
   }
 `;

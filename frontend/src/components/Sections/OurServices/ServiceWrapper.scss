@@ -194,5 +194,17 @@
   .SideMargin {
     margin: 0 25% 0 25%;
     text-align: center;
+   
+  }
+
+  @media(max-width:767px){
+    #DevelopmentCycle{
+
+      display: flex;
+      flex-direction: column;
+      width: 560px;
+      margin: 0px auto;
+    }
+     
   }
 }
