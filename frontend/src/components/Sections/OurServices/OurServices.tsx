@@ -5,7 +5,7 @@ import { Typography, Box } from "@material-ui/core";
 
 import "./ServiceWrapper.scss";
 
-import { OurDevelopmentCycle } from "../OurDevelopmentCycle";
+import { OurDevelopmentCycle } from "./OurDevelopmentCycle";
 
 interface OurServiceProps extends DynamicType {
   data?: any;
