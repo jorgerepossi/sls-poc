@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, SectionCenter } from "../../../index";
+import { Section} from "../../../index";
 import { Typography, Box } from "@material-ui/core";
 import { Link } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Heading } from "../../../Heading";
 import { Section, SectionCenter } from "../../../index";
-import { DevelopmentCycleStyled } from "./OurDevelopmentCycleStyled.styled";
+import { DevelopmentCycleStyled } from "./OurDevelopmentCycle.styled";
 import { Box } from "@material-ui/core";
 import BackGroundStatic from "./../../../../assets/images/services_03.png";
 import ListCycle from "./ListCycle";

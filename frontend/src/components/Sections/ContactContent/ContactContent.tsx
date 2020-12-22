@@ -1,7 +1,6 @@
 import React from "react";
 import { Heading } from "../../Heading";
-import { Section, SectionCenter, Icon } from "../../index";
-import { Typography, Box } from "@material-ui/core";
+import { Section, SectionCenter } from "../../index";
 import { ContactForm } from "./../../UI/Form";
 
 interface ContactContentProps extends DynamicType {

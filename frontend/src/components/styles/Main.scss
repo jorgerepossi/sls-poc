@@ -7,7 +7,17 @@
   --orange-color: hsla(6, 100%, 76%, 100%);
   --cyan-color: hsl(184, 81%, 67%);
   --violet-color: hsl(238, 72%, 80%);
-  --fontFamily: "Nunito";
+  --fontFamily: "Nunito"; 
+}
+
+$tablet-width: 1024px;
+$mobile-width: 980px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
 }
 
 body {
@@ -52,6 +62,15 @@ $darkColor: var(--dark-color);
 footer {
   @extend .backgroundDark;
 }
+
+
+.containerWrapper{
+   min-width: 320px;
+  width: calc(100% - 50px); 
+  @include mobile { 
+      width: 1170px !important;  }
+  }
+
 
 @keyframes dotMove {
   0% {

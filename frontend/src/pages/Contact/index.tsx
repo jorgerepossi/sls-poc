@@ -1,6 +1,6 @@
 import React from "react";
 import { ContactContent } from "./../../components";
-import { ContantWrapper } from "./Contact.styled";
+import "./Contact.scss";
 import {
   Section,
   Seo,
@@ -19,21 +19,23 @@ const Contact = () => {
       <Seo title="Contact" />
       <PageHeader />
 
-      <SectionCenter>
-        <ContantWrapper>
+      <SectionCenter className="containerWrapper">
+        <Box className="widget  ">
           <Section className="widgetWrapper col-33">
             <Box className="widgetWrap">
               <WidgetList data={InfoData} />
             </Box>
           </Section>
-          <Section className="col-66">
-            <ContactContent
-              subtitle="Contact"
-              title="Get in Touch"
-              content="If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA."
-            />
+          <Section className="formWrapper col-66">
+            <Box className="formWrap">
+              <ContactContent
+                subtitle="Contact"
+                title="Get in Touch"
+                content="If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA."
+              />
+            </Box>
           </Section>
-        </ContantWrapper>
+        </Box>
       </SectionCenter>
     </Container>
   );
