@@ -1,6 +1,6 @@
 import React from "react";
 import { ContactContent } from "./../../components";
-
+import { ContantWrapper } from "./Contact.styled";
 import {
   Section,
   Seo,
@@ -8,6 +8,10 @@ import {
   SectionCenter,
   PageHeader,
 } from "./../../components";
+import Box from "@material-ui/core/Box";
+import { InfoData } from "./../../components/NavLink/Data";
+import { WidgetList } from "./../../components/List";
+import "./../../components/styles/Icon.css";
 
 const Contact = () => {
   return (
@@ -16,15 +20,20 @@ const Contact = () => {
       <PageHeader />
 
       <SectionCenter>
-        <Section>Office Address Office Email Office Phone</Section>
-        <Section>
-          <ContactContent
-            subtitle="Contact"
-            title="Get in Touch"
-            content="If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA."
-          />
-          
-        </Section>
+        <ContantWrapper>
+          <Section className="widgetWrapper col-33">
+            <Box className="widgetWrap">
+              <WidgetList data={InfoData} />
+            </Box>
+          </Section>
+          <Section className="col-66">
+            <ContactContent
+              subtitle="Contact"
+              title="Get in Touch"
+              content="If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA."
+            />
+          </Section>
+        </ContantWrapper>
       </SectionCenter>
     </Container>
   );

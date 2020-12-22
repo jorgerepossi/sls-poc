@@ -28,16 +28,19 @@ export const Data = [
 // <i class=""></i>
 export const InfoData = [
   {
+    title: "Office Address",
     iconimg: "fas fa-map-marker-alt",
     infoContentFirst: "27 Division St, New York,",
     infoContentSecond: "NY 10002, USA",
   },
   {
+    title: "Office Email",
     iconimg: "fas fa-envelope",
-    infoContentFirst: "info_company@dispatchsss.com",
+    infoContentFirst: "info@dispatchsss.com",
     infoContentSecond: "info@dispatchsss.com",
   },
   {
+    title: "Office Phone",
     iconimg: "fas fa-phone-alt",
     infoContentFirst: "+549 011 123 456 789",
     infoContentSecond: "+549 011 123 456 788",

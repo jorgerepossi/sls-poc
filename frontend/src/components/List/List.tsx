@@ -3,10 +3,23 @@ import { NavLink } from "./../NavLink";
 import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 import { Section } from "../UI/Section";
-
+import Box from "@material-ui/core/Box";
 export const List = memo(
-  ({ data, className, listClass, id, Flex, Grid, JustifyCenter }: TypeProps): JSX.Element => {
-    const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
+  ({
+    data,
+    className,
+    listClass,
+    id,
+    Flex,
+    Grid,
+    JustifyCenter,
+  }: TypeProps): JSX.Element => {
+    const classes = [
+      Flex && ` ${style.Flex}`,
+      Grid && ` ${style.Grid}`,
+      JustifyCenter && ` ${style.JustifyCenter}`,
+      className,
+    ];
     return (
       <Fragment>
         <ul id={id} className={classes.join(" ")}>
@@ -28,6 +41,37 @@ export const List = memo(
     );
   }
 );
+
+export const WidgetList = ({ data }: InfoProps): JSX.Element => {
+  return (
+    <>
+      {data.map((info, key) => (
+        <Box className="widget-container" key={key}>
+          <Box className="infobox">
+            <Box className="infobox-wrapper">
+              <Box className="media-wrapper iconWrapper">
+                <Icon iconimg={info.iconimg} />
+              </Box>
+
+              <Box className="content_wrapper">
+                <Box className="wgl-infobox-title_wrapper">
+                  <h3 className="wgl-infobox_title">{info.title}</h3>
+                </Box>
+                <Box className="content_inner_wrapper">
+                  <Box className="wgl-infobox_content">
+                    {info.infoContentFirst}
+                    <br />
+                    {info.infoContentSecond}
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      ))}
+    </>
+  );
+};
 
 export const InfoList = memo(
   ({ data }: InfoProps): JSX.Element => {
@@ -59,24 +103,31 @@ interface SocialIconProps extends TypeProps {
   iconimg?: string;
 }
 
-export const SocialIcon = memo(({ data, className, id, Flex, Grid, JustifyCenter }: SocialIconProps) => {
-  const classes = [Flex && ` ${style.Flex}`, Grid && ` ${style.Grid}`, JustifyCenter && ` ${style.JustifyCenter}`, className];
+export const SocialIcon = memo(
+  ({ data, className, id, Flex, Grid, JustifyCenter }: SocialIconProps) => {
+    const classes = [
+      Flex && ` ${style.Flex}`,
+      Grid && ` ${style.Grid}`,
+      JustifyCenter && ` ${style.JustifyCenter}`,
+      className,
+    ];
 
-  if (data) {
-    return (
-      <Fragment>
-        <ul id={id} className={classes.join(" ")}>
-          {data.map((item, key) => (
-            <li key={key}>
-              <a href={item.to}>
-                <i className={item.iconimg}></i>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </Fragment>
-    );
-  } else {
-    return <></>;
+    if (data) {
+      return (
+        <Fragment>
+          <ul id={id} className={classes.join(" ")}>
+            {data.map((item, key) => (
+              <li key={key}>
+                <a href={item.to}>
+                  <i className={item.iconimg}></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Fragment>
+      );
+    } else {
+      return <></>;
+    }
   }
-});
+);

@@ -14,6 +14,7 @@ import { ThemeProvider } from "styled-components";
 import "./components/styles/Reset.scss";
 import "./components/styles/Main.scss";
 import "./components/styles/Normalize.css";
+import "./components/styles/Icon.css";
 import "./components/styles/ThemifyIcon/themify-icons.css";
 import "./components/styles/font/flaticon.css";
 import dark from "./components/styles/Themes/dark";
