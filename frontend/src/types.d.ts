@@ -1,4 +1,5 @@
 import { SectionProps, DisplayProps } from "./types.d";
+
 declare global {
   // Types
 
@@ -97,12 +98,14 @@ declare global {
     children: any;
     props?: any;
     display?: string;
+    styleinline?: any;
   }
 
   export interface SectionProps {
     id?: string;
     className?: string;
     children: any;
+    styleinline?: any;
   }
 
   export interface TypeProps extends Partial<DisplayProps> {
@@ -118,6 +121,8 @@ declare global {
     iconimg?: any;
     data: Array<>;
   }
+
+ 
 
   export interface SectionProps extends Partial<DisplayProps> {}
   export interface SectionCenterProps extends Partial<DisplayProps> {}

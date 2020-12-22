@@ -3,7 +3,8 @@ import { Heading } from "../../Heading";
 import { Section, SectionCenter, Icon } from "../../index";
 import { Typography, Box } from "@material-ui/core";
 
-import "./ServiceWrapper.scss";
+import "./ServiceWrapper.styled.tsx";
+import { WhatWeDo }  from './../OurServices/ServiceWrapper.styled';
 
 import { OurDevelopmentCycle } from "./OurDevelopmentCycle";
 
@@ -21,6 +22,9 @@ export const OurServices = ({
   return (
     <>
       <SectionCenter>
+        <WhatWeDo>
+
+        
         <Section id="OurService">
           <Heading
             subtitle={subtitle}
@@ -70,6 +74,7 @@ export const OurServices = ({
             );
           })}
         </Section>
+        </WhatWeDo>
       </SectionCenter>
       <OurDevelopmentCycle
         subtitle="what we do"

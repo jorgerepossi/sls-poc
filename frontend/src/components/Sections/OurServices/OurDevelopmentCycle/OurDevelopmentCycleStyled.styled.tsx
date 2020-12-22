@@ -54,76 +54,70 @@ export const DevelopmentCycleStyled = styled.div`
           left: 24%;
           width: 10px;
         }
-        .objectAnimated_02.movecenter img {
+        .movecenter img {
           position: absolute;
-          top: 16%;
-          left: 67%;
+
           transition: all 0.2s ease-in-out;
           animation: iconAnimatedCenter 12.5s infinite linear;
           width: 10px;
-
         }
+
+        .movetop img {
+          position: absolute;
+
+          transition: all 0.2s ease-in-out;
+          animation: iconAnimated 9.5s infinite linear;
+        }
+
         .objectAnimated_02 img {
           position: absolute;
           top: 42%;
           left: 69%;
-          transition: all 0.2s ease-in-out;
-          animation: iconAnimated 9.5s infinite linear;
-        }
-
-        .objectAnimated_02.movetop img {
-          position: absolute;
-          top: 27%;
-          left: 26%;
-          transition: all 0.2s ease-in-out;
-          animation: iconAnimated 9.5s infinite linear;
         }
         .objectAnimated_03 img {
           position: absolute;
           top: 16%;
           left: 68%;
-          
         }
-        .objectAnimated_03.movedown img {
+
+        .movedown img {
           position: absolute;
-          top: 46%;
-          left: 71%;
+
           transition: all 0.2s ease-in-out;
           animation: iconAnimatedDown 9.5s infinite linear;
         }
 
         @keyframes iconAnimated {
           0% {
-            transform: translateX( 0px)
+            transform: translateY(0px);
           }
           50% {
-            transform: translateX(30px)
+            transform: translateY(30px);
           }
           100% {
-            transform: translateX( 0px);
+            transform: translateY(0px);
           }
         }
         @keyframes iconAnimatedCenter {
           0% {
-            transform: translateX( -10px) rotate(360deg);
-            
+            transform: translateX(-10px) rotate(360deg);
           }
           50% {
-            transform: translateX(30px) ;
+            transform: translateX(30px);
           }
           100% {
-            transform: translateX( -10px) rotate(360deg);
+            transform: translateX(-10px) rotate(360deg);
           }
         }
         @keyframes iconAnimatedDown {
           0% {
-            transform: translateY( 0px)
+            transform: translateY(0px);
           }
           50% {
-            transform: translateY(30px)
+            transform: translate3D(15px, 10px, 15px);
           }
           100% {
-            transform: translateY( 0px);
+            transform: translateY(0px);
           }
         }
       }

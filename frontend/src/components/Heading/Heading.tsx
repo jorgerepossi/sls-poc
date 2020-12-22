@@ -4,8 +4,6 @@ import { Box, Typography } from "@material-ui/core";
 
 import styled from "styled-components";
 
-
-
 export const Heading = ({
   id,
   title,
@@ -22,27 +20,25 @@ export const Heading = ({
   const classes = [className, addAllClasses];
 
   return (
-    
-      <HeadingStyled
-        id={id}
-        className={classes.join(" ")}
-        JustifyContent={JustifyContent}
-        Direction={Direction}
-        Display={Display}
-        AlignItems={AlignItems}
-        AlignContent={AlignContent}
-      >
-        <Subtitle subtitle={subtitle} />
-        <Box className="HeadingContentTitle">
-          <Typography component="h3">
-            <span className="title">{title}</span>
-          </Typography>
-        </Box>
-        <Box className="HeadingContentBox">
-          <Typography className="SideMargin">{content}</Typography>
-        </Box>
-      </HeadingStyled>
-   
+    <HeadingStyled
+      id={id}
+      className={classes.join(" ")}
+      JustifyContent={JustifyContent}
+      Direction={Direction}
+      Display={Display}
+      AlignItems={AlignItems}
+      AlignContent={AlignContent}
+    >
+      <Subtitle subtitle={subtitle} />
+      <Box className="HeadingContentTitle">
+        <Typography component="h3">
+          <span className="title">{title}</span>
+        </Typography>
+      </Box>
+      <Box className="HeadingContentBox">
+        <Typography className="SideMargin">{content}</Typography>
+      </Box>
+    </HeadingStyled>
   );
 };
 
@@ -63,6 +59,17 @@ const HeadingStyled = styled.div<DisplayProps>`
   justify-content: ${(props) => props.JustifyContent};
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
+  &.center {
+    width: 650px !important;
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 110px auto 50px;
+
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
   @media (min-width: 981px) {
     margin: 3rem 0rem;
     padding: 0px;

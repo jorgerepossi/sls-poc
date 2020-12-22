@@ -48,6 +48,7 @@ export const Section = ({
   AlignContent,
   JustifyContent,
   JustifyCenter,
+  styleinline,
 }: SectionProps): JSX.Element => {
   const classes = [JustifyCenter && ` ${style.JustifyCenter}`, className];
 
@@ -60,6 +61,7 @@ export const Section = ({
       Display={Display}
       AlignItems={AlignItems}
       AlignContent={AlignContent}
+      style={styleinline}
     >
       {children}
     </SectionStyled>
