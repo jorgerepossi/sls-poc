@@ -4,6 +4,7 @@ import React from "react";
 import "./ContactForm.scss";
 import { FormField } from "./FormField";
 import { TextArea } from "./TextArea";
+import { ButtonForm } from "./ButtonForm";
 
 interface Values {
   firstName: string;
@@ -59,11 +60,7 @@ export const ContactForm: React.FC<Props> = ({ onSubmit }) => {
               />
             </Box>
             <Box className="iconWrapper">
-              <span>
-                <button type="submit" className="submit">
-                  Post A Comment
-                </button>
-              </span>
+              <Field children="Post A comment" className="submit"  component={ButtonForm}/>
             </Box>
           </Form>
         )}
