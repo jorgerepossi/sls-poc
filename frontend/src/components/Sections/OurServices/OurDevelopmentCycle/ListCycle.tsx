@@ -1,7 +1,7 @@
+import { Box, Typography } from "@material-ui/core";
 import React from "react";
-import { Section} from "../../../index";
-import { Typography, Box } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { Section } from "../../../index";
 
 export const DataCycle = [
   {
@@ -73,13 +73,13 @@ export const DataCycle = [
 const ListCycle = () => {
   return (
     <Section id="DevelopmentCycle">
-      {DataCycle.map((item, i) => {
+      {DataCycle.map((item, key) => {
         return (
-          <Section className="developmentContent" key={i}>
+          <Section className="developmentContent" key={key}>
             <Box className="sectionAnimate">
               {item.tinyicons.map((item, key) => {
                 return (
-                  <Box className={item.classes}>
+                  <Box className={item.classes} key={key}>
                     <img src={item.icon} alt="" />
                   </Box>
                 );

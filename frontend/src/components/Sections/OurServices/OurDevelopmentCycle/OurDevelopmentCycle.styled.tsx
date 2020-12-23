@@ -21,7 +21,7 @@ export const DevelopmentCycleStyled = styled.div`
         box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
       &:hover {
         background-color: #2b2b34;
-        &:first-child {
+        &:first-of-type {
           .infobox-title {
             color: var(--orange-color) !important;
             transition: background 0.3s, border 0.3s, border-radius 0.3s,
@@ -29,7 +29,7 @@ export const DevelopmentCycleStyled = styled.div`
               -webkit-box-shadow 0.3s;
           }
         }
-        &:nth-child(2) {
+        &:nth-of-type(2) {
           .infobox-title {
             color: var(--cyan-color) !important;
             transition: background 0.3s, border 0.3s, border-radius 0.3s,

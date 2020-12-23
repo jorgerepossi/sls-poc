@@ -1,12 +1,12 @@
+import { Box, Typography } from "@material-ui/core";
 import React from "react";
 import { Heading } from "../../Heading";
-import { Section, SectionCenter, Icon } from "../../index";
-import { Typography, Box } from "@material-ui/core";
-
-import "./ServiceWrapper.styled.tsx";
-import { WhatWeDo }  from './../OurServices/ServiceWrapper.styled';
-
+import { Icon, Section, SectionCenter } from "../../index";
+import { WhatWeDo } from './../OurServices/ServiceWrapper.styled';
 import { OurDevelopmentCycle } from "./OurDevelopmentCycle";
+import "./ServiceWrapper.styled.tsx";
+
+
 
 interface OurServiceProps extends DynamicType {
   data?: any;

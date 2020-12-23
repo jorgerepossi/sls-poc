@@ -27,7 +27,11 @@ export const ContactContent = ({
           Display="flex"
         />
       </Section>
-      <ContactForm />
+      <ContactForm
+        onSubmit={({ firstName, email, message }) => {
+          console.log(firstName, email, message);
+        }}
+      />
     </SectionCenter>
   );
 };
