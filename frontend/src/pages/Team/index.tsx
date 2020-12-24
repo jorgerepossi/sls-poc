@@ -2,7 +2,6 @@ import React from "react";
 import {
   Container,
   Seo,
-
   PageHeader,
   OurTeam,
 } from "../../components/";

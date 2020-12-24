@@ -19,3 +19,4 @@ export { OurServices } from "./Sections/OurServices";
 export { OurTeam } from "./Sections/OurTeam";
 export { ContactContent } from "./Sections/ContactContent";
 export { OurWorkContent } from "./Sections/OurWorkContent";
+export { AboutContent } from "./Sections/AboutContent";

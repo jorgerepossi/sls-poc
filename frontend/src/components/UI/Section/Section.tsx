@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import style from "./../../styles/Common.module.css";
 
 const SectionStyled = styled.section<DisplayProps>`

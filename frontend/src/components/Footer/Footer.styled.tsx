@@ -15,7 +15,7 @@ const FooterStyled = styled.footer`
   .FooterWrapperContent {
     #FooterData {
       padding: 2rem 0;
-      @media (max-width: 767px) {
+      @media (max-width: 900px) {
         display: block;
         .InfoContentFooter {
           padding: 2rem 0rem;

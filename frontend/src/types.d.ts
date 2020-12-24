@@ -32,9 +32,9 @@ declare global {
   };
 
   export type DynamicType = {
-    subtitle: string;
-    content: string;
-    title: string;
+    subtitle?: string;
+    content?: string;
+    title?: string;
   };
 
   export type InfoType = {

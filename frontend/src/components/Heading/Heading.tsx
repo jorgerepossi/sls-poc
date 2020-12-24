@@ -60,13 +60,12 @@ const HeadingStyled = styled.div<DisplayProps>`
   align-content: ${(props) => props.AlignContent};
   align-items: ${(props) => props.AlignItems};
   &.center {
-    width: 650px !important;
+    max-width: 650px !important;
     display: flex !important;
     justify-content: center;
     align-content: center;
     align-items: center;
     margin: 110px auto 50px;
-
     padding-top: 4rem;
     padding-bottom: 1rem;
   }
@@ -83,6 +82,9 @@ const HeadingStyled = styled.div<DisplayProps>`
         margin-bottom: 20px;
         display: block;
         line-height: 1.35em;
+        @media (max-width: 767px) {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -118,7 +120,7 @@ Heading.propsTypes = {
 Heading.defaultProps = {
   subtitle: "subtitle",
   title: "title",
-  content: "content",
+  content: "",
   Display: "flex",
   Direction: "column",
 };

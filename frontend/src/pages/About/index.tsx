@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, SectionCenter, Section, Seo, PageHeader } from "./../../components";
+import { Container, Seo, PageHeader, AboutContent } from "./../../components";
 
-const About: React.FC = (): JSX.Element => {
+interface Props extends DynamicType {}
+const About: React.FC<Props> = (): JSX.Element => {
   return (
     <Container className="about">
       <Seo title="About Us" metaDescription="" />
       <PageHeader title="About Us" />
-      <SectionCenter>
-        <Section>About Us</Section>
-      </SectionCenter>
+
+      <AboutContent />
     </Container>
   );
 };

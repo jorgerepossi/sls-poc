@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
 
 :root {
-  --dark-color: hsla(240, 14%, 13%, 100%);
-  --orange-color: hsla(6, 100%, 76%, 100%);
-  --cyan-color: hsl(184, 81%, 67%);
-  --violet-color: hsl(238, 72%, 80%);
-  --fontFamily: "Nunito"; 
+    --dark-color: hsla(240, 14%, 13%, 100%);
+    --orange-color: hsla(6, 100%, 76%, 100%);
+    --cyan-color: hsl(184, 81%, 67%);
+    --violet-color: hsl(238, 72%, 80%);
+    --fontFamily: "Nunito";
 }
 
 $tablet-width: 1024px;
@@ -15,174 +15,177 @@ $mobile-width: 980px;
 $desktop-width: 1024px;
 
 @mixin mobile {
-  @media (min-width: #{$mobile-width}) {
-    @content;
-  }
+    @media (min-width: #{$mobile-width}) {
+        @content;
+    }
 }
 
 body {
-  font-family: "Nunito";
-  font-size: 16px;
-  line-height: 1.875;
-  color: #616161;
-  position: relative;
-  overflow-x: hidden;
-  font-weight: 400;
+    font-family: "Nunito";
+    font-size: 16px;
+    line-height: 1.875;
+    color: #616161;
+    position: relative;
+    overflow-x: hidden;
+    font-weight: 400;
 }
 
 body,
 html {
-  max-width: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 p {
-  font-family: inherit;
+    font-family: inherit;
 }
 
 h3,
 h3 a,
 h3 span {
-  font-family: Nunito;
-  font-weight: 800;
+    font-family: Nunito;
+    font-weight: 800;
 }
 
-
-input[type="text"], 
-input[type="url"], 
-input[type="search"], 
-input[type="email"], 
-input[type="password"], 
-input[type="tel"], 
-input[type="time"], 
+input[type="text"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="time"],
 input,
-select, 
+select,
 textarea {
-  display: block;
-  height: 50px;
-  max-width: 100%;
-  margin: 0 0 20px 0;
-  padding: 10px 18px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-  outline: none;
-  background: #f6f6f6;
-  border: 2px solid #f6f6f6;
-  border-radius: 25px;
-  transition: 0.3s;
+    display: block;
+    height: 50px;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    padding: 10px 18px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    outline: none;
+    background: #f6f6f6;
+    border: 2px solid #f6f6f6;
+    border-radius: 25px;
+    transition: 0.3s;
 }
 
-input:focus, 
-input[type="text"]:focus, 
-input[type="url"]:focus, 
-input[type="search"]:focus, 
-input[type="email"]:focus, 
-input[type="password"]:focus, 
-input[type="tel"]:focus, 
-input[type="time"]:focus, 
-select:focus, 
+input:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+select:focus,
 textarea:focus {
-  background: transparent;
-  border-color: #e8e8e9;
+    background: transparent;
+    border-color: #e8e8e9;
 }
 
 $darkColor: var(--dark-color);
 
 .backgroundDark {
-  background-color: var(--dark-color);
+    background-color: var(--dark-color);
 }
 
 footer {
-  @extend .backgroundDark;
+    @extend .backgroundDark;
 }
 
+.HeadingContentBox {
+    width: 100%;
+    max-width: 650px;
+}
 
-.containerWrapper{
-   min-width: 320px;
-  width: calc(100% - 50px); 
-  @include mobile { 
-      width: 1170px !important;  }
-  }
+.containerWrapper {
+    min-width: 320px;
+    width: calc(100% - 50px);
 
+    @include mobile {
+        max-width: 1170px;
+        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 @keyframes dotMove {
-  0% {
-    transform: translate(0px, 0px);
-  }
+    0% {
+        transform: translate(0px, 0px);
+    }
 
-  25% {
-    transform: perspective(500px) translate3d(5px, 5px, 15px);
-  }
+    25% {
+        transform: perspective(500px) translate3d(5px, 5px, 15px);
+    }
 
-  50% {
-    transform: translate(0px, 0px);
-  }
+    50% {
+        transform: translate(0px, 0px);
+    }
 
-  75% {
-    transform: perspective(500px) translate3d(-5px, 5px, -15px);
-  }
+    75% {
+        transform: perspective(500px) translate3d(-5px, 5px, -15px);
+    }
 
-  100% {
-    transform: translate(0px, 0px);
-  }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }
 
 /* Icon Styled */
 
 .iconWrapper {
-  transition: 0.4s;
-  z-index: 9;
-  
-  
-  span{
-    
-    &::after{
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      display: block;
-      transition: 0.4s;
-      z-index: -1;
-      border-radius: inherit;
-  
-  }
-}
+    transition: 0.4s;
+    z-index: 9;
 
-.submit {
-  background-color: transparent;
-  appearance: none;
-  border: 0px;
-  outline: none;
-  cursor: pointer;
-  display: inline-block;
-height: 50px;
-max-width: 100%;
-margin-bottom: 0;
-border-width: 0;
-border-style: solid;
-border-color: currentColor;
-border-radius: 25px;
-outline: none;
-padding: 6px 26px 4px;
-font-family: inherit;
-font-size: 16px;
-line-height: 28px;
-letter-spacing: 0;
-text-transform: capitalize;
--webkit-appearance: none;
-background: transparent;
-transition: 0.4s;
-}
+    span {
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            transition: 0.4s;
+            z-index: -1;
+            border-radius: inherit;
+        }
+    }
 
-
+    .submit {
+        background-color: transparent;
+        appearance: none;
+        border: 0px;
+        outline: none;
+        cursor: pointer;
+        display: inline-block;
+        height: 50px;
+        max-width: 100%;
+        margin-bottom: 0;
+        border-width: 0;
+        border-style: solid;
+        border-color: currentColor;
+        border-radius: 25px;
+        outline: none;
+        padding: 6px 26px 4px;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        -webkit-appearance: none;
+        background: transparent;
+        transition: 0.4s;
+    }
 }

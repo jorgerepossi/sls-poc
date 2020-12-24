@@ -1,24 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "@apollo/client";
 import { configureStore } from "@reduxjs/toolkit";
+import React from "react";
+import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import apolloClient from "./apolloClient";
-import rootReducer from "./reducers";
-import { Layout, Footer, Header } from "./components/";
-import routes from "./routes";
-import { Navigation } from "./components/";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import "./components/styles/Reset.scss";
+import apolloClient from "./apolloClient";
+import { Footer, Header, Layout, Navigation } from "./components/";
+import "./components/styles/font/flaticon.css";
+import "./components/styles/Icon.css";
 import "./components/styles/Main.scss";
 import "./components/styles/Normalize.css";
-import "./components/styles/Icon.css";
-import "./components/styles/ThemifyIcon/themify-icons.css";
-import "./components/styles/font/flaticon.css";
+import "./components/styles/Reset.scss";
 import dark from "./components/styles/Themes/dark";
-import light from "./components/styles/Themes/light";
+import "./components/styles/ThemifyIcon/themify-icons.css";
+import rootReducer from "./reducers";
+import routes from "./routes";
+
 
 const store = configureStore({
   reducer: rootReducer,
