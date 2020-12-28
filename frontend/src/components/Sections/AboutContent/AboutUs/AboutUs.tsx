@@ -7,7 +7,7 @@ interface Props extends DynamicType {}
 export const AboutUs: React.FC<Props> = ({ subtitle, title, content }) => {
   return (
     <SectionCenter>
-      <AboutUsStyled id="AboutUs" className="containerWrapper">
+      <AboutUsStyled id="AboutUs" className="containerWrapper super-padding">
         <Section>hola</Section>
         <Section>
           <Heading

@@ -22,7 +22,7 @@ export const Footer = () => {
         <Section id="Copyright">
           <Box m={2} textAlign="center">
             <Typography component="p">
-              Copyright &copy; 2020 {process.env.REACT_APP_BASE_NAME} by
+              Copyright &copy; 2020 {process.env.REACT_APP_BASE_NAME} with
               <span>
                 <a href="https://www.verbostudio.com/" target="_blank" rel="noopener noreferrer">
                   VerboStudio

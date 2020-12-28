@@ -1,32 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Data } from "../NavLink/Data";
-import { Box } from "@material-ui/core";
-import { List } from "../List";
-import { Icon } from "../UI/Icon/IconSet";
-import SiteContent from "./Navigation.Styled";
-import Sticky from "react-stickynode";
+import React, { useEffect, useState } from "react";
+import { DesktopMenu } from "./DesktopMenu/DesktopMenu";
+import { MobileMenu } from "./MobileMenu/MobileMenu";
+import "./Navigation.Styled";
 
-export const Navigation = () => {
-  return (
-    <>
-      <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-        <SiteContent className="site-header">
-          <Box>logo</Box>
+export const Navigation = (props) => {
+  function useWindowSize() {
+    const [size, setSize] = useState(window.innerWidth);
 
-          <nav id="Navigation">
-            <List data={Data} id="MenuMain" className="Menu" listClass="MenuItem" />
-          </nav>
+    useEffect(() => {
+      const handleResize = () => {
+        setSize(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => {
+        // removemos el evento addEventListener
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+    return size;
+  }
 
-          <Box id="ContactIcon">
-            <Link to="/contact" alt="Contact Us" title="Contact Us">
-              <div className="iconWrapper">
-                <Icon iconimg="ti-email" />
-              </div>
-            </Link>
-          </Box>
-        </SiteContent>
-      </Sticky>
-    </>
-  );
+  const windowWidth = useWindowSize();
+  let windowWidthPlus = windowWidth > 980 ? <DesktopMenu /> : <MobileMenu />;
+
+  return <>{windowWidthPlus}</>;
 };

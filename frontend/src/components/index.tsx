@@ -1,22 +1,23 @@
-export { Layout } from "./Layout/Layout";
-export { Icon, IonIcon } from "./UI/Icon";
-export { Divider } from "./UI/Divider";
-export { Container } from "./UI/Container";
-export { Section, SectionCenter } from "./UI/Section";
-export { ContactForm } from "./UI/Form";
-export { NavLink } from "./NavLink/";
-export { Navigation } from "./Navigation";
+export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Heading } from "./Heading";
-export { Footer } from "./Footer";
+export { Layout } from "./Layout/Layout";
 export { List } from "./List";
-export { Seo } from "./Seo";
+export { Navigation } from "./Navigation";
+export { NavLink } from "./NavLink/";
 export { PageHeader } from "./PageHeader";
-
+export { AboutContent } from "./Sections/AboutContent";
+export { ContactContent } from "./Sections/ContactContent";
 /** export sections  */
 export { Dynamic } from "./Sections/Dynamic/";
 export { OurServices } from "./Sections/OurServices";
 export { OurTeam } from "./Sections/OurTeam";
-export { ContactContent } from "./Sections/ContactContent";
 export { OurWorkContent } from "./Sections/OurWorkContent";
-export { AboutContent } from "./Sections/AboutContent";
+export { Seo } from "./Seo";
+export { Container } from "./UI/Container";
+export { Divider } from "./UI/Divider";
+export { ContactForm } from "./UI/Form";
+export { Icon, IonIcon } from "./UI/Icon";
+export { ParticlesRandom } from "./UI/Particles";
+export { Section, SectionCenter } from "./UI/Section";
+export { AboutTab } from "./UI/Tabs";

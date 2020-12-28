@@ -7,7 +7,6 @@ const About: React.FC<Props> = (): JSX.Element => {
     <Container className="about">
       <Seo title="About Us" metaDescription="" />
       <PageHeader title="About Us" />
-
       <AboutContent />
     </Container>
   );

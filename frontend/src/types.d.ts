@@ -35,6 +35,7 @@ declare global {
     subtitle?: string;
     content?: string;
     title?: string;
+    value?: number;
   };
 
   export type InfoType = {
