@@ -14,6 +14,7 @@ export const OurPhilosophy: React.FC<Props> = ({
 }) => {
   return (
     <PhilosophyWrapper id="Philosophy">
+      <ParticlesRandom />
       <SectionCenter className="ourPhilosophyWrapper  super-padding">
         <Section>
           <Heading
@@ -24,7 +25,7 @@ export const OurPhilosophy: React.FC<Props> = ({
             Direction="column"
             Display="flex"
           />
-          <ParticlesRandom />
+
           <AboutTab />
         </Section>
         <WeBelieve />

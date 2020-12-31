@@ -5,6 +5,36 @@ export const AboutUsStyled = styled.section`
     @media (min-width: 980px) {
       display: flex;
     }
+
+    .yearExperience {
+      position: relative;
+      img:nth-of-type(1) {
+        position: absolute;
+        animation: iconAnimatedDown 9.5s infinite linear;
+        transition: all 2s ease-in-out;
+        animation-delay: 2s;
+      }
+    }
+
+    @keyframes animatedFigure {
+      0% {
+        transform: translate(0px, 0px);
+      }
+      25% {
+        transform: translate(20px, 0px);
+      }
+      50% {
+        transform: translate(30px, -20px);
+      }
+      75% {
+        transform: translate(20px, 0px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+
+    
   }
 `;
 
@@ -78,6 +108,11 @@ export const PhilosophyWrapper = styled.section`
     #tsparticles {
       position: absolute;
       width: 100%;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
 
     .ourPhilosophyWrapper {

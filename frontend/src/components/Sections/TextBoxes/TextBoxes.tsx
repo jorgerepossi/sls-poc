@@ -6,20 +6,23 @@ import { Section } from "../../UI/Section";
 
 interface Props extends InfoProps {
   color?: string;
+}
+
+interface DOMAttr extends React.HTMLAttributes<HTMLElement> {
   background?: string;
 }
 
-export const TextBoxesLight: React.FC<Props> = ({
+export const TextBoxesLight: React.FC<Props & DOMAttr> = ({
   color,
   data,
   background,
-}) => {
+}): JSX.Element => {
   return (
     <TextBoxesLightStyled color={color} background={background}>
       <Section>
         <Box className="column-gap-default super-margin">
           {data.map((item, key) => (
-            <Box className="top-column" key={key}>
+            <Box className="top-column" key={item.id}>
               <Box className="column-wrap">
                 <Box className="widget-wrap">
                   <Box className="widget-container">

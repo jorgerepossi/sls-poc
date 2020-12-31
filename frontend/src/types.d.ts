@@ -118,12 +118,14 @@ declare global {
     id?: string;
     name?: string;
   }
-  export interface InfoProps {
+  export interface InfoProps extends HTMLAttributes<T> {
     infoContentFirst?: string;
     infoContentSecond?: string;
     iconimg?: any;
     data: Array<>;
     bg?: string | undefined;
+    background?: string;
+
   }
 
  

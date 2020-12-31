@@ -15,18 +15,18 @@ import "./../../components/styles/Icon.css";
 
 const Contact = () => {
   return (
-    <Container>
+    <Container >
       <Seo title="Contact" />
       <PageHeader />
 
-      <SectionCenter className="containerWrapper">
+      <SectionCenter className="containerWrapper ">
         <Box className="widget  ">
           <Section className="widgetWrapper col-33">
             <Box className="widgetWrap">
               <WidgetList data={InfoData} />
             </Box>
           </Section>
-          <Section className="formWrapper col-66">
+          <Section className="formWrapper col-66 super-margin">
             <Box className="formWrap">
               <ContactContent
                 subtitle="Contact"

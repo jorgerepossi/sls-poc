@@ -11,6 +11,8 @@ const TabWrapper = styled.section`
   &.widget-tabs-container {
     @media (min-width: 980px) {
       max-width: 490px;
+      position: relative;
+      z-index: 2;
     }
 
     .tabs_headings {

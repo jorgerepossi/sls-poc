@@ -1,7 +1,6 @@
 import React from "react";
 import { TextBoxesLight } from "../TextBoxes";
 import { AboutUs } from "./AboutUs/AboutUs";
-import { AboutView } from "./AboutView/AboutView";
 import { DataText } from "./DataText";
 import { OurPhilosophy } from "./OurPhilosophy/OurPhilosophy";
 

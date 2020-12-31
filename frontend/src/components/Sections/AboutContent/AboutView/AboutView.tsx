@@ -8,7 +8,6 @@ import { DataText } from "./../DataText";
 interface Props {}
 
 export const AboutView: React.FC<Props> = () => {
-  const { REACT_APP_API_URL } = process.env;
   return (
     <AboutViewStyled>
       <Box className="column-gap-default super-margin">

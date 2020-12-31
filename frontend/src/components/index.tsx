@@ -9,6 +9,7 @@ export { NavLink } from "./NavLink/";
 export { PageHeader } from "./PageHeader";
 /** Section  */
 export { AboutContent } from "./Sections/AboutContent";
+export { BigDataAnalysis } from "./Sections/BigDataAnalysis";
 export { CarouselBrand } from "./Sections/Carousel";
 export { ContactContent } from "./Sections/ContactContent";
 export { Dynamic } from "./Sections/Dynamic/";
@@ -28,4 +29,3 @@ export { Image } from "./UI/Image";
 export { ParticlesRandom } from "./UI/Particles";
 export { Section, SectionCenter } from "./UI/Section";
 export { AboutTab } from "./UI/Tabs";
-

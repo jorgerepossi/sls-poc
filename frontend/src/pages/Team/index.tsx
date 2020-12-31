@@ -4,9 +4,8 @@ import {
   Seo,
   PageHeader,
   OurTeam,
-  TextBoxesLight,
+  
 } from "../../components/";
-import { DataTextFlexible } from "../../components/Sections/AboutContent/DataText";
 
 const Team = () => {
   return (

@@ -5,10 +5,25 @@ interface Props {
   src?: string;
   alt?: string;
   title?: string;
-  classname?: string;
+  className?: string;
+
 }
-export const Image: React.FC<Props> = ({ src, alt, title, classname }) => {
-  return <img src={src} alt={alt} title={title} className={classname} />;
+export const Image: React.FC<Props> = ({
+  src,
+  alt,
+  title,
+  className,
+
+}) => {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      title={title}
+      className={className}
+     
+    />
+  );
 };
 
 Image.propTypes = {
