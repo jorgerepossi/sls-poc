@@ -71,6 +71,7 @@ declare global {
   }
 
   export interface ListProps {
+    imagen?: string | undefined;
     to?: string;
     className?: string;
     activeClassName?: string;
@@ -107,6 +108,7 @@ declare global {
     className?: string;
     children: any;
     styleinline?: any;
+    bg?: string;
   }
 
   export interface TypeProps extends Partial<DisplayProps> {
@@ -121,6 +123,7 @@ declare global {
     infoContentSecond?: string;
     iconimg?: any;
     data: Array<>;
+    bg?: string | undefined;
   }
 
  

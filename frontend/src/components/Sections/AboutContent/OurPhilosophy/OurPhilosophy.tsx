@@ -1,4 +1,3 @@
-import { Box } from "@material-ui/core";
 import React from "react";
 import { Heading } from "../../../Heading";
 import { ParticlesRandom } from "../../../UI/Particles";
@@ -15,7 +14,6 @@ export const OurPhilosophy: React.FC<Props> = ({
 }) => {
   return (
     <PhilosophyWrapper id="Philosophy">
-      <ParticlesRandom />
       <SectionCenter className="ourPhilosophyWrapper  super-padding">
         <Section>
           <Heading
@@ -26,6 +24,7 @@ export const OurPhilosophy: React.FC<Props> = ({
             Direction="column"
             Display="flex"
           />
+          <ParticlesRandom />
           <AboutTab />
         </Section>
         <WeBelieve />

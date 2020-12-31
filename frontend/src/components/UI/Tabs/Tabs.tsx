@@ -1,6 +1,6 @@
 import { Box, Typography } from "@material-ui/core";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React, { useState } from "react";
+import React from "react";
 import { DataTabs } from "./Data";
 import { TabsStyled } from "./Tabs.Styled";
 interface Props {}

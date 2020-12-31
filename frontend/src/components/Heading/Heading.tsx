@@ -70,8 +70,8 @@ const HeadingStyled = styled.div<DisplayProps>`
     padding-bottom: 1rem;
   }
   @media (min-width: 981px) {
-    margin: 3rem 0rem;
-    padding: 0px;
+    margin: 0rem 0rem 3rem;
+    padding: 3rem 0px;
   }
   h3 {
     font-weight: 800;

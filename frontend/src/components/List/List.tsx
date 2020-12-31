@@ -4,6 +4,8 @@ import { Icon } from "./../UI/Icon";
 import style from "./../styles/Common.module.css";
 import { Section } from "../UI/Section";
 import Box from "@material-ui/core/Box";
+
+
 export const List = memo(
   ({
     data,
@@ -118,7 +120,7 @@ export const SocialIcon = memo(
           <ul id={id} className={classes.join(" ")}>
             {data.map((item, key) => (
               <li key={key}>
-                <a href={item.to}>
+                <a href={item.to} title={item.name} >
                   <i className={item.iconimg}></i>
                 </a>
               </li>

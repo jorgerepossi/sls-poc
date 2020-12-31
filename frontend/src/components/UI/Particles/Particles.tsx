@@ -388,6 +388,6 @@ export const ParticlesRandom = () => {
         pauseOnOutsideViewport: false,
         themes: [],
       }}
-    />
+    ></Particles>
   );
 };

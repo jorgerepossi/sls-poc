@@ -1,0 +1,1 @@
+export { CarouselBrand } from './CarouselBrand'

@@ -1,10 +1,13 @@
 import React from "react";
-import { Container, SectionCenter, Heading } from "./../../index";
+import { Heading } from "../../Heading";
+import { Container } from "../../UI/Container";
+import { SectionCenter } from "../../UI/Section";
 
-export const SolutionBusiness = () => {
+interface Props {}
+export const Hero: React.FC<Props> = () => {
   return (
     <Container>
-      <SectionCenter>
+      <SectionCenter className="HeroWrapper">
         <Heading
           subtitle="Intuitive User Experience"
           title="Web & Mobile Apps  Development"

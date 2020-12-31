@@ -1,5 +1,5 @@
 import React from "react";
-import { Seo, PageHeader } from "./../../components";
+import { Seo, PageHeader, WeDo } from "./../../components";
 import { OurServices } from "../../components/Sections/OurServices/OurServices";
 import { DataService } from "./../../components/Sections/OurServices/Data";
 
@@ -14,6 +14,11 @@ const Services = () => {
         subtitle="Our Services"
         title="Services What We Provide"
         content="Map a strategy, create a user friendly product experience, deliver reliable cross-platform solution with on-boarding and staff training."
+      />
+     <WeDo
+        subtitle="what we do"
+        title="Custom IT Solutions for Your Business"
+        content="Zircona is an innovative and dynamic software development, outsourcing and consulting company. We have proven success and experience in building Dedicated Development Teams of different sizes for our international customers"
       />
     </>
   );

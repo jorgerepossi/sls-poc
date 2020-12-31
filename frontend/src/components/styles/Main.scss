@@ -112,9 +112,13 @@ footer {
     padding: 8rem 0rem;
 }
 
+.super-margin {
+    margin: 8rem 0rem;
+}
+
 .containerWrapper {
     min-width: 320px;
-    width: calc(100% - 50px);
+    width: calc(100% - 100px);
 
     @include mobile {
         max-width: 1170px;

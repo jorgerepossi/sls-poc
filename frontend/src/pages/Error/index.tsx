@@ -4,18 +4,26 @@ import {
   SectionCenter,
   Section,
   PageHeader,
+  Seo,
 } from "../../components";
 import { Heading } from "../../components";
-import { Typography } from "@material-ui/core";
+import ErrorPage from "../../assets/images/404.png";
 
 function Error({ location }) {
   return (
     <>
+     <Seo title="Page not found" />
       <PageHeader title="Error 404" />
       <Container>
+        
         <Section>
-          <SectionCenter>
-            <Typography>Error Page</Typography>
+          <SectionCenter
+            Display="flex"
+            JustifyContent="center"
+            AlignContent="center"
+            AlignItems="center"
+          >
+            <img src={ErrorPage} alt="" />
           </SectionCenter>
         </Section>
         <SectionCenter>

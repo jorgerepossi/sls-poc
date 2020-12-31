@@ -25,7 +25,7 @@ export const Data = [
     sitelink: "Our Team",
   },
 ];
-// <i class=""></i>
+
 export const InfoData = [
   {
     title: "Office Address",
@@ -42,8 +42,8 @@ export const InfoData = [
   {
     title: "Office Phone",
     iconimg: "fas fa-phone-alt",
-    infoContentFirst: "+549 011 123 456 789",
-    infoContentSecond: "+549 011 123 456 788",
+    infoContentFirst: "+549 011 1234 5678",
+    infoContentSecond: "+549 011 1234 5678",
   },
 ];
 

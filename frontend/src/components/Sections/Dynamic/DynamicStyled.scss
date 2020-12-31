@@ -1,0 +1,174 @@
+.SectionGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 980px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .DynamicSoftware {
+        margin-left: 1rem;
+
+        @media (min-width: 980px) {
+            margin-left: 3rem;
+        }
+    }
+
+    .dflex {
+        @media (min-width: 767px) {
+            display: flex;
+        }
+
+        .inner-column {
+            width: 100%;
+
+            .column-wrap {
+                padding: 0 15px 0px 5px;
+
+                .widget-wrap {
+                    display: flex;
+                    position: relative;
+                    width: 100%;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    -ms-flex-line-pack: start;
+                    align-content: flex-start;
+
+                    .widget-spacer {
+                        margin-bottom: 20px;
+                        width: 100%;
+                    }
+
+                    .widget-flipbox {
+                        width: 100%;
+                    }
+
+                    .widget-container {
+                        transition: background .3s,border .3s,border-radius .3s,box-shadow .3s,-webkit-border-radius .3s,-webkit-box-shadow .3s;
+
+                        .flipbox {
+                            height: 270px;
+                        }
+
+                        .flipbox {
+                            position: relative;
+                            perspective: 1000px;
+                            width: 100%;
+                        }
+
+                        .flipbox {
+                            .flipbox_wrap {
+                                position: relative;
+                                z-index: 1;
+                                transition: 0.7s;
+                                width: 100%;
+                                height: 100%;
+                                transform-style: preserve-3d;
+                                perspective: inherit;
+
+                                .flipbox_front {
+                                    z-index: 2;
+                                }
+
+                                .flipbox_front {
+                                    text-align: center;
+                                }
+
+                                .flipbox_front {
+                                    text-align: center;
+                                    justify-content: center;
+                                    border-style: solid;
+                                    border-width: 2px 2px 2px 2px;
+                                    border-color: #e8e8e9;
+                                    border-radius: 10px 10px 10px 10px;
+                                    background-color: #ffffff;
+                                }
+
+                                .flipbox_back {
+                                    padding: 20px 27px 20px 27px;
+                                    border-radius: 10px 10px 10px 10px;
+                                }
+
+                                .flipbox_front, .flipbox_back {
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    backface-visibility: hidden;
+                                    transform: rotate(0);
+                                    transition: 0.7s;
+                                    perspective: inherit;
+                                    transform-style: preserve-3d;
+                                    background-color: #ffffff;
+                                }
+
+                                .flipbox_front {
+                                    .flipbox_media-wrap {
+                                        .img-wrapper {
+                                            figure {
+                                                &.image-box_img {
+                                                    text-align: center;
+                                                    align-content: center;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    display: flex;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .flipbox_back {
+                                    transform: rotateY(-180deg);
+                                }
+
+                                .flipbox_back {
+                                    text-align: center;
+                                }
+
+                                .flipbox_back {
+                                    text-align: center;
+                                    justify-content: center;
+                                    background-image: url("http://zircona.wgl-demo.net/wp-content/uploads/2020/04/flip-boxes_bg-03.png");
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    border-style: solid;
+                                    border-width: 2px 2px 2px 2px;
+                                    border-color: #1c1c25;
+                                }
+
+                                .flipbox_wrap {
+                                    position: relative;
+                                    z-index: 1;
+                                    transition: 0.7s;
+                                    width: 100%;
+                                    height: 100%;
+                                    transform-style: preserve-3d;
+                                    perspective: inherit;
+                                }
+
+                                .flipbox_title {
+                                    backface-visibility: hidden;
+                                    transform: translateZ(55px) scale(0.94);
+                                }
+
+                                .flipbox_content {
+                                    backface-visibility: hidden;
+                                    transform: translateZ(60px) scale(0.94);
+                                }
+                            }
+
+                            &:hover .flipbox_wrap {
+                                transform: rotateY(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

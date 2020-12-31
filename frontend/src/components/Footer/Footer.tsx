@@ -16,6 +16,7 @@ export const Footer = () => {
         <Divider />
         <Section id="FooterMenu">
           <Box m={4}>
+            
             <List data={Data} className="FooterContent " listClass="FooterUlLink" Flex JustifyCenter />
           </Box>
         </Section>
