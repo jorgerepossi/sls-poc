@@ -33,7 +33,8 @@ const PageHeaderStyled = styled.div`
   background-position: center bottom;
   background-color: #f8f8f8;
   height: 330px;
-  margin-bottom: 110px;
+  margin-bottom: 20px;
+
   padding-top: 76px;
   padding-bottom: 80px;
   .page-header_title {

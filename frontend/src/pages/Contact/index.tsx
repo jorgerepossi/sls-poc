@@ -15,9 +15,10 @@ import "./../../components/styles/Icon.css";
 
 const Contact = () => {
   return (
-    <Container >
+    <Container>
       <Seo title="Contact" />
       <PageHeader />
+    
 
       <SectionCenter className="containerWrapper ">
         <Box className="widget  ">

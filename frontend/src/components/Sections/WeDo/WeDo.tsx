@@ -152,7 +152,7 @@ const WeDoStyled = styled.section`
 `;
 
 interface Props extends DynamicType {}
-export const WeDo: React.FC<Props> = ({ subtitle, title, content }) => {
+export const WeDo: React.FC<Props> = ({ subtitle, title, content }) : JSX.Element => {
   return (
     <WeDoStyled className="WeDoWrapper">
       <ParticlesRandom />

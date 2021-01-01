@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
-import { Switch, Route  } from "react-router-dom";
-import Loading from "./components/Loading";
+import { Switch, Route } from "react-router-dom";
+import { Loader } from "./components/Loading";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -12,7 +12,7 @@ const Services = lazy(() => import("./pages/Services"));
 const Error = lazy(() => import("./pages/Error"));
 
 const routes = (
-  <Suspense fallback={<Loading />}>
+  <Suspense fallback={<Loader />}>
     <Switch key="router">
       <Route exact path="/" component={Home} />
       <Route path="/services" component={Services} />
@@ -20,7 +20,7 @@ const routes = (
       <Route path="/our-work" component={OurWork} />
       <Route path="/our-team" component={Team} />
       <Route path="/contact" component={Contact} />
-      <Route  component={Error} />
+      <Route component={Error} />
     </Switch>
   </Suspense>
 );

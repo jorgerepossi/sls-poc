@@ -29,3 +29,4 @@ export { Image } from "./UI/Image";
 export { ParticlesRandom } from "./UI/Particles";
 export { Section, SectionCenter } from "./UI/Section";
 export { AboutTab } from "./UI/Tabs";
+export { Loader } from "./../components/Loading";

@@ -1,0 +1,96 @@
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  @mixin fullWidthPosition {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
+.LoadingPageContent {
+    position: fixed;
+
+    @include fullWidthPosition;
+    @include centerFlex;
+    background-color: rgba(255, 255, 255, 0.906);
+    z-index: 99999;
+
+    #status {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        div {
+            position: absolute;
+            top: 27px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--orange-color);
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+    }
+
+    #status div:nth-child(1) {
+        left: 6px;
+        animation: tt_elipsis1 0.6s infinite;
+    }
+
+    #status div:nth-child(2) {
+        left: 6px;
+        animation: tt_elipsis2 0.6s infinite;
+    }
+
+    #status div:nth-child(3) {
+        left: 26px;
+        animation: tt_elipsis2 0.6s infinite;
+    }
+
+    #status div:nth-child(4) {
+        left: 26px;
+        animation: tt_elipsis3 0.6s infinite;
+    }
+
+    @keyframes tt_elipsis1 {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes tt_elipsis2 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(19px, 0);
+        }
+    }
+
+    @keyframes tt_elipsis3 {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0);
+        }
+    }
+}

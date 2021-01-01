@@ -1,0 +1,176 @@
+#top-section {
+    display: flex;
+
+    .column-gap-default {
+        width: 100%;
+
+        .row {
+            display: flex;
+            width: calc(100% + 20px);
+            margin: -10px;
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+        }
+    }
+
+    .column {
+        width: 30%;
+        padding: 1rem;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    .inner-column {
+        width: 40%;
+        position: relative;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        .widget-container {
+            &:not(:first-child) {
+                position: absolute;
+                top: 0;
+            }
+
+            &:nth-of-type(2) {
+                animation: imageLeft alternate  infinite;
+                animation-duration: 5s;
+            }
+
+            &:nth-of-type(3) {
+                animation: imageUp alternate infinite;
+                animation-duration: 5s;
+            }
+
+            &:nth-of-type(4) {
+                animation: imageUp alternate infinite;
+                animation-duration: 8s;
+            }
+
+            &:nth-of-type(5) {
+                animation: imageUp alternate infinite;
+                animation-duration: 10s;
+            }
+        }
+    }
+
+    .top-column {
+        .widget-container {
+            .layout-left {
+                text-align: left;
+                justify-content: flex-start;
+                display: flex;
+                flex-flow: column;
+
+                .infobox {
+                    justify-content: flex-start;
+                display: flex;
+                    .icon-wrapper {
+                        .icon {
+                            transform: rotate(90deg);
+                            color: var(--orange-color);
+                            margin: 0px !important;
+                        }
+                    }
+                }
+            }
+
+            .layout-right {
+                text-align: right;
+                
+
+                .infobox {
+                    justify-content: flex-end;
+                display: flex;
+               
+                    .icon-wrapper {
+                        .icon {
+                            transform: rotate(-180deg);
+                            color: var(--orange-color);
+                            margin: 0px !important;
+                        }
+                    }
+                }
+            }
+
+            .infobox-wrapper {
+                .infobox {
+                    display: flex;
+                    margin-bottom: 2rem;
+
+                    &:hover {
+                        .content-wrapper {
+                            .infobox-title-wrapper {
+                                .infobox_title {
+                                    h3 {
+                                        color: var(--orange-color);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .icon-wrapper {
+                        .icon {
+                            margin: 0px 10px 0px 10px;
+                        }
+                    }
+
+                    .content-wrapper {
+                        .infobox-title-wrapper {
+                            position: relative;
+
+                            .infobox_title {
+                                font-size: 1.3rem;
+                                margin: 9px 0px 5px 0px;
+                                color: #232323;
+                                line-height: 1.5;
+                                word-break: break-word;
+                                -webkit-transition: 0.4s;
+                                transition: 0.4s;
+                                font-weight: 800;
+
+                                h3 {
+                                    margin: 5px 0px 5px 0px;
+                                    font-weight: 700;
+                                    color: #232323;
+                                }
+                            }
+
+                            .infobox_title {
+                                h3 {
+                                    position: relative;
+                                    z-index: 1;
+                                    margin-bottom: 5px;
+                                    font-size: 24px;
+                                    line-height: 1.5;
+                                    word-break: break-word;
+                                    transition: 0.4s;
+                                }
+                            }
+
+                            .content_inner_wrapper {
+                                position: relative;
+
+                                .infobox_content {
+                                    font-size: 16px;
+                                    transition: 0.4s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

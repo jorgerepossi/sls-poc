@@ -26,6 +26,20 @@ $darkColor: var(--dark-color);
     }
 }
 
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+@mixin fullWidthPosition {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
 body {
     font-family: "Nunito";
     font-size: 16px;
@@ -121,7 +135,7 @@ footer {
     width: calc(100% - 100px);
 
     @include mobile {
-        max-width: 1170px;
+        max-width: 1190px;
         width: 100% !important;
         padding-left: 15px;
         padding-right: 15px;
@@ -230,8 +244,6 @@ footer {
     }
 }
 
-
-
 @keyframes iconAnimatedDown {
     0% {
         transform: translate3D(0px, 0px, 10px);
@@ -278,19 +290,33 @@ footer {
 
 @keyframes animatedFigure {
     0% {
-      transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
     }
-    25% {
-      transform: translate(20px, 0px);
-    }
-    50% {
-      transform: translate(30px, -20px);
-    }
-    75% {
-      transform: translate(20px, 0px);
-    }
-    100% {
-      transform: translate(0px, 0px);
-    }
-  }
 
+    25% {
+        transform: translate(20px, 0px);
+    }
+
+    50% {
+        transform: translate(30px, -20px);
+    }
+
+    75% {
+        transform: translate(20px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes imageLeft {
+    0% {  transform: translateX(10px); }
+
+    100% { transform: translateX(-10px); }
+}
+@keyframes imageUp {
+    0% {  transform: translateY(10px); }
+
+    100% { transform: translateY(-10px); }
+}
