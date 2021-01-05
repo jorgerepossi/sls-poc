@@ -74,7 +74,8 @@
 
                 .infobox {
                     justify-content: flex-start;
-                display: flex;
+                    display: flex;
+
                     .icon-wrapper {
                         .icon {
                             transform: rotate(90deg);
@@ -87,12 +88,11 @@
 
             .layout-right {
                 text-align: right;
-                
 
                 .infobox {
                     justify-content: flex-end;
-                display: flex;
-               
+                    display: flex;
+
                     .icon-wrapper {
                         .icon {
                             transform: rotate(-180deg);
@@ -138,12 +138,13 @@
                                 word-break: break-word;
                                 -webkit-transition: 0.4s;
                                 transition: 0.4s;
-                                font-weight: 800;
 
                                 h3 {
                                     margin: 5px 0px 5px 0px;
                                     font-weight: 700;
                                     color: #232323;
+                                    font-family: var(--fontFamily);
+                                    font-weight: 800;
                                 }
                             }
 
@@ -165,6 +166,12 @@
                                 .infobox_content {
                                     font-size: 16px;
                                     transition: 0.4s;
+
+                                    p {
+                                        font-weight: 400 !important;
+                                        color: #616161;
+                                        font-family: var(--fontFamily);
+                                    }
                                 }
                             }
                         }

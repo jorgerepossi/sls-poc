@@ -16,6 +16,10 @@ $desktop-width: 1024px;
 
 $darkColor: var(--dark-color);
 
+.MuiTypography-body1, .MuiTypography-h3 {
+    font-family: var(--fontFamily !important);
+}
+
 .backgroundDark {
     background-color: var(--dark-color);
 }
@@ -71,6 +75,7 @@ h3 a,
 h3 span {
     font-family: Nunito;
     font-weight: 800;
+    color: inherit;
 }
 
 input[type="text"],
@@ -145,6 +150,10 @@ footer {
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+.menuMobile {
+    overflow: hidden;
 }
 
 .floatLeft {

@@ -14,6 +14,8 @@ const SiteContentStyled = styled.div`
   align-items: center;
   padding: 0 2rem;
   background-color: #fff;
+
+  
   nav {
     &#Navigation {
       height: 100px;
@@ -146,7 +148,9 @@ const SiteContentStyled = styled.div`
   }
 `;
 const SiteContent = ({ children, className }) => {
-  return <SiteContentStyled className={className}>{children}</SiteContentStyled>;
+  return (
+    <SiteContentStyled className={className}>{children}</SiteContentStyled>
+  );
 };
 
 export default SiteContent;

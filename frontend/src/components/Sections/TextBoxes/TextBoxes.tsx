@@ -100,7 +100,13 @@ export const TextBoxesLightStyled = styled.section`
                       word-break: break-word;
                       transition: 0.4s;
                       font-weight: 800;
+                      font-family: var(--fontFamily);
                     }
+                  }
+                  p {
+                    font-weight: 400 !important;
+                    color: #616161;
+                    font-family: var(--fontFamily);
                   }
                 }
               }

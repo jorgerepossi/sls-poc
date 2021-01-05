@@ -117,7 +117,7 @@ declare global {
     listClass?: string;
     id?: string;
     name?: string;
-  }
+    onClick?:any}
   export interface InfoProps extends HTMLAttributes<T> {
     infoContentFirst?: string;
     infoContentSecond?: string;
