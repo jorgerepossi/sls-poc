@@ -9,7 +9,7 @@ const SectionStyled = styled.section<DisplayProps>`
   flex-direction: ${(props) => props.Direction};
   align-content: ${(props) => props.AlignContent};
   justify-content: ${(props) => props.JustifyContent};
-  position: relative;
+ 
 
   &.Theme {
     background-color: ${(props) => props.theme.colors.backgroundColor};

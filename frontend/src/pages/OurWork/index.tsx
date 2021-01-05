@@ -9,6 +9,8 @@ import {
   OurWorkContent,
 } from "../../components/";
 
+import { Client } from "./../../components/Sections/OurWorkContent/ListClients";
+
 const OurWork = () => {
   return (
     <>
@@ -21,6 +23,7 @@ const OurWork = () => {
         <Section>
           <SectionCenter>
             <OurWorkContent
+              data={Client}
               subtitle="our portfolio"
               title="Adaptive Design"
               content="We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs."

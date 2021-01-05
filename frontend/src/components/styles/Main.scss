@@ -7,7 +7,7 @@
     --orange-color: hsla(6, 100%, 76%, 100%);
     --cyan-color: hsl(184, 81%, 67%);
     --violet-color: hsl(238, 72%, 80%);
-    --fontFamily: "Nunito";
+    --fontFamily: "Nunito", Sans-serif;
 }
 
 $tablet-width: 1024px;
@@ -130,6 +130,10 @@ footer {
     margin: 8rem 0rem;
 }
 
+.tiny-margin {
+    margin: 3rem 0rem;
+}
+
 .containerWrapper {
     min-width: 320px;
     width: calc(100% - 100px);
@@ -168,6 +172,23 @@ footer {
 
 .marginBigBottom {
     margin-bottom: 200px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.column-gap-default {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
 }
 
 /* Icon Styled */

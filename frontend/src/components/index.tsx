@@ -21,7 +21,7 @@ export { OurServices } from "./Sections/OurServices";
 export { OurTeam } from "./Sections/OurTeam";
 export { OurWorkContent } from "./Sections/OurWorkContent";
 export { TextBoxesLight } from "./Sections/TextBoxes";
-export { WeDo } from "./Sections/WeDo";
+export { WeDo, ListMap } from "./Sections/WeDo";
 export { Seo } from "./Seo";
 /** UI  */
 export { Container } from "./UI/Container";
@@ -32,5 +32,3 @@ export { Image } from "./UI/Image";
 export { ParticlesRandom } from "./UI/Particles";
 export { Section, SectionCenter } from "./UI/Section";
 export { AboutTab } from "./UI/Tabs";
-
-
