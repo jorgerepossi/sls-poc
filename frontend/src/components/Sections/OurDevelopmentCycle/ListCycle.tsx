@@ -1,7 +1,7 @@
 import { Box, Typography } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Section } from "../../../index";
+import { Section } from "../../index";
 
 import {DataCycle} from './Data';
 

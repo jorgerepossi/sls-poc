@@ -133,6 +133,7 @@ footer {
 .containerWrapper {
     min-width: 320px;
     width: calc(100% - 100px);
+    margin-bottom: 2rem;
 
     @include mobile {
         max-width: 1190px;
@@ -311,12 +312,63 @@ footer {
 }
 
 @keyframes imageLeft {
-    0% {  transform: translateX(10px); }
+    0% {
+        transform: translateX(10px);
+    }
 
-    100% { transform: translateX(-10px); }
+    100% {
+        transform: translateX(-10px);
+    }
 }
-@keyframes imageUp {
-    0% {  transform: translateY(10px); }
 
-    100% { transform: translateY(-10px); }
+@keyframes imageUp {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translate3d(4px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+@keyframes moveImagenUp {
+    0% {
+        transform: translate3D(0, 10px, 0);
+    }
+
+    50% {
+        transform: translate3D(0, -10px, 0);
+    }
+
+    100% {
+        transform: translate3D(0, 10px, 0);
+    }
+}
+
+@keyframes grayScale {
+    0% {
+        filter: blur() brightness(100%) grayscale(100%);
+    }
+
+    50% {
+        filter: blur() brightness(100%) grayscale(0%);
+    }
+
+    100% {
+        filter: blur() brightness(100%) grayscale(100%);
+    }
 }

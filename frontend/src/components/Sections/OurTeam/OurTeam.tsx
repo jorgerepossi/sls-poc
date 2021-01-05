@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container } from "@material-ui/core";
-import { Section, SectionCenter } from "../../index";
+import { Box } from "@material-ui/core";
+import { Section, SectionCenter, Container } from "../../index";
 import { Heading } from "../../Heading";
 import { OurTeamStyled } from "./OurTeam.styled";
 import TeamImg01 from "./../../../assets/images/team/team_01.png";
@@ -18,7 +18,7 @@ export const OurTeam = ({
   content,
 }: OurTeamProps): JSX.Element => {
   return (
-    <Section>
+    <Container>
       <SectionCenter>
         <OurTeamStyled>
           <Section id="OurTeam" Display="grid">
@@ -49,6 +49,6 @@ export const OurTeam = ({
         </OurTeamStyled>
       </SectionCenter>
       <TextBoxesLight data={DataTextFlexible} background="#75E8EF" />
-    </Section>
+    </Container>
   );
 };

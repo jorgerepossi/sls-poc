@@ -1,6 +1,9 @@
 import React from "react";
 import { Heading } from "../../Heading";
 import { Section, SectionCenter } from "../../index";
+import { Image } from "../../UI/Image";
+
+import BigImageCenter from './../../../assets/images/ourwork/portfolio_02.jpg';
 
 interface OurWorkContentProps extends DynamicType {
   data?: any;
@@ -25,6 +28,9 @@ export const OurWorkContent = ({
           Display="flex"
           AlignItems="center"
         />
+      </SectionCenter>
+      <SectionCenter className="containerWrapper">
+        <Image src={BigImageCenter} />
       </SectionCenter>
     </Section>
   );

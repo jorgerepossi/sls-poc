@@ -13,13 +13,16 @@ const OurWork = () => {
   return (
     <>
       <Container>
-        <Seo title="Our Work" metaDescription="ss" />
+        <Seo
+          title="Our Work"
+          metaDescription="We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs."
+        />
         <PageHeader />
         <Section>
           <SectionCenter>
             <OurWorkContent
               subtitle="our portfolio"
-              title="Our Latest Works"
+              title="Adaptive Design"
               content="We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs."
             />
           </SectionCenter>

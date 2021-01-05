@@ -4,9 +4,10 @@ import { BigDataAnalysis } from "../BigDataAnalysis";
 import { CarouselBrand } from "../Carousel";
 import { Dynamic } from "../Dynamic";
 import { Hero } from "../Hero";
-import { OurDevelopmentCycle } from "../OurServices/OurDevelopmentCycle";
+import { OurDevelopmentCycle } from "../OurDevelopmentCycle";
 import { TextBoxesLight } from "../TextBoxes";
 import { WeDo } from "../WeDo";
+import { SectionCenter } from "./../../UI/Section";
 import "./HomeContentStyled.scss";
 
 interface Props {}
@@ -14,7 +15,9 @@ export const HomeContent: React.FC<Props> = () => {
   return (
     <>
       <Hero />
-      <CarouselBrand />
+      <SectionCenter>
+        <CarouselBrand />
+      </SectionCenter>
       <Dynamic
         subtitle="About Us"
         title="Dynamic Software Development Company"

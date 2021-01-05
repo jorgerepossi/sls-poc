@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import React from "react";
-import { Heading } from "../../Heading";
+
 import { Container } from "../../UI/Container";
 import { ParticlesRandom } from "../../UI/Particles";
 import { Section, SectionCenter } from "../../UI/Section";
-import { Box } from "@material-ui/core";
 
 import { Image } from "./../../UI/Image";
 
@@ -12,21 +10,38 @@ import home1slider2 from "./../../../assets/images/home-1_slider_2.png";
 import home1slider3 from "./../../../assets/images/home-1_slider_3.png";
 
 import styled from "@emotion/styled";
+import { HeroImage } from "./HeroImage";
+import { HeroContent } from "./HeroContent";
 
 const HeroStyled = styled.section`
+  #HeroContentWrapper {
+    width: 100%;
+    max-width: 580px;
+  }
   .HeroWrapper {
+    .HeroWrapper_content {
+      display: flex;
+      height: 750px;
+      width: 100%;
+      z-index: 20;
+      opacity: 1;
+      visibility: inherit;
+      position: relative;
+      @media (max-width: 980px) {
+        flex-direction: column;
+        height: auto;
+      }
+    }
     .HeadingContent {
       margin: 0rem 0rem 1rem;
       max-width: 580px;
 
       .title {
-        @media (min-width: 980px) {
+        @media (min-width: 1100px) {
           font-size: 60px;
         }
       }
     }
-
-    
   }
 `;
 
@@ -44,19 +59,9 @@ export const Hero: React.FC<Props> = () => {
         />
         <Section className="HeroWrapper">
           <ParticlesRandom />
-          <SectionCenter>
-            <Heading
-              subtitle="Intuitive User Experience"
-              title="Web & Mobile Apps  Development"
-              content="We’ve got a vast code base of modules and ready-made solutions that speed up the development process and cut your expenses."
-            />
-            <Box className=" iconWrapper">
-              <span>
-                <Link className="submit" to="services">
-                  Get Starter
-                </Link>
-              </span>
-            </Box>
+          <SectionCenter className="HeroWrapper_content">
+            <HeroContent />
+            <HeroImage />
           </SectionCenter>
         </Section>
       </Container>

@@ -1,3 +1,4 @@
+export { Loader } from "./../components/Loading";
 export { Hero } from "./../components/Sections/Hero";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
@@ -13,6 +14,8 @@ export { BigDataAnalysis } from "./Sections/BigDataAnalysis";
 export { CarouselBrand } from "./Sections/Carousel";
 export { ContactContent } from "./Sections/ContactContent";
 export { Dynamic } from "./Sections/Dynamic/";
+export { HeroContent } from "./Sections/Hero/HeroContent";
+export { HeroImage } from "./Sections/Hero/HeroImage";
 export { HomeContent } from "./Sections/HomeContent";
 export { OurServices } from "./Sections/OurServices";
 export { OurTeam } from "./Sections/OurTeam";
@@ -29,4 +32,5 @@ export { Image } from "./UI/Image";
 export { ParticlesRandom } from "./UI/Particles";
 export { Section, SectionCenter } from "./UI/Section";
 export { AboutTab } from "./UI/Tabs";
-export { Loader } from "./../components/Loading";
+
+

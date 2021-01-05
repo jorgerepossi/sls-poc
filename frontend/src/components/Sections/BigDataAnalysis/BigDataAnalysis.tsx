@@ -1,22 +1,22 @@
 import { Box, Typography } from "@material-ui/core";
 import React from "react";
-import { Container } from "../../UI/Container";
 import { Image } from "../../UI/Image";
 import { Section, SectionCenter } from "../../UI/Section";
-import { Icon } from "./../../UI/Icon/IconSet";
-
 import Notebook from "./../../../assets/images/bigdata/laptop_01.png";
 import Notebook2 from "./../../../assets/images/bigdata/laptop_02.png";
 import Notebook3 from "./../../../assets/images/bigdata/laptop_03.png";
 import Notebook4 from "./../../../assets/images/bigdata/laptop_04.png";
 import Notebook5 from "./../../../assets/images/bigdata/laptop_05.png";
-
+import { Icon } from "./../../UI/Icon/IconSet";
 import "./BigDataStyled.scss";
+
+
+
 
 interface Props {}
 export const BigDataAnalysis: React.FC<Props> = () => {
   return (
-    <Container className="super-margin">
+    <Section className="super-margin">
       <SectionCenter>
         <Section id="top-section">
           <Box className="container column-gap-default">
@@ -187,6 +187,6 @@ export const BigDataAnalysis: React.FC<Props> = () => {
           </Box>
         </Section>
       </SectionCenter>
-    </Container>
+    </Section>
   );
 };

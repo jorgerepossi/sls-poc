@@ -3,7 +3,7 @@ import React from "react";
 import { Heading } from "../../Heading";
 import { Icon, Section, SectionCenter } from "../../index";
 import { WhatWeDo } from "./../OurServices/ServiceWrapper.styled";
-import { OurDevelopmentCycle } from "./OurDevelopmentCycle";
+import { OurDevelopmentCycle } from "./../OurDevelopmentCycle";
 import "./ServiceWrapper.styled.tsx";
 
 interface OurServiceProps extends DynamicType {
