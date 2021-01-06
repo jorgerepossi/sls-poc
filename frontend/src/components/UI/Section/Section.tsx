@@ -9,7 +9,6 @@ const SectionStyled = styled.section<DisplayProps>`
   flex-direction: ${(props) => props.Direction};
   align-content: ${(props) => props.AlignContent};
   justify-content: ${(props) => props.JustifyContent};
- 
 
   &.Theme {
     background-color: ${(props) => props.theme.colors.backgroundColor};
@@ -49,8 +48,15 @@ export const Section = ({
   JustifyContent,
   JustifyCenter,
   styleinline,
+  Flex,
+  color,
+  background,
 }: SectionProps): JSX.Element => {
-  const classes = [JustifyCenter && ` ${style.JustifyCenter}`, className];
+  const classes = [
+    JustifyCenter && ` ${style.JustifyCenter}`,
+    Flex && ` ${style.Flex}`,
+    className,
+  ];
 
   return (
     <SectionStyled
@@ -62,6 +68,8 @@ export const Section = ({
       AlignItems={AlignItems}
       AlignContent={AlignContent}
       style={styleinline}
+      color={color}
+      background={background}
     >
       {children}
     </SectionStyled>

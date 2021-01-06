@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 interface Props {
-  src?: string;
+  src?: any;
   alt?: string;
   title?: string;
   className?: string;

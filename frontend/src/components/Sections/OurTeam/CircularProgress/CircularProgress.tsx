@@ -6,10 +6,14 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
 export function CircularProgressWithLabel(
-  props: CircularProgressProps & { value: number; text?: string }
+  props: CircularProgressProps & {
+    value: number;
+    text?: string;
+    className?: string;
+  }
 ) {
   return (
-    <>
+    <Box className="circular-content_wrapper">
       <Box position="relative" display="inline-flex">
         <CircularProgress variant="determinate" {...props} />
         <Box
@@ -23,12 +27,31 @@ export function CircularProgressWithLabel(
           justifyContent="center"
           className=""
         >
-          <Typography variant="caption" component="div">{`${Math.round(
-            props.value
-          )}%`}</Typography>
+          <Typography
+            variant="caption"
+            component="div"
+            className="caption_text"
+          >{`${Math.round(props.value)}%`}</Typography>
         </Box>
       </Box>
-      <Box>{props.text}</Box>
-    </>
+      <Box className="caption_team">{props.text}</Box>
+    </Box>
   );
+}
+
+export default function CircularStatic() {
+  const [progress, setProgress] = React.useState(10);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
+    }, 800);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return <CircularProgressWithLabel value={progress} />;
 }

@@ -1,14 +1,17 @@
 import React from "react";
 import { SectionCenter, Heading } from "./../../index";
 import { Box } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import "./DynamicStyled.scss";
 import { FlipSection } from "./FlipSection";
 import { Section } from "../../UI/Section";
-export const Dynamic = ({
+import { Icon, IonIcon } from "./../../UI/Icon";
+
+export const Dynamic: React.FC<DynamicType> = ({
   title,
   content,
   subtitle,
-}: DynamicType): JSX.Element => {
+}): JSX.Element => {
   return (
     <Section className="super-margin">
       <SectionCenter Flex className="SectionGrid  containerWrapper">
@@ -23,6 +26,9 @@ export const Dynamic = ({
             Display="flex"
             AlignItems="flex-start"
           />
+          <Box className=" iconWrapper violet">
+            <IonIcon name="play" /> Know How
+          </Box>
         </Box>
       </SectionCenter>
     </Section>

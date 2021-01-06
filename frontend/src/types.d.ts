@@ -110,6 +110,9 @@ declare global {
     children: any;
     styleinline?: any;
     bg?: string;
+    Flex?: any;
+    color?: string, 
+  background?: string
   }
 
   export interface TypeProps extends Partial<DisplayProps> {

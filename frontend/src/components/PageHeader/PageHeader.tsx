@@ -32,7 +32,7 @@ const PageHeaderStyled = styled.div`
   background-attachment: scroll;
   background-position: center bottom;
   background-color: #f8f8f8;
-  height: 330px;
+  height: 220px;
   margin-bottom: 20px;
 
   padding-top: 76px;

@@ -29,7 +29,7 @@ export const HomeContent: React.FC<Props> = () => {
         title="Our Development Cycle"
         content="But building it before the development of a full-fledged application is a widespread practice that always pays off in the end."
       />
-      <TextBoxesLight data={DataText} color="#ffffff" background="" />
+      <TextBoxesLight data={DataText} color="#ffffff" background="#ffffff" />
       <WeDo
         subtitle="what we do"
         title="Custom IT Solutions for Your Business"
