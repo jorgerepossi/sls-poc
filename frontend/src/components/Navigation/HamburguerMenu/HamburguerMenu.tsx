@@ -7,7 +7,7 @@ interface Props {
 }
 
 const HamburguerStyled = styled.div`
-  .hamburguerContent {
+  .hamburguerContentWrapper {
             padding: 9px 10px;
             overflow: hidden;
             background-color: var(--orange-color);
@@ -25,7 +25,7 @@ const HamburguerStyled = styled.div`
                 span {
                     width: 100%;
                     height: 2px;
-                    background-color: #ffffff;
+                    background-color:#ffffff;
                     display: block;
                     position: absolute;
                     left: 0;
@@ -38,7 +38,7 @@ const HamburguerStyled = styled.div`
                     width: 100%;
                     display: block;
                     opacity: 1;
-                    background-color: #ffffff;
+                    background-color:#ffffff;
                 }
             }
         }
@@ -50,7 +50,7 @@ export const HamburguerMenu: React.FC<Props> = ({
 }): JSX.Element => {
   return (
     <HamburguerStyled>
-      <div className="hamburguerContent" onClick={onClick}>
+      <div className="hamburguerContentWrapper" onClick={onClick}>
         <div {...props} className="hamburguerMenuLink">
           <div className="hamburguerContent">
             <div className="menuToogle">

@@ -5,8 +5,12 @@ import { Image } from "../../UI/Image";
 import { Section } from "../../UI/Section";
 import "./CarouselBrand.scss";
 
-
-
+import Nodejs from "./../../../assets/images/carouselbrand/nodejs.png";
+import AngularLogo from "./../../../assets/images/carouselbrand/angular.png";
+import AWSLogo from "./../../../assets/images/carouselbrand/aws.png";
+import PHP from "./../../../assets/images/carouselbrand/php.png";
+import Vuejs from "./../../../assets/images/carouselbrand/vuejs.png";
+import JS from "./../../../assets/images/carouselbrand/js.png";
 
 interface Props {
   className?: string;
@@ -41,33 +45,32 @@ export const CarouselBrand: React.FC<Props> = (): JSX.Element => {
     <Section id="carouseBrand" className="super-margin">
       <Slider {...settings}>
         <Box>
-          <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
+          <Image src={Nodejs} alt="NodeJS" title="NodeJS" />
         </Box>
         <Box>
-          <Box>
-            <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
-          </Box>
+          <Image src={AngularLogo} alt="Angular" title="Angular" />
+        </Box>
+
+        <Box>
+          <Image
+            src={AWSLogo}
+            alt="Amazon We Server"
+            title="Amazon We Server"
+          />
+        </Box>
+
+        <Box>
+          <Image src={Vuejs} alt="Vuejs" title="Vuejs" />
         </Box>
         <Box>
-          <Box>
-            <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
-          </Box>
+          <Image src={JS} alt="JavaScript" title="JavaScript" />
         </Box>
         <Box>
-          <Box>
-            <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
-          </Box>
+          <Image src={PHP} alt="PHP Front/Backend" title="PHP Front/Backend" />
         </Box>
-        <Box>
-          <Box>
-            <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
-          </Box>
-        </Box>
-        <Box>
-          <Box>
-            <Image src="http://zircona.wgl-demo.net/wp-content/uploads/2020/04/partners_01-g.png" />
-          </Box>
-        </Box>
+         
+
+      
       </Slider>
     </Section>
   );

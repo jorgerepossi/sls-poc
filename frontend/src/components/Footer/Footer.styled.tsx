@@ -88,6 +88,10 @@ const FooterStyled = styled.footer`
     #FooterMenu {
       .FooterContent {
         display: block;
+        flex-direction: column;
+        @media (min-width: 980px) {
+          flex-direction: row;
+        }
         li {
           &.FooterUlLink {
             margin-right: calc(10px / 2);

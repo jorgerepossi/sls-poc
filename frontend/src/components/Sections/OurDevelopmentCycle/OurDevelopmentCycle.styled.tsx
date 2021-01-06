@@ -6,6 +6,11 @@ export const DevelopmentCycleStyled = styled.div`
     text-align: center;
     padding-bottom: 50px;
 
+    @media (max-width: 980px){
+flex-wrap: wrap;
+justify-content: center; 
+    }
+
     @media (max-width: 767px) {
       display: flex;
       justify-content: center;
@@ -19,6 +24,12 @@ export const DevelopmentCycleStyled = styled.div`
       border-radius: 10px 10px 10px 10px;
       transition: background 0.3s, border 0.3s, border-radius 0.3s,
         box-shadow 0.3s, -webkit-border-radius 0.3s, -webkit-box-shadow 0.3s;
+      @media (max-width: 980px){
+        width: 50%;
+      }
+      @media (max-width: 767px){
+        width: 100%;
+      }
       &:hover {
         background-color: #2b2b34;
         &:first-of-type {

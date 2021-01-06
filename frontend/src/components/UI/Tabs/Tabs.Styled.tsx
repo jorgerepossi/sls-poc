@@ -9,6 +9,9 @@ interface Props {
 
 const TabWrapper = styled.section`
   &.widget-tabs-container {
+    position: relative;
+    z-index: 9;
+
     @media (min-width: 980px) {
       max-width: 490px;
       position: relative;

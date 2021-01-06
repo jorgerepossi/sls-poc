@@ -6,6 +6,7 @@ declare global {
   export type DisplayProps = {
     Flex?: any;
     Grid?: any;
+    DirectionColumn?: any;
     JustifyCenter?: any;
     Display?:
       | "flex"

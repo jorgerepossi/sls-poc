@@ -10,3 +10,6 @@
   justify-content: center;
 }
 
+.DirectionColumn {
+  flex-direction: column;
+}

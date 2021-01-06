@@ -45,6 +45,13 @@ const WeDoStyled = styled.section`
         margin-left: 50px;
         margin-right: 50px;
       }
+
+      @media (max-width: 767px) {
+        padding: 1rem 2rem 2rem 2rem;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
     }
     .widget-container-animation {
       display: flex;

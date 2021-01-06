@@ -12,7 +12,7 @@ const MobileHeaderStyled = styled.nav`
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color: rgba(49, 49, 49, 1);
+    background-color: #fff;
     position: sticky;
     width: 100%;
   }
@@ -81,7 +81,7 @@ export const MobileMenu = (props) => {
         })
 
         .to(".hamburguerMenuLink", {
-          rotate: "135deg",
+          rotate: "45deg",
           ease: "expo.inOut",
         });
     } else {
@@ -149,6 +149,8 @@ export const MobileMenu = (props) => {
       </MobileHeaderStyled>
       <NavMobileDropDown className=" menuMobile">
         <List
+          Flex
+          DirectionColumn
           data={Data}
           id="MenuMain"
           className="Menu"

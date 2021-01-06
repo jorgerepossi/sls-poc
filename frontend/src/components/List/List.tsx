@@ -14,12 +14,14 @@ export const List = memo(
     Flex,
     Grid,
     JustifyCenter,
+    DirectionColumn,
     onClick,
   }: TypeProps): JSX.Element => {
     const classes = [
       Flex && ` ${style.Flex}`,
       Grid && ` ${style.Grid}`,
       JustifyCenter && ` ${style.JustifyCenter}`,
+      DirectionColumn && ` ${style.DirectionColumn}`,
       className,
     ];
     return (
