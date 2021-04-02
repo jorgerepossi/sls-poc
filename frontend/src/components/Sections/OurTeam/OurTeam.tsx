@@ -6,11 +6,13 @@ import { Team } from "./DedicatedTeam/DedicatedTeam";
 import { ListTeam } from "./ListTeam";
 import { WeHave } from "./WeHave";
 
-interface OurTeamProps extends DynamicType {
+interface OurTeamProps extends DynamicType
+{
   JustifyContent?: string;
 }
 
-export const OurTeam: React.FC<OurTeamProps> = ( ): JSX.Element => {
+export const OurTeam: React.FC<OurTeamProps> = (): JSX.Element =>
+{
   return (
     <Container>
       <WeHave

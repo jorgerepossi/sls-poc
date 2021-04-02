@@ -69,7 +69,7 @@ export const Section = ({
       AlignContent={AlignContent}
       style={styleinline}
       color={color}
-      background={background}
+     
     >
       {children}
     </SectionStyled>

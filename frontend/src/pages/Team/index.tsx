@@ -1,13 +1,15 @@
 import React from "react";
-import {
-  Container,
-  Seo,
-  PageHeader,
-  OurTeam,
-  
-} from "../../components/";
+import
+  {
+    Container,
+    Seo,
+    PageHeader,
+    OurTeam,
 
-const Team = () => {
+  } from "../../components/";
+
+const Team = () =>
+{
   return (
     <>
       <Container>
@@ -18,7 +20,7 @@ const Team = () => {
           title="We Have Only Best Skilled Professional Team"
           content="If you’re searching for talented tech minds who are dedicated to their work, we are a perfect fit. We are a dynamic software development company based in USA. ZIrcona workers have been working on various large-scale & complex projects, always meeting clients’ expectations."
         />
-       
+
       </Container>
     </>
   );

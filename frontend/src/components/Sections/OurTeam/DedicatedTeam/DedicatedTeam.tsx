@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 
 import styled from "@emotion/styled";
 import { Image } from "../../../UI/Image";
-interface Props extends DynamicType {
+interface Props extends DynamicType
+{
   data?: any;
 }
 
@@ -143,7 +144,8 @@ const ListTeamWorkStyled = styled.section`
   }
 `;
 
-const ListTeamWork: React.FC<Props> = ({ data }): JSX.Element => {
+const ListTeamWork: React.FC<Props> = ({ data }): JSX.Element =>
+{
   return (
     <ListTeamWorkStyled id="ListTeamWorkStyled">
       {data.map((item) => (
@@ -173,7 +175,7 @@ const ListTeamWork: React.FC<Props> = ({ data }): JSX.Element => {
               <Section Flex JustifyCenter>
                 <Box className="team-icons">
                   {item.socialMedia.map((item) => (
-                    <Box className={`iconWrapper ${item.classname}`}>
+                    <Box className={`iconWrapper ${ item.classname }`}>
                       <Icon iconimg={item.name} />
                     </Box>
                   ))}
@@ -187,7 +189,8 @@ const ListTeamWork: React.FC<Props> = ({ data }): JSX.Element => {
   );
 };
 
-export const Team: React.FC<Props> = ({ data }) => {
+export const Team: React.FC<Props> = ({ data }) =>
+{
   return (
     <Section>
       <SectionCenter>

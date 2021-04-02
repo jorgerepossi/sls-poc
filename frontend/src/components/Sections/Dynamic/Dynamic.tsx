@@ -1,11 +1,10 @@
 import React from "react";
 import { SectionCenter, Heading } from "./../../index";
 import { Box } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import "./DynamicStyled.scss";
 import { FlipSection } from "./FlipSection";
 import { Section } from "../../UI/Section";
-import { Icon, IonIcon } from "./../../UI/Icon";
+import { IonIcon } from "./../../UI/Icon";
 
 export const Dynamic: React.FC<DynamicType> = ({
   title,

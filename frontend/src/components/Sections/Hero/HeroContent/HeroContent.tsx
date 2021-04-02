@@ -1,4 +1,4 @@
-import { Box } from "@material-ui/core";
+import  Box  from "@material-ui/core/Box";
 import React from "react";
 import { Link } from "react-router-dom";
 import { Heading } from "../../../Heading";
